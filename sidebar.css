@@ -282,8 +282,3 @@ header>div ul.navbar>li.logo>a {
     z-index: 10;
     left: 0;
 }
-
-#sidebar_icon:checked~.containerA {
-    left: 250px;
-    max-width: 950px;
-}
