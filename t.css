@@ -110,14 +110,13 @@ p {
 }
 
 .container {
-    max-width: 1280px;
     width: 100%;
 }
 
 .contents {
     position: relative;
     left: 250px;
-    width: 1030px;
+    width: 100%;
     transition: all 0.35s;
 }
 
@@ -141,6 +140,7 @@ p {
 
 .something {
     height: 600px;
+    width: 100%;
     background-color: #bdbdbd;
 }
 
@@ -225,11 +225,4 @@ header>div ul.navbar>li>a {
 #sidebar_icon:checked~.container .contents {
     z-index: 10;
     left: 0px;
-    max-width: 1030px;
-}
-
-@media screen and (max-width: 1280px) {
-    body {
-        color: yellow;
-    }
 }
