@@ -225,7 +225,8 @@ header>div ul.navbar>li>a {
 #sidebar_icon:checked~.container .contents {
     z-index: 10;
     left: 0px;
-    max-width: 1030px;
+    max-width: 1280px;
+    width: 100%;
 }
 
 @media screen and (max-width: 1280px) {
