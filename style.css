@@ -313,7 +313,9 @@ header>div ul.navbar>li>a {
 
 
 
-/* footer */
+
+
+/* footer  수정하기 맨 밑, 사이드바 안겹치게*/
 footer {
     position: relative;
     height: 60px;
