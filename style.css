@@ -10,7 +10,8 @@
     --color-black: #000000;
     --color-black-a: rgba(0, 0, 0, 0.5);
     --color-blue: #0078D0;
-    --color-light-blue: #eff4fc;
+    --color-sky: #79cdfc;
+    --color-light-blue: #eaeef5;
 
     /* Font size */
     --font-big: 48px;
@@ -115,6 +116,12 @@ p {
     width: 100%;
 }
 
+#wrapper {
+    height: auto;
+    min-width: 100%;
+    padding-bottom: 60px;
+}
+
 .contents {
     position: relative;
     left: 250px;
@@ -142,7 +149,7 @@ p {
 
 .something {
     height: 600px;
-    background-color: #bdbdbd;
+    translate: ;
 }
 
 /* header */
@@ -152,6 +159,7 @@ p {
 
 header {
     width: 100%;
+    height: 60px;
     background-color: var(--color-white);
     position: relative;
     z-index: 50;
@@ -173,11 +181,16 @@ header>div ul.navbar>li {
     vertical-align: middle;
 }
 
-header>div ul.navbar>li>a {
+header>div ul.navbar>li>a,
+label {
     display: block;
     width: auto;
     padding: 20px;
     padding-left: 45px;
+}
+
+.navbar>li>label {
+    font-weight: var(--weight-bold);
 }
 
 .logo_img {
@@ -198,11 +211,9 @@ header>div ul.navbar>li>a {
 
 .sidebar_btn {
     display: block;
-    width: 40px;
-    height: 45px;
     position: relative;
     cursor: pointer;
-    background: #7c7979;
+    color: #000000;
 }
 
 .sidebar {
@@ -258,7 +269,6 @@ header>div ul.navbar>li>a {
 
 .accordion_li {
     width: 250px;
-    padding: 20px;
     border-bottom: 1px solid var(--color-light-white);
 }
 
@@ -266,6 +276,12 @@ header>div ul.navbar>li>a {
     color: var(--color-dark-grey);
     font-size: var(--font-small);
     font-weight: var(--weight-semi-bold);
+    padding: 20px;
+}
+
+.accordion_li i {
+    font-size: var(--font-micro);
+    padding-right: 6px;
 }
 
 .accordion_content {
@@ -275,7 +291,13 @@ header>div ul.navbar>li>a {
 }
 
 .accordion_content>ul>li {
-    padding: 12px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.accordion_content>ul>li>a {
+    display: block;
+    padding-left: 50px;
 }
 
 .accordion_content>ul>li>a:hover {
@@ -284,27 +306,22 @@ header>div ul.navbar>li>a {
 
 .accordion_li:first-of-type :target~.accordion_content {
     height: 150px;
-    padding: 20px;
 }
 
 .accordion_li:nth-of-type(2) :target~.accordion_content {
     height: 50px;
-    padding: 20px;
 }
 
 .accordion_li:nth-of-type(3) :target~.accordion_content {
     height: 150px;
-    padding: 20px;
 }
 
 .accordion_li:nth-of-type(4) :target~.accordion_content {
     height: 100px;
-    padding: 20px;
 }
 
 .accordion_li:nth-of-type(5) :target~.accordion_content {
     height: 250px;
-    padding: 20px;
 }
 
 .accordion_li:nth-of-type(n) :target~.close-accordion p {
@@ -315,9 +332,9 @@ header>div ul.navbar>li>a {
 
 
 
-/* footer  수정하기 맨 밑, 사이드바 안겹치게*/
 footer {
-    position: relative;
+    position: absolute;
+    bottom: 0;
     height: 60px;
     width: 100%;
     background-image: url(img/footer.png);
@@ -329,7 +346,7 @@ footer {
 .footer_text {
     text-align: center;
     font-weight: var(--weight-bold);
-    color: #79cdfc;
+    color: var(--color-sky);
 }
 
 
@@ -337,6 +354,6 @@ footer {
 
 @media screen and (max-width: 1280px) {
     body {
-        color: yellow;
+        color: red;
     }
 }
