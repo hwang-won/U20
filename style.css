@@ -34,7 +34,8 @@
 body {
     height: 100%;
     box-sizing: border-box;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
     font-family: 'Noto_Sans', sans-serif !important;
 }
 
@@ -150,8 +151,8 @@ p {
 
 .something {
     position: relative;
-    min-height: 1000px;
-    height: 100%;
+    height: 100vh;
+    margin-bottom: 100px;
 }
 
 .center {
@@ -870,7 +871,7 @@ header>div ul.navbar>li>label {
 }
 
 .mypage>h3 {
-    padding-bottom: 16px;
+    padding-bottom: 6px;
 }
 
 .mypage_box {
@@ -894,7 +895,7 @@ header>div ul.navbar>li>label {
 /* change_pw.html */
 /* change_pw */
 .mypage_notice {
-    padding-top: 20px;
+    padding-top: 10px;
     padding-bottom: 20px;
 }
 
@@ -904,9 +905,9 @@ header>div ul.navbar>li>label {
 }
 
 .mypage_notice h5 {
+    margin: 0 0 10px 0;
     color: var(--color-grey);
     font-size: var(--font-small);
-    padding: 10px 0 10px 0;
 }
 
 .form>.input_row {
@@ -918,9 +919,9 @@ header>div ul.navbar>li>label {
 
 /* footer */
 footer {
-    position: relative;
-    bottom: 0;
     height: 60px;
+    position: relative;
+    bottom: 0px;
     width: 100%;
     background-image: url(img/footer.png);
     background-size: 100%;
@@ -950,10 +951,6 @@ footer {
 
 /* media quarry */
 @media screen and (min-width: 1500px) {
-    body {
-        color: rgb(32, 209, 47);
-    }
-
     .contents {
         left: 100px;
         width: 1280px;
@@ -962,10 +959,6 @@ footer {
 
 /* media quarry */
 @media screen and (min-width: 1750px) {
-    body {
-        color: blue;
-    }
-
     .contents {
         left: 0px;
         width: 1280px;
