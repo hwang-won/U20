@@ -54,7 +54,6 @@ textarea {
 * {
     box-sizing: border-box;
     padding: 0;
-    margin: 0;
 }
 
 a {
@@ -125,10 +124,10 @@ p {
 
 .contents {
     position: relative;
-    margin: 0 auto;
+    left: 230px;
     width: 1030px;
     transition: all 0.35s;
-    padding: 100px 60px 60px 100px;
+    padding-top: 100px;
 }
 
 .flex {
@@ -152,7 +151,7 @@ p {
 .something {
     position: relative;
     min-height: 1000px;
-    height: 120%;
+    height: 100%;
 }
 
 .center {
@@ -187,7 +186,7 @@ p {
 
 .country_table {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1280px;
     position: relative;
     margin: 0 auto;
 }
@@ -550,9 +549,9 @@ header>div ul.navbar>li>label {
 
 .sidebar {
     position: fixed;
-    top: 60px;
+    top: 50px;
     left: 0;
-    width: 250px;
+    width: 230px;
     height: 100%;
     background-color: var(--color-light-blue);
     z-index: 10;
@@ -565,7 +564,7 @@ header>div ul.navbar>li>label {
 
 #sidebar_icon:checked~.container .sidebar {
     z-index: 10;
-    left: -250px;
+    left: -230px;
 }
 
 #sidebar_icon:checked~.container .contents {
@@ -600,7 +599,7 @@ header>div ul.navbar>li>label {
 }
 
 .accordion_li {
-    width: 250px;
+    width: 100%;
     border-bottom: 1px solid var(--color-light-white);
 }
 
@@ -686,7 +685,7 @@ header>div ul.navbar>li>label {
 }
 
 .input_row>label {
-    margin-right: 50px;
+    margin-right: 20px;
     color: var(--color-dark-grey);
     font-weight: var(--weight-regular);
 }
@@ -699,7 +698,7 @@ header>div ul.navbar>li>label {
     cursor: pointer;
 }
 
-[type="radio"] {
+[type="checkbox"] {
     vertical-align: middle;
     border: 2px solid var(--color-grey);
     border-radius: 50%;
@@ -707,11 +706,11 @@ header>div ul.navbar>li>label {
     height: 16px;
 }
 
-[type="radio"]:checked {
+[type="checkbox"]:checked {
     border: 5px solid var(--color-blue);
 }
 
-[type="radio"]:hover {
+[type="checkbox"]:hover {
     box-shadow: 0 0 0 4px var(--color-sky);
     cursor: pointer;
 }
@@ -858,8 +857,9 @@ footer {
 }
 
 .mediaquarry {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
+    background-color: rgb(252, 252, 212);
 }
 
 
@@ -871,12 +871,25 @@ footer {
 }
 
 /* media quarry */
-@media screen and (min-width: 1550px) {
+@media screen and (min-width: 1500px) {
+    body {
+        color: rgb(32, 209, 47);
+    }
+
+    .contents {
+        left: 100px;
+        width: 1280px;
+    }
+}
+
+/* media quarry */
+@media screen and (min-width: 1750px) {
     body {
         color: blue;
     }
 
     .contents {
+        left: 0px;
         width: 1280px;
     }
 }
