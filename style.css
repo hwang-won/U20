@@ -114,6 +114,7 @@ p {
 .container {
     max-width: 1280px;
     width: 100%;
+    margin: 0 auto;
 }
 
 #wrapper {
@@ -124,7 +125,7 @@ p {
 
 .contents {
     position: relative;
-    left: 250px;
+    margin: 0 auto;
     width: 1030px;
     transition: all 0.35s;
     padding: 100px 60px 60px 60px;
