@@ -105,10 +105,6 @@ p {
     margin: 0;
 }
 
-br {
-    border: 1px solid var(--color-black);
-}
-
 .section {
     padding: 50px;
     text-align: center;
@@ -465,7 +461,7 @@ header>div ul.navbar>li>label {
     margin-top: 20px;
 }
 
-
+/* mypage.html */
 /* mypage */
 .mypage {
     width: 60%;
@@ -486,12 +482,41 @@ header>div ul.navbar>li>label {
 }
 
 .mypage_box a,
-span:last-child {
+.mypage_box span:last-child {
     float: right;
     color: var(--color-blue);
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
+
+/* change_pw.html */
+/* change_pw */
+.mypage_notice {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.mypage_notice p {
+    font-size: var(--font-micro);
+    color: var(--color-dark-grey);
+}
+
+.mypage_notice p:nth-child(1) {
+    font-size: var(--font-small);
+    padding-bottom: 10px;
+}
+
+.change_pw_form>.input_row {
+    border: 0;
+    border-bottom: 1px solid var(--color-light-white);
+    font-weight: var(--weight-bold);
+}
+
+.change_pw_form>.input_row>.input_text {
+    font-weight: var(--weight-bold);
+}
+
 
 
 
