@@ -750,8 +750,9 @@ footer {
 }
 
 .mediaquarry {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
+    background-color: rgb(252, 252, 212);
 }
 
 
@@ -768,9 +769,4 @@ footer {
         color: blue;
     }
 
-    .contents {
-        /* left: 0px;
-        max-width: 1280px;
-        width: 100%; */
-    }
 }
