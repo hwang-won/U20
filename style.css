@@ -54,7 +54,6 @@ textarea {
 * {
     box-sizing: border-box;
     padding: 0;
-    margin: 0;
 }
 
 a {
@@ -125,7 +124,7 @@ p {
 
 .contents {
     position: relative;
-    left: 250px;
+    left: 230px;
     width: 1030px;
     transition: all 0.35s;
     padding-top: 100px;
@@ -152,7 +151,7 @@ p {
 .something {
     position: relative;
     min-height: 1000px;
-    height: 120%;
+    height: 100%;
 }
 
 .center {
@@ -184,7 +183,7 @@ p {
 
 .country_table {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1280px;
     position: relative;
 }
 
@@ -442,9 +441,9 @@ header>div ul.navbar>li>label {
 
 .sidebar {
     position: fixed;
-    top: 60px;
+    top: 50px;
     left: 0;
-    width: 250px;
+    width: 230px;
     height: 100%;
     background-color: var(--color-light-blue);
     z-index: 10;
@@ -457,7 +456,7 @@ header>div ul.navbar>li>label {
 
 #sidebar_icon:checked~.container .sidebar {
     z-index: 10;
-    left: -250px;
+    left: -230px;
 }
 
 #sidebar_icon:checked~.container .contents {
@@ -492,7 +491,7 @@ header>div ul.navbar>li>label {
 }
 
 .accordion_li {
-    width: 250px;
+    width: 100%;
     border-bottom: 1px solid var(--color-light-white);
 }
 
@@ -764,9 +763,25 @@ footer {
 }
 
 /* media quarry */
-@media screen and (min-width: 1550px) {
+@media screen and (min-width: 1500px) {
+    body {
+        color: rgb(32, 209, 47);
+    }
+
+    .contents {
+        left: 100px;
+        width: 1280px;
+    }
+}
+
+/* media quarry */
+@media screen and (min-width: 1750px) {
     body {
         color: blue;
     }
 
+    .contents {
+        left: 0px;
+        width: 1280px;
+    }
 }
