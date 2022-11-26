@@ -224,11 +224,20 @@
         <!-- contents 본문 내용 -->
         <div class="container">
             <div class="contents something">
-                <form action="signup.php" method="post">
-                    <div class="signup_wrap">
-                        <label>아이디</label>
+                <div class="mypage">
+                    <h3>계정 생성</h3>
+                    <hr />
+                    <div class="mypage_notice">
+                        <h5>새로운 계정의 정보를 입력해 주세요.</h5>
+                        <p>
+                            - 비밀번호는 8 ~ 32 자의 영문 대소문자, 숫자,
+                            특수문자를 조합하여 설정해 주세요.
+                        </p>
+                    </div>
+                    <form action="#" method="post" class="form">
                         <div class="input_row">
                             <input
+                                placeholder="아이디"
                                 type="text"
                                 name="id"
                                 class="input_text"
@@ -239,7 +248,7 @@
                         </div>
                         <!-- #2 PASSWORD VERIFICATION -->
                         <script>
-                            var check = function () {
+                            const check = function () {
                                 if (
                                     document.getElementById("pw").value ==
                                     document.getElementById("cpassword").value
@@ -260,9 +269,9 @@
                                 }
                             };
                         </script>
-                        <label>비밀번호</label>
                         <div class="input_row">
                             <input
+                                placeholder="비밀번호"
                                 type="password"
                                 name="pw"
                                 id="pw"
@@ -274,10 +283,9 @@
                                 onkeyup="check();"
                             />
                         </div>
-                        <label>비밀번호 재확인</label>
-                        <span id="message"></span>
                         <div class="input_row">
                             <input
+                                placeholder="비밀번호 재확인"
                                 type="password"
                                 name="cpassword"
                                 id="cpassword"
@@ -289,9 +297,11 @@
                                 onkeyup="check();"
                             />
                         </div>
-                        <label>이름</label>
+                        <span id="message"></span>
+
                         <div class="input_row">
                             <input
+                                placeholder="이름"
                                 type="text"
                                 name="name"
                                 class="input_text"
@@ -301,7 +311,7 @@
                             />
                         </div>
 
-                        <label>권한</label>
+                        <h3>권한</h3>
                         <div class="input_row">
                             <label>
                                 <input
@@ -366,11 +376,11 @@
                                 class="btn_login"
                                 name="signup"
                             >
-                                <span>회원가입</span>
+                                <span>확인</span>
                             </button>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
 
