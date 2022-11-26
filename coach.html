@@ -229,34 +229,49 @@
                         <table class="table table-hover team_table">
                             <h2 class="country_h2">코치진</h2>
                             <!-- 검색 -->
+                            <form action="" class="searchForm" name="coach_searchForm" method="get"></form>
                             <div class="selectWrap">
-                                <div class="selectArea float_r">
+                                <div class="selectArea">
                                     <div class="select_box mr10">
-                                        <select class="d_select" title="날짜" style="width: 140px;">
-                                            <option value="1">날짜</option>
-                                            <option value="2">2023-06-04</option>
-                                            <option value="3">2023-06-05</option>
-                                            <option value="4">2023-06-06</option>
-                                            <option value="5">2023-06-07</option>
+                                        <select class="d_select" title="국가" style="width: 100px;">
+                                            <option value="" hidden="">국가</option>
+                                            <option value="1">한국</option>
+                                            <option value="2">일본</option>
+                                            <option value="3">사우디 아라비아</option>
+                                            <option value="4">인도</option>
                                         </select>
                                     </div>
                                     <div class="select_box mr10">
-                                        <select class="d_select" title="성별" style="width: 90px;">
+                                        <select class="d_select" title="지역" style="width: 100px;">
+                                            <option value="" hidden="">지역</option>
+                                            <option value="1">서울</option>
+                                            <option value="2">도쿄</option>
+                                        </select>
+                                    </div>
+                                    <div class="select_box mr10">
+                                        <select class="d_select" title="소속" style="width: 80px;">
+                                            <option value="" hidden="">소속</option>
+                                            <option value="1">국제코치협회</option>
+                                            <option value="2">한국코치연맹</option>
+                                        </select>
+                                    </div>
+                                    <div class="select_box mr10">
+                                        <select class="d_select" title="성별" style="width: 80px;">
                                             <option value="" hidden="">성별</option>
                                             <option value="1">남</option>
                                             <option value="2">여</option>
                                         </select>
                                     </div>
                                     <div class="select_box mr10">
-                                        <select class="d_select" title="기록 방식" style="width: 122px;">
-                                            <option value="" hidden="">기록 방식</option>
-                                            <option value="1">자동</option>
-                                            <option value="2">수동</option>
+                                        <select class="d_select" title="직무" style="width: 150px;">
+                                            <option value="" hidden="">직무</option>
+                                            <option value="1">헤드 코치</option>
+                                            <option value="2">서브 코치</option>
                                         </select>
                                     </div>
                                     <div class="select_box mr10">
-                                        <select class="d_select" title="구분" style="width: 172.667px;">
-                                            <option value="" hidden="">종목</option>
+                                        <select class="d_select" title="참가경기" style="width: 150px;">
+                                            <option value="" hidden="">참가경기</option>
                                             <option value="" disabled="">단거리달리기</option>
                                             <option value="1">100M</option>
                                             <option value="2">200M</option>
@@ -290,7 +305,10 @@
                                             <option value="23">4x400M 혼성</option>
                                         </select>
                                     </div>
-                                    <a class="btn_search" href="#"><img src="img/btn_search.gif" alt="검색"></a>
+                                    <div class="search" style="width: 260px;">
+                                        <input type="text" id="search_coach" class="word" name="search_coach" placeholder="검색어를 입력해주세요" maxlength="30" style="width: 270px;">
+                                        <a class="btn_search" href="#" title="검색"></a>
+                                    </div>
                                 </div>
                             </div>
                             <colgroup>
@@ -408,7 +426,7 @@
                     <a href="#">10</a>
                     <a class="arrow next" href="#"></a>
                     <a class="arrow nnext" href="#"></a>
-                    <input type="button" onclick="window.open('/addresult.html')" value="등록" class="bt_insert">
+                    <input type="button" onclick="window.open('/addresult.html')" value="등록" class="btn_middle">
                     </div>
                 </div>
             </div>

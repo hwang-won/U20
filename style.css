@@ -386,25 +386,28 @@ table.team_table.center {
 /* 검색 */
 .selectWrap {
     margin: 10px 0 12px 0;
-  }
-  .selectWrap:after {
+}
+
+.selectWrap:after {
     content: "";
     display: block;
     clear: both;
     visibility: hidden;
     height: 0;
-  }
-  
-  .select_box {
+}
+
+.select_box {
     position: relative;
     float: left;
     height: 40px;
     background: var(--color-white) url(img/bg_selectArrow_down.png) right center
-      no-repeat;
-    border: 1px solid var(--color-black);
-  }
-  
-  .select_box select.d_select {
+        no-repeat;
+    border-color: #aaa !important;
+    border: 1px solid #aaa !important;
+    border-radius: 6px;
+}
+
+.select_box select.d_select {
     width: 100%;
     height: 40px;
     min-height: 40px;
@@ -413,14 +416,48 @@ table.team_table.center {
     opacity: 1;
     font-size: var(--font-micro);
     filter: alpha(opacity=0); /*IE8*/
-  }
-  .mr10 {
-    margin-right: 10px !important;
-  }
-  
-  .float_r {
-    float: right !important;
-  }
+}
+
+.mr10 {
+margin-right: 10px !important;
+}
+
+/*director.html*/
+/*coach.html*/
+/*judge.html*/
+/* 검색 버튼 */
+.searchForm{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+.search{
+    position: relative;
+    float: left;
+    min-height: 38px;
+    line-height: 38px;
+    border-color: #aaa !important;
+    border: 1px solid #aaa !important;
+    border-radius: 6px;
+    font-size: 14px;
+}
+.search > input[type="text"]{
+    text-align: left;
+    font-size: 14px;
+    line-height: 14px;
+    vertical-align: middle;
+}
+.btn_search{
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    top: 0;
+    height: 100%;
+    min-height: 35px;
+    width: 50px;
+    background: url(/img/icon_search.png) no-repeat 50% 50% rgba(0,0,0,.03) !important;
+}
 
 /*homepage.html*/
 /*director.html*/
@@ -442,7 +479,6 @@ button.btn_add{position: absolute;left:97px;top:5px;border-radius:2px;padding:2p
 button.btn_add:hover{background:#1565c0; color:#fff;}
 a.main_list{color:#333;}
 a.main_list:hover{text-decoration: underline;color:#024274;}
-
 
 /* header */
 #sidebar_icon {
