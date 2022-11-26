@@ -128,7 +128,7 @@ p {
     margin: 0 auto;
     width: 1030px;
     transition: all 0.35s;
-    padding: 100px 60px 60px 60px;
+    padding: 100px 60px 60px 100px;
 }
 
 .flex {
