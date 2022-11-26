@@ -577,7 +577,7 @@ header>div ul.navbar>li>label {
 }
 
 .input_row>label {
-    margin-right: 50px;
+    margin-right: 20px;
     color: var(--color-dark-grey);
     font-weight: var(--weight-regular);
 }
@@ -590,7 +590,7 @@ header>div ul.navbar>li>label {
     cursor: pointer;
 }
 
-[type="radio"] {
+[type="checkbox"] {
     vertical-align: middle;
     border: 2px solid var(--color-grey);
     border-radius: 50%;
@@ -598,11 +598,11 @@ header>div ul.navbar>li>label {
     height: 16px;
 }
 
-[type="radio"]:checked {
+[type="checkbox"]:checked {
     border: 5px solid var(--color-blue);
 }
 
-[type="radio"]:hover {
+[type="checkbox"]:hover {
     box-shadow: 0 0 0 4px var(--color-sky);
     cursor: pointer;
 }
@@ -732,7 +732,7 @@ header>div ul.navbar>li>label {
 
 /* footer */
 footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     height: 60px;
     width: 100%;
