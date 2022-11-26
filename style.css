@@ -685,7 +685,7 @@ header>div ul.navbar>li>label {
 }
 
 .mypage>h3 {
-    padding-bottom: 16px;
+    padding-bottom: 6px;
 }
 
 .mypage_box {
@@ -709,7 +709,7 @@ header>div ul.navbar>li>label {
 /* change_pw.html */
 /* change_pw */
 .mypage_notice {
-    padding-top: 20px;
+    padding-top: 10px;
     padding-bottom: 20px;
 }
 
@@ -719,9 +719,9 @@ header>div ul.navbar>li>label {
 }
 
 .mypage_notice h5 {
+    margin: 0 0 10px 0;
     color: var(--color-grey);
     font-size: var(--font-small);
-    padding: 10px 0 10px 0;
 }
 
 .form>.input_row {
