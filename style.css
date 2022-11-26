@@ -335,6 +335,10 @@ header>div ul.navbar>li>label {
     height: 250px;
 }
 
+.accordion_li:nth-of-type(6) :target~.accordion_content {
+    height: 200px;
+}
+
 .accordion_li:nth-of-type(n) :target~.close-accordion p {
     color: var(--color-blue);
 }
