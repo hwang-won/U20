@@ -127,6 +127,7 @@ p {
     left: 250px;
     width: 1030px;
     transition: all 0.35s;
+    padding: 100px 60px 60px 60px;
 }
 
 .flex {
@@ -149,8 +150,13 @@ p {
 
 .something {
     position: relative;
-    height: 1000px;
-    padding-top: 100px;
+    min-height: 1000px;
+    height: 120%;
+}
+
+.center {
+    margin: 0 auto;
+    text-align: center;
 }
 
 .main-table {
@@ -388,19 +394,15 @@ header>div ul.navbar>li>label {
 }
 
 
-/* signup html */
-/* section signup */
-.signup_wrap {
-    margin: 0 auto;
-    width: 500px;
-    border: 1px solid var(--color-dark-white);
-    border-radius: 15px;
-    padding: 50px;
+/* signup.html */
+/* signup */
+.form>h3 {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-bold);
+    color: var(--color-grey);
+    padding-top: 10px;
 }
 
-.signup_wrap>label {
-    padding: 10px 20px 0 10px;
-}
 
 .input_row {
     width: 100%;
@@ -413,17 +415,13 @@ header>div ul.navbar>li>label {
 }
 
 .input_row>label {
-    font-size: var(--font-small);
-    line-height: 20px;
     margin-right: 50px;
-}
-
-.input_row>label:nth-of-type(2) {
-    margin-left: 27px;
+    color: var(--color-dark-grey);
+    font-weight: var(--weight-regular);
 }
 
 .input_row>label>input {
-    margin: 10px;
+    margin: 4px;
 }
 
 .input_row>label>span:hover {
@@ -452,6 +450,7 @@ header>div ul.navbar>li>label {
     display: block;
     width: 100%;
     font-size: var(--font-small);
+    font-weight: var(--weight-bold);
 }
 
 
@@ -477,10 +476,17 @@ header>div ul.navbar>li>label {
 
 
 /* login */
+.logo_img_login {
+    display: block;
+    margin: 0 auto;
+    width: 160px;
+    padding-bottom: 30px;
+
+}
+
 .login_pannel {
     display: block;
     margin: 0 auto;
-    margin-top: 150px;
     width: 325px;
     border: 1px solid var(--color-dark-white);
     border-radius: 3%;
@@ -502,6 +508,61 @@ header>div ul.navbar>li>label {
 .login_pannel .btn_login {
     margin-top: 20px;
 }
+
+/* mypage.html */
+/* mypage */
+.mypage {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.mypage>h3 {
+    padding-bottom: 16px;
+}
+
+.mypage_box {
+    display: block;
+    position: relative;
+    padding: 30px 10px 10px 0;
+    color: var(--color-dark-grey);
+    font-weight: var(--weight-bold);
+    border-bottom: 1px solid var(--color-light-white);
+}
+
+.mypage_box a,
+.mypage_box span:last-child {
+    float: right;
+    color: var(--color-blue);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+/* change_pw.html */
+/* change_pw */
+.mypage_notice {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.mypage_notice p {
+    font-size: var(--font-micro);
+    color: var(--color-dark-grey);
+}
+
+.mypage_notice h5 {
+    color: var(--color-grey);
+    font-size: var(--font-small);
+    padding: 10px 0 10px 0;
+}
+
+.form>.input_row {
+    border: 0;
+    border-bottom: 1px solid var(--color-light-white);
+    font-weight: var(--weight-bold);
+}
+
+
 
 
 /* footer */
