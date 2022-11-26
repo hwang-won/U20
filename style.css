@@ -105,6 +105,10 @@ p {
     margin: 0;
 }
 
+br {
+    border: 1px solid var(--color-black);
+}
+
 .section {
     padding: 50px;
     text-align: center;
@@ -127,6 +131,7 @@ p {
     left: 250px;
     width: 1030px;
     transition: all 0.35s;
+    padding: 100px 60px 60px 60px;
 }
 
 .flex {
@@ -150,7 +155,11 @@ p {
 .something {
     position: relative;
     height: 1000px;
-    padding-top: 100px;
+}
+
+.center {
+    margin: 0 auto;
+    text-align: center;
 }
 
 /* header */
@@ -423,10 +432,17 @@ header>div ul.navbar>li>label {
 
 
 /* login */
+.logo_img_login {
+    display: block;
+    margin: 0 auto;
+    width: 160px;
+    padding-bottom: 30px;
+
+}
+
 .login_pannel {
     display: block;
     margin: 0 auto;
-    margin-top: 150px;
     width: 325px;
     border: 1px solid var(--color-dark-white);
     border-radius: 3%;
@@ -448,6 +464,35 @@ header>div ul.navbar>li>label {
 .login_pannel .btn_login {
     margin-top: 20px;
 }
+
+
+/* mypage */
+.mypage {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.mypage>h3 {
+    padding-bottom: 16px;
+}
+
+.mypage_box {
+    display: block;
+    position: relative;
+    padding: 30px 10px 10px 0;
+    color: var(--color-dark-grey);
+    font-weight: var(--weight-bold);
+    border-bottom: 1px solid var(--color-light-white);
+}
+
+.mypage_box a,
+span:last-child {
+    float: right;
+    color: var(--color-blue);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 
 
 /* footer */
