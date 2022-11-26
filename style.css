@@ -749,6 +749,11 @@ footer {
     color: var(--color-sky);
 }
 
+.mediaquarry {
+    width: 80%;
+    margin: 0 auto;
+}
+
 
 /* media quarry */
 @media screen and (max-width: 1280px) {
