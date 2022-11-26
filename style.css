@@ -282,7 +282,7 @@ table.team_table td {
 }
 
 table.team_table>tbody>tr:hover {
-    background-color: #f1f8ff;
+    background-color: #f9f9f9;
     /*#bbdefd;*/
     color: #333;
 }
@@ -382,7 +382,7 @@ table.team_table.center {
 /*director.html*/
 /*coach.html*/
 /*judge.html*/
-/* 검색 */
+/* 검색 리스팅 */
 .selectWrap {
     margin: 10px 0 12px 0;
 }
@@ -424,7 +424,7 @@ margin-right: 10px !important;
 /*director.html*/
 /*coach.html*/
 /*judge.html*/
-/* 검색 버튼 */
+/* 검색창 */
 .searchForm{
     margin: 0;
     padding: 0;
@@ -463,21 +463,99 @@ margin-right: 10px !important;
 /*coach.html*/
 /*judge.html*/
 /*버튼*/
-.col_right{float: right;}
-.base_mar{margin-top:20px; }
-.btn_base a{display: block;text-align: center;width:200px;padding:12px 0;font-size:1em;text-decoration: none;border-radius:6px;font-family: 'NotoSansKR-Medium'; }
-.btn_base a.btn_top,.btn_base a.btn_footer{background:#024274;color:#fff; }
-.btn_base a.btn_top:hover,.btn_base a.btn_footer{background:#002c4f; }
-.btn_base a.btn_footer{border-radius: 0;}
-.btn_base a.btn_top i{position: relative;left:-6px;}
-a.btn_middle{text-align: center;padding:0.2em 1.25em;font-size: 0.85em;text-decoration: none;background:#024274;color:#fff;font-family: 'NotoSansKR-Regular';border-radius: 3px;}
-a.btn_middle span.btn_txt{position: relative;top:-1px;}
-a.btn_middle_disable{text-align: center;padding:0.2em 1.25em;font-size: 0.85em;text-decoration: none;background:#c0c0c0;color:#fff;font-family: 'NotoSansKR-Regular';border-radius: 3px;}
-a.btn_middle_disable span.btn_txt{position: relative;top:-1px;}
-button.btn_add{position: absolute;left:97px;top:5px;border-radius:2px;padding:2px 8px;background:#2196f3;color:#fff;}
-button.btn_add:hover{background:#1565c0; color:#fff;}
-a.main_list{color:#333;}
-a.main_list:hover{text-decoration: underline;color:#024274;}
+.base_mar{
+    margin-top: 40px;
+}
+.col_right{
+    float: right;
+    margin-left: 15px;
+}
+.btn_base a,.btn_base input{
+    display: block;
+    text-align: center;
+    width: 80px;
+    padding: 9px 0;
+    font-size: 1em;
+    text-decoration: none;
+    border-radius: 6px;
+    font-family: 'NotoSansKR-Medium'; 
+}
+.btn_base .btn_add,.btn_base a.btn_footer{
+    background:#024274;
+    color:#fff; 
+}
+.btn_base .btn_add:hover,.btn_base a.btn_footer{
+    background:#002c4f; 
+}
+.btn_base a.btn_footer{
+    border-radius: 0;
+}
+.btn_base .btn_add i{
+    position: relative;
+    left:-6px;
+}
+.btn_view{
+    text-align: center;
+    padding:0.2em 1.25em;
+    font-size: 0.85em;
+    text-decoration: none;
+    background:#024274;
+    color:#fff;
+    font-family: 'NotoSansKR-Regular';
+    border-radius: 3px;
+}
+.btn_view span.btn_txt{
+    position: relative;
+    top:-1px;
+}
+.btn_view:hover{
+    background: #002c4f;
+}
+.btn_delete{
+    text-align: center;
+    padding:0.2em 1.25em;
+    font-size: 0.85em;
+    text-decoration: none;
+    background:#ac0303;
+    color:#fff;
+    font-family: 'NotoSansKR-Regular';
+    border-radius: 3px;
+}
+.btn_delete span.btn_txt{
+    position: relative;
+    top:-1px;
+}
+.btn_delete:hover{
+    background: #720101 ;
+}
+.btn_excel{
+    text-align: center;
+    /* padding:0.2em 1.25em; */
+    font-size: 0.85em;
+    text-decoration: none;
+    /* background:#5CB762; */
+    background:#024274;
+    color:#fff;
+    font-family: 'NotoSansKR-Regular';
+    border-radius: 3px;
+}
+.btn_excel span.btn_txt{
+    position: relative;top:-1px;
+}
+.btn_excel:hover{
+    /* background: #217b27 ; */
+    background: #002c4f ;
+}
+.main_list{
+    color:#333;
+}
+.main_list:hover{
+    text-decoration: underline;
+    color:#024274;
+}
+span.bold{
+    font-weight: bold;
+}
 
 /* header */
 #sidebar_icon {
