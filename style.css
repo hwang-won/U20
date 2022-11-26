@@ -125,10 +125,10 @@ p {
 
 .contents {
     position: relative;
-    margin: 0 auto;
+    left: 250px;
     width: 1030px;
     transition: all 0.35s;
-    padding: 100px 60px 60px 100px;
+    padding-top: 100px;
 }
 
 .flex {
@@ -769,6 +769,8 @@ footer {
     }
 
     .contents {
-        width: 1280px;
+        /* left: 0px;
+        max-width: 1280px;
+        width: 100%; */
     }
 }
