@@ -455,6 +455,10 @@ header>div ul.navbar>li>label {
     padding: 16px;
 }
 
+.id_pw_wrap .input_row .input_text {
+    color: var(--color-grey);
+}
+
 .login_pannel .btn_login {
     margin-top: 20px;
 }
