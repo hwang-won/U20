@@ -150,7 +150,8 @@ p {
 
 .something {
     position: relative;
-    height: 1000px;
+    min-height: 1000px;
+    height: 120%;
 }
 
 .center {
@@ -339,19 +340,15 @@ header>div ul.navbar>li>label {
 }
 
 
-/* signup html */
-/* section signup */
-.signup_wrap {
-    margin: 0 auto;
-    width: 500px;
-    border: 1px solid var(--color-dark-white);
-    border-radius: 15px;
-    padding: 50px;
+/* signup.html */
+/* signup */
+.form>h3 {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-bold);
+    color: var(--color-grey);
+    padding-top: 10px;
 }
 
-.signup_wrap>label {
-    padding: 10px 20px 0 10px;
-}
 
 .input_row {
     width: 100%;
@@ -364,17 +361,13 @@ header>div ul.navbar>li>label {
 }
 
 .input_row>label {
-    font-size: var(--font-small);
-    line-height: 20px;
     margin-right: 50px;
-}
-
-.input_row>label:nth-of-type(2) {
-    margin-left: 27px;
+    color: var(--color-dark-grey);
+    font-weight: var(--weight-regular);
 }
 
 .input_row>label>input {
-    margin: 10px;
+    margin: 4px;
 }
 
 .input_row>label>span:hover {
@@ -403,6 +396,7 @@ header>div ul.navbar>li>label {
     display: block;
     width: 100%;
     font-size: var(--font-small);
+    font-weight: var(--weight-bold);
 }
 
 
@@ -502,18 +496,15 @@ header>div ul.navbar>li>label {
     color: var(--color-dark-grey);
 }
 
-.mypage_notice p:nth-child(1) {
+.mypage_notice h5 {
+    color: var(--color-grey);
     font-size: var(--font-small);
-    padding-bottom: 10px;
+    padding: 10px 0 10px 0;
 }
 
-.change_pw_form>.input_row {
+.form>.input_row {
     border: 0;
     border-bottom: 1px solid var(--color-light-white);
-    font-weight: var(--weight-bold);
-}
-
-.change_pw_form>.input_row>.input_text {
     font-weight: var(--weight-bold);
 }
 
