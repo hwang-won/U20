@@ -732,7 +732,7 @@ header>div ul.navbar>li>label {
 
 /* footer */
 footer {
-    position: relative;
+    position: fixed;
     bottom: 0;
     height: 60px;
     width: 100%;
