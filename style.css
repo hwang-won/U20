@@ -168,7 +168,7 @@ p {
     padding-top: 50px;
 }
 
-.country_h2{
+.country_h2 {
     color: #006caf;
     text-transform: uppercase;
     margin-left: 0;
@@ -180,90 +180,196 @@ p {
     margin-inline-end: 0px;
     font-weight: bold;
 }
+
 .country_table {
     width: 100%;
     max-width: 1200px;
     position: relative;
 }
+
 .space {
     padding-left: 55px;
     padding-right: 55px;
 }
+
 .space--right {
     padding-left: 0;
 }
+
 .space--left {
     padding-right: 0;
 }
-.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{vertical-align: middle;}
-.table > tbody > tr > td.td_over, .table > tfoot > tr > td.td_over{overflow: hidden;}
-div.tb_list{margin-bottom: 12px;}
-div.col_tb_pad_R{padding-right: 0;}
-div.col_tb_pad_L{padding-left: 0;}
-div.tb_list_R{margin-right:15px;}
-table.team_table{/*border: 1px solid #ccc;*/border-collapse: collapse;margin: 0;padding: 0;width: 100%;table-layout: fixed;border-top:2px solid #024274;}
-table.team_table caption,table.modal_table caption {display: none;}
-table.team_table tr{background: #fff;border-bottom:1px solid #ddd;padding: .35em;}
-table.team_table th,table.team_table td{padding: .825em;text-align: center;}
-table.team_table tbody tr.border_bg,table.modal_table tr.border_bg{background: #fff;}
-table.team_table th{font-size: 1em;letter-spacing: .1em;background:#e9eaed;color:#2f2f2f;font-family: 'NotoSansKR-Regular';white-space: nowrap;}
-table.team_table td{font-size: 1em;position: relative;/* white-space: nowrap; */}
-table.team_table > tbody > tr:hover{background-color:#f1f8ff; /*#bbdefd;*/color:#333;} /*Modified by KJLEE at 2018.03.27*/
-table.team_table td[data-th]::before{display: none;text-transform: uppercase;content: attr(data-th);}
-table.team_table tr.tb_title_top01 th,table.team_table tr.tb_title_top02 td{text-align: left;padding-left:18px;background:#1565c0;color: #fff;}
-table.team_table tbody tr.tb_title_top02 td.sm_td_title{display: none;}
-table.team_table.center{width:70%;border:1px solid #ddd; margin:0 auto; margin-top:30px;margin-bottom:30px;}
+
+.table>thead>tr>th,
+.table>tbody>tr>th,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>tbody>tr>td,
+.table>tfoot>tr>td {
+    vertical-align: middle;
+}
+
+.table>tbody>tr>td.td_over,
+.table>tfoot>tr>td.td_over {
+    overflow: hidden;
+}
+
+div.tb_list {
+    margin-bottom: 12px;
+}
+
+div.col_tb_pad_R {
+    padding-right: 0;
+}
+
+div.col_tb_pad_L {
+    padding-left: 0;
+}
+
+div.tb_list_R {
+    margin-right: 15px;
+}
+
+table.team_table {
+    /*border: 1px solid #ccc;*/
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+    border-top: 2px solid #024274;
+}
+
+table.team_table caption,
+table.modal_table caption {
+    display: none;
+}
+
+table.team_table tr {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: .35em;
+}
+
+table.team_table th,
+table.team_table td {
+    padding: .825em;
+    text-align: center;
+}
+
+table.team_table tbody tr.border_bg,
+table.modal_table tr.border_bg {
+    background: #fff;
+}
+
+table.team_table th {
+    font-size: 1em;
+    letter-spacing: .1em;
+    background: #e9eaed;
+    color: #2f2f2f;
+    font-family: 'NotoSansKR-Regular';
+    white-space: nowrap;
+}
+
+table.team_table td {
+    font-size: 1em;
+    position: relative;
+    /* white-space: nowrap; */
+}
+
+table.team_table>tbody>tr:hover {
+    background-color: #f1f8ff;
+    /*#bbdefd;*/
+    color: #333;
+}
+
+/*Modified by KJLEE at 2018.03.27*/
+table.team_table td[data-th]::before {
+    display: none;
+    text-transform: uppercase;
+    content: attr(data-th);
+}
+
+table.team_table tr.tb_title_top01 th,
+table.team_table tr.tb_title_top02 td {
+    text-align: left;
+    padding-left: 18px;
+    background: #1565c0;
+    color: #fff;
+}
+
+table.team_table tbody tr.tb_title_top02 td.sm_td_title {
+    display: none;
+}
+
+table.team_table.center {
+    width: 70%;
+    border: 1px solid #ddd;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 
 /* 페이징 */
 .page_wrap {
     padding-top: 50px;
-	text-align:center;
-	font-size:0;
- }
+    text-align: center;
+    font-size: 0;
+}
+
 .page_nation {
-	display:inline-block;
+    display: inline-block;
 }
+
 .page_nation .none {
-	display:none;
+    display: none;
 }
+
 .page_nation a {
-	display:block;
-	margin:0 3px;
-	float:left;
-	border:1px solid #e6e6e6;
-	width:28px;
-	height:28px;
-	line-height:28px;
-	text-align:center;
-	background-color:#fff;
-	font-size:13px;
-	color:#999999;
-	text-decoration:none;
+    display: block;
+    margin: 0 3px;
+    float: left;
+    border: 1px solid #e6e6e6;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    background-color: #fff;
+    font-size: 13px;
+    color: #999999;
+    text-decoration: none;
 }
+
 .page_nation .arrow {
-	border:1px solid #ccc;
+    border: 1px solid #ccc;
 }
+
 .page_nation .pprev {
-	background:#f8f8f8 url('img/page_pprev.png') no-repeat center center;
-	margin-left:0;
+    background: #f8f8f8 url('img/page_pprev.png') no-repeat center center;
+    margin-left: 0;
 }
+
 .page_nation .prev {
-	background:#f8f8f8 url('img/page_prev.png') no-repeat center center;
-	margin-right:7px;
+    background: #f8f8f8 url('img/page_prev.png') no-repeat center center;
+    margin-right: 7px;
 }
+
 .page_nation .next {
-	background:#f8f8f8 url('img/page_next.png') no-repeat center center;
-	margin-left:7px;
+    background: #f8f8f8 url('img/page_next.png') no-repeat center center;
+    margin-left: 7px;
 }
+
 .page_nation .nnext {
-	background:#f8f8f8 url('img/page_nnext.png') no-repeat center center;
-	margin-right:0;
+    background: #f8f8f8 url('img/page_nnext.png') no-repeat center center;
+    margin-right: 0;
 }
+
 .page_nation a.active {
-	background-color:#42454c;
-	color:#fff;
-	border:1px solid #42454c;
+    background-color: #42454c;
+    color: #fff;
+    border: 1px solid #42454c;
 }
+
 
 /* header */
 #sidebar_icon {
@@ -324,8 +430,8 @@ header>div ul.navbar>li>label {
     font-size: 20px;
 }
 
-/* sidebar */
 
+/* sidebar */
 .sidebar_btn {
     display: block;
     position: relative;
@@ -531,6 +637,7 @@ header>div ul.navbar>li>label {
 }
 
 
+/* login.html */
 /* login */
 .logo_img_login {
     display: block;
@@ -623,8 +730,6 @@ header>div ul.navbar>li>label {
 }
 
 
-
-
 /* footer */
 footer {
     position: relative;
@@ -644,8 +749,7 @@ footer {
 }
 
 
-
-
+/* media quarry */
 @media screen and (max-width: 1280px) {
     body {
         color: red;
