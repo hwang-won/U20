@@ -386,6 +386,11 @@ table.team_table.center {
 /* 검색 리스팅 */
 .selectWrap {
     margin: 10px 0 12px 0;
+    padding: 20px 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #dfdfdf;
+    border-radius: 9px;
 }
 
 .selectWrap:after {
@@ -465,8 +470,10 @@ margin-right: 10px !important;
 /*judge.html*/
 /*버튼*/
 .base_mar{
-    margin-top: 40px;
+    /* margin-top: 8px; */
+    margin-bottom: 8px;
 }
+
 .col_right{
     float: right;
     margin-left: 15px;
@@ -482,11 +489,13 @@ margin-right: 10px !important;
     font-family: 'NotoSansKR-Medium'; 
 }
 .btn_base .btn_add,.btn_base a.btn_footer{
-    background:#024274;
-    color:#fff; 
+    /* background:#024274; */
+    background:#e9eaed;
+    color:#444444; 
 }
 .btn_base .btn_add:hover,.btn_base a.btn_footer{
-    background:#002c4f; 
+    /* background:#002c4f;  */
+    background:#bdbdbd; 
 }
 .btn_base a.btn_footer{
     border-radius: 0;
@@ -535,8 +544,9 @@ margin-right: 10px !important;
     font-size: 0.85em;
     text-decoration: none;
     /* background:#5CB762; */
-    background:#024274;
-    color:#fff;
+    /* background:#024274; */
+    background:#e9eaed;
+    color:#444444;
     font-family: 'NotoSansKR-Regular';
     border-radius: 3px;
 }
@@ -545,7 +555,8 @@ margin-right: 10px !important;
 }
 .btn_excel:hover{
     /* background: #217b27 ; */
-    background: #002c4f ;
+    /* background: #002c4f ; */
+    background: #bdbdbd ;
 }
 .main_list{
     color:#333;
@@ -554,7 +565,7 @@ margin-right: 10px !important;
     text-decoration: underline;
     color:#024274;
 }
-span.bold{
+.bold{
     font-weight: bold;
 }
 

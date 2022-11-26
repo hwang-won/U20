@@ -223,101 +223,108 @@
         <!-- contents 본문 내용 -->
         <div class="container">
             <div class="contents main-table">
-                <!-- 코치 테이블 -->
                 <div class="country_table space">			      		
                     <div class="team_tabs-content tab">
-                        <table class="table table-hover team_table">
-                            <h2 class="country_h2">코치진</h2>
-                            <!-- 검색 -->
-                            <div class="selectWrap">
-                                    <form action="" class="searchForm" name="coach_searchForm" method="post">
-                                        <div class="selectArea">
-                                            <div class="select_box mr10">
-                                                <select class="d_select" title="국가" style="width: 130px;">
-                                                    <option value="" hidden="">국가</option>
-                                                    <option value="1">한국</option>
-                                                    <option value="2">일본</option>
-                                                    <option value="3">사우디 아라비아</option>
-                                                    <option value="4">인도</option>
-                                                </select>
-                                            </div>
-                                            <div class="select_box mr10">
-                                                <select class="d_select" title="지역" style="width: 100px;">
-                                                    <option value="" hidden="">지역</option>
-                                                    <option value="1">서울</option>
-                                                    <option value="2">도쿄</option>
-                                                </select>
-                                            </div>
-                                            <div class="select_box mr10">
-                                                <select class="d_select" title="소속" style="width: 120px;">
-                                                    <option value="" hidden="">소속</option>
-                                                    <option value="1">국제코치협회</option>
-                                                    <option value="2">한국코치연맹</option>
-                                                </select>
-                                            </div>
-                                            <div class="select_box mr10">
-                                                <select class="d_select" title="성별" style="width: 80px;">
-                                                    <option value="" hidden="">성별</option>
-                                                    <option value="1">남</option>
-                                                    <option value="2">여</option>
-                                                </select>
-                                            </div>
-                                            <div class="select_box mr10">
-                                                <select class="d_select" title="직무" style="width: 150px;">
-                                                    <option value="" hidden="">직무</option>
-                                                    <option value="1">헤드 코치</option>
-                                                    <option value="2">서브 코치</option>
-                                                </select>
-                                            </div>
-                                            <div class="select_box mr10">
-                                                <select class="d_select" title="참가경기" style="width: 150px;">
-                                                    <option value="" hidden="">참가경기</option>
-                                                    <option value="" disabled="">단거리달리기</option>
-                                                    <option value="1">100M</option>
-                                                    <option value="2">200M</option>
-                                                    <option value="3">400M</option>
-                                                    <option value="" disabled="">중/장거리</option>
-                                                    <option value="4">800M</option>
-                                                    <option value="5">1500M</option>
-                                                    <option value="6">5000M</option>
-                                                    <option value="7">10000M</option>
-                                                    <option value="8">3000M 장애물</option>
-                                                    <option value="" disabled="">허들달리기</option>
-                                                    <option value="9">110M 허들</option>
-                                                    <option value="10">400M 허들</option>
-                                                    <option value="" disabled="">점프경기</option>
-                                                    <option value="11">높이뛰기</option>
-                                                    <option value="12">장대높이뛰기</option>
-                                                    <option value="13">멀리뛰기</option>
-                                                    <option value="14">삼단뛰기</option>
-                                                    <option value="" disabled="">던지기</option>
-                                                    <option value="15">투포환</option>
-                                                    <option value="16">원반던지기</option>
-                                                    <option value="17">해머던지기</option>
-                                                    <option value="18">창던지기</option>
-                                                    <option value="" disabled="">종합</option>
-                                                    <option value="19">10종 경기</option>
-                                                    <option value="" disabled="">경보</option>
-                                                    <option value="20">10000M 경보</option>
-                                                    <option value="" disabled="">릴레이</option>
-                                                    <option value="21">4x100M 릴레이</option>
-                                                    <option value="22">4x400M 릴레이</option>
-                                                    <option value="23">4x400M 혼성</option>
-                                                </select>
-                                            </div>
-                                            <div class="search" style="width: 260px;">
-                                                <input type="text" id="search_coach" class="word" name="search_coach" placeholder="검색어를 입력해주세요" maxlength="30" style="width: 270px;">
-                                                <button type="submit" class="btn_search" title="검색"></a>
-                                            </div>
-                                        </div>
-                                    </form>
-                                    <!-- 등록 버튼 -->
-                                    <div class="btn_base col_right">
-                                        <a href="#" onclick="" class="btn_add">
-                                            <span class="btn_txt bold">등록</span>
-                                        </a>
+                        <h2 class="country_h2">코치진</h2>
+                        <!-- 검색 -->
+                        <div class="selectWrap">
+                            <form action="" class="searchForm" name="coach_searchForm" method="post">
+                                <div class="selectArea">
+                                    <div class="select_box mr10">
+                                        <select class="d_select" title="국가" style="width: 130px;">
+                                            <option value="" hidden="">국가</option>
+                                            <option value="1">한국</option>
+                                            <option value="2">일본</option>
+                                            <option value="3">사우디 아라비아</option>
+                                            <option value="4">인도</option>
+                                        </select>
+                                    </div>
+                                    <div class="select_box mr10">
+                                        <select class="d_select" title="지역" style="width: 100px;">
+                                            <option value="" hidden="">지역</option>
+                                            <option value="1">서울</option>
+                                            <option value="2">도쿄</option>
+                                        </select>
+                                    </div>
+                                    <div class="select_box mr10">
+                                        <select class="d_select" title="소속" style="width: 120px;">
+                                            <option value="" hidden="">소속</option>
+                                            <option value="1">국제코치협회</option>
+                                            <option value="2">한국코치연맹</option>
+                                        </select>
+                                    </div>
+                                    <div class="select_box mr10">
+                                        <select class="d_select" title="성별" style="width: 80px;">
+                                            <option value="" hidden="">성별</option>
+                                            <option value="1">남</option>
+                                            <option value="2">여</option>
+                                        </select>
+                                    </div>
+                                    <div class="select_box mr10">
+                                        <select class="d_select" title="직무" style="width: 150px;">
+                                            <option value="" hidden="">직무</option>
+                                            <option value="1">헤드 코치</option>
+                                            <option value="2">서브 코치</option>
+                                        </select>
+                                    </div>
+                                    <div class="select_box mr10">
+                                        <select class="d_select" title="참가경기" style="width: 150px;">
+                                            <option value="" hidden="">참가경기</option>
+                                            <option value="" disabled="">단거리달리기</option>
+                                            <option value="1">100M</option>
+                                            <option value="2">200M</option>
+                                            <option value="3">400M</option>
+                                            <option value="" disabled="">중/장거리</option>
+                                            <option value="4">800M</option>
+                                            <option value="5">1500M</option>
+                                            <option value="6">5000M</option>
+                                            <option value="7">10000M</option>
+                                            <option value="8">3000M 장애물</option>
+                                            <option value="" disabled="">허들달리기</option>
+                                            <option value="9">110M 허들</option>
+                                            <option value="10">400M 허들</option>
+                                            <option value="" disabled="">점프경기</option>
+                                            <option value="11">높이뛰기</option>
+                                            <option value="12">장대높이뛰기</option>
+                                            <option value="13">멀리뛰기</option>
+                                            <option value="14">삼단뛰기</option>
+                                            <option value="" disabled="">던지기</option>
+                                            <option value="15">투포환</option>
+                                            <option value="16">원반던지기</option>
+                                            <option value="17">해머던지기</option>
+                                            <option value="18">창던지기</option>
+                                            <option value="" disabled="">종합</option>
+                                            <option value="19">10종 경기</option>
+                                            <option value="" disabled="">경보</option>
+                                            <option value="20">10000M 경보</option>
+                                            <option value="" disabled="">릴레이</option>
+                                            <option value="21">4x100M 릴레이</option>
+                                            <option value="22">4x400M 릴레이</option>
+                                            <option value="23">4x400M 혼성</option>
+                                        </select>
+                                    </div>
+                                    <div class="search" style="width: 260px;">
+                                        <input type="text" id="search_coach" class="word" name="search_coach" placeholder="검색어를 입력해주세요" maxlength="30" style="width: 270px;">
+                                        <button type="submit" class="btn_search" title="검색"></a>
                                     </div>
                                 </div>
+                            </form>
+                        </div>
+                        <!-- 등록 버튼 -->
+                        <div class="btn_base base_mar col_right">
+                            <a href="#" onclick="" class="btn_add">
+                                <span class="btn_txt bold">등록</span>
+                            </a>
+                        </div>
+                        <!-- 엑셀 출력 버튼 -->
+                        <div class="btn_base base_mar col_right">
+                            <input type="button" onclick="" class="btn_excel" value="엑셀 출력">
+                        </div>
+                        <div class="btn_base base_mar col_right">
+                            <input type="button" onclick="" class="btn_excel" value="엑셀 입력" >
+                        </div>                                
+                        <!-- 코치 테이블 -->
+                        <table class="table table-hover team_table">
                             <colgroup>
                                 <col width="auto">
                                 <col width="auto">
@@ -344,7 +351,8 @@
                                 <th scope="col">직무</th>
                                 <th scope="col">참가경기</th>
                                 <th scope="col">상세보기</th>
-                                <th scope="col"></th>
+                                <th scope="col">수정</th>
+                                <th scope="col">삭제</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -360,6 +368,7 @@
                                     <td scope="col">헤드 코치</td>
                                     <td scope="col">100m</td>
                                     <td scope="col"><a href="#" onclick="" class="btn_view">보기</a></td>
+                                    <td scope="col"><a href="#" onclick="" class="btn_view">수정</a></td>
                                     <td scope="col"><a href="#" onclick="" class="btn_delete">삭제</a></td>
                                 </tr>                 
                                 <tr>
@@ -374,6 +383,7 @@
                                     <td scope="col">헤드 코치</td>
                                     <td scope="col">100m</td>
                                     <td scope="col"><a href="#" onclick="" class="btn_view">보기</a></td>
+                                    <td scope="col"><a href="#" onclick="" class="btn_view">수정</a></td>
                                     <td scope="col"><a href="#" onclick="" class="btn_delete">삭제</a></td>
                                 </tr>                 
                                 <tr>
@@ -388,6 +398,7 @@
                                     <td scope="col">헤드 코치</td>
                                     <td scope="col">100m</td>
                                     <td scope="col"><a href="#" onclick="" class="btn_view">보기</a></td>
+                                    <td scope="col"><a href="#" onclick="" class="btn_view">수정</a></td>
                                     <td scope="col"><a href="#" onclick="" class="btn_delete">삭제</a></td>
                                 </tr>                 
                                 <tr>
@@ -402,6 +413,7 @@
                                     <td scope="col">헤드 코치</td>
                                     <td scope="col">100m</td>
                                     <td scope="col"><a href="#" onclick="" class="btn_view">보기</a></td>
+                                    <td scope="col"><a href="#" onclick="" class="btn_view">수정</a></td>
                                     <td scope="col"><a href="#" onclick="" class="btn_delete">삭제</a></td>
                                 </tr>                 
                                 <tr>
@@ -416,14 +428,11 @@
                                     <td scope="col">헤드 코치</td>
                                     <td scope="col">100m</td>
                                     <td scope="col"><a href="#" onclick="" class="btn_view">보기</a></td>
+                                    <td scope="col"><a href="#" onclick="" class="btn_view">수정</a></td>
                                     <td scope="col"><a href="#" onclick="" class="btn_delete">삭제</a></td>
                                 </tr>           
                             </tbody>
                         </table>
-						<!-- 엑셀 출력 버튼 -->
-                        <div class="btn_base base_mar col_right">
-                            <input type="button" onclick="" class="btn_excel" value="엑셀">
-                        </div>
                     </div>  
                 </div>
                 <!-- 코치 페이징 -->
