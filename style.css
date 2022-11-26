@@ -105,6 +105,10 @@ p {
     margin: 0;
 }
 
+h5 {
+    font-size: var(--font-big);
+}
+
 .section {
     padding: 50px;
     text-align: center;
@@ -753,5 +757,12 @@ footer {
 @media screen and (max-width: 1280px) {
     body {
         color: red;
+    }
+}
+
+/* media quarry */
+@media screen and (min-width: 1300px) {
+    body {
+        color: blue;
     }
 }
