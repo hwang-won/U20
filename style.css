@@ -478,7 +478,7 @@ margin-right: 10px !important;
     float: right;
     margin-left: 15px;
 }
-.btn_base a,.btn_base input{
+.btn_base a,.btn_base input, .btn_base button{
     display: block;
     text-align: center;
     width: 80px;
@@ -558,6 +558,58 @@ margin-right: 10px !important;
     /* background: #002c4f ; */
     background: #bdbdbd ;
 }
+
+/* judge_info.html */
+/* judge_info */
+.judge_info {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.judge_info>h3 {
+    padding-bottom: 6px;
+}
+
+.judge_info_box {
+    display: block;
+    position: relative;
+    padding: 30px 10px 10px 0;
+    color: var(--color-dark-grey);
+    font-weight: var(--weight-bold);
+    border-bottom: 1px solid var(--color-light-white);
+}
+.judge_info_box a,
+.judge_info_box span:last-child,
+.judge_info_box .input_text {
+    float: right;
+    color: var(--color-blue);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/*이미지 등록 폼*/
+.form-control{
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+/*수정 안내 span*/
+.input_guide{
+    font-size: 0.85em;
+    color:var(--color-light-grey);
+}
+
 .main_list{
     color:#333;
 }
@@ -567,6 +619,11 @@ margin-right: 10px !important;
 }
 .bold{
     font-weight: bold;
+}
+/* 이미지 재조정 */
+.image_resize{
+    max-width: 50%;
+    height: auto;
 }
 
 /* header */
