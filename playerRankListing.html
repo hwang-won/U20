@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>U20</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav>
+        <a class="logo" href="#" style="padding-left: 20px;">
+            <!--패딩 20px줌-->
+            <img src="img/logo.png" alt="Logo" class="logo_img" />
+        </a>
+        </div>
+    </nav>
+    <section class="something container">
+        <div class="left_menu">
+            <ul class="menu2">
+                <li>
+                    <a href="#" onclick="test(0)">참가자 관리</a>
+                    <ul class="sub_menu">
+                        <li><a href="#">심판 목록</a></li>
+                        <li><a href="#">임원 목록</a></li>
+                        <li><a href="#">코치 목록</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="test(1)">선수 관리</a>
+                    <ul class="sub_menu">
+                        <li><a href="#">선수 목록</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="test(2)">경기 관리</a>
+                    <ul class="sub_menu">
+                        <li><a href="#">경기 목록</a></li>
+                        <li><a href="#">국가 목록</a></li>
+                        <li><a href="#">일정 목록</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="test(3)">기록 관리</a>
+                    <ul class="sub_menu">
+                        <li><a href="/resultManagement.html">경기결과 목록</a></li>
+                        <li><a href="#">역대기록 목록</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="test(4)">통계 관리</a>
+                    <ul class="sub_menu" style="display:block">
+                        <li><a href="/playerRankListing.html">선수별 순위보기</a></li>
+                        <li><a href="/newRecordListing.html">신기록 경기기록</a></li>
+                        <li><a href="/scheduleRankListing.html">경기별 순위보기</a></li>
+                        <li><a href="/scheduleListing.html">경기별 메달보기</a></li>
+                        <li><a href="/countryListing.html">국가별 순위보기</a></li>
+                    </ul>
+                </li>
+                <li onclick="test(5)">
+                    <a href="#">계정 관리</a>
+                    <ul class="sub_menu">
+                        <li><a href="#">마이페이지</a></li>
+                        <li><a href="#">비밀번호 변경</a></li>
+                        <li><a href="#">권한 변경</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        </div>
+        <div class="contents_wrap">
+            <div class="selectWrap">
+                <div class="selectArea float_r">
+                    <!-- 국가 선택 -->
+                    <div class="select_box mr10">
+                        <select class="d_select" title="국가" style="width: 150px;">
+                            <option value="" hidden>국가</option>
+                            <option value="1">대한민국</option>
+                            <option value="2">중국</option>
+                            <option value="3">일본</option>
+                        </select>
+                    </div>
+                    <!-- 종목 추후 앞에 순서 따라 보여주는 거 분류해야함  -->
+                    <div class="select_box mr10">
+                        <select class="d_select" title="구분" style="width: 172.667px;">
+                            <option value="" hidden>종목</option>
+                            <option value="" disabled>단거리달리기</option>
+                            <option value="1">100M</option>
+                            <option value="2">200M</option>
+                            <option value="3">400M</option>
+                            <option value="" disabled>중/장거리</option>
+                            <option value="4">800M</option>
+                            <option value="5">1500M</option>
+                            <option value="6">5000M</option>
+                            <option value="7">10000M</option>
+                            <option value="8">3000M 장애물</option>
+                            <option value="" disabled>허들달리기</option>
+                            <option value="9">110M 허들</option>
+                            <option value="10">400M 허들</option>
+                            <option value="" disabled>점프경기</option>
+                            <option value="11">높이뛰기</option>
+                            <option value="12">장대높이뛰기</option>
+                            <option value="13">멀리뛰기</option>
+                            <option value="14">삼단뛰기</option>
+                            <option value="" disabled>던지기</option>
+                            <option value="15">투포환</option>
+                            <option value="16">원반던지기</option>
+                            <option value="17">해머던지기</option>
+                            <option value="18">창던지기</option>
+                            <option value="" disabled>종합</option>
+                            <option value="19">10종 경기</option>
+                            <option value="" disabled>경보</option>
+                            <option value="20">10000M 경보</option>
+                            <option value="" disabled>릴레이</option>
+                            <option value="21">4x100M 릴레이</option>
+                            <option value="22">4x400M 릴레이</option>
+                            <option value="23">4x400M 혼성</option>
+                        </select>
+                    </div>
+                    <!-- 클릭 시 select 옵션 보내는 onclick 구현 예정 -->
+                    <a class="btn_search" href="#"><img src="img/btn_search.gif" alt="검색"></a>
+                </div>
+            </div>
+            <div class="tbl_area">
+                <table width="100%" cellspacing="0" cellpadding="0" class="tbl_t01">
+                    <colgroup>
+                        <col style="width: 10%;">
+                        <col style="width:15%;">
+                        <col style="width:25%;">
+                        <col style="width:20%;">
+                        <col style="width:10%;">
+                        <col style="width:10%;">
+                        <col style="width:10%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>순위</th>
+                            <th>국가</th>
+                            <th>이름</th>
+                            <th>출전 종목</th>
+                            <th>금</th>
+                            <th>은</th>
+                            <th>동</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>한국</td>
+                            <td>권 산</td>
+                            <td>100m, 400m, 1600m </td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>한국</td>
+                            <td>권 산</td>
+                            <td>100m, 400m, 1600m </td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>한국</td>
+                            <td>권 산</td>
+                            <td>100m, 400m, 1600m </td>
+                            <td>3</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>한국</td>
+                            <td>권 산</td>
+                            <td>100m, 400m, 1600m </td>
+                            <td>3</td>
+                            <td>1</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>한국</td>
+                            <td>권 산</td>
+                            <td>100m, 400m, 1600m </td>
+                            <td>2</td>
+                            <td>4</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>한국</td>
+                            <td>권 산</td>
+                            <td>100m, 400m, 1600m </td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>한국</td>
+                            <td>권 산</td>
+                            <td>100m, 400m, 1600m </td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>한국</td>
+                            <td>권 산</td>
+                            <td>100m, 400m, 1600m </td>
+                            <td>0</td>
+                            <td>2</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>한국</td>
+                            <td>권 산</td>
+                            <td>100m, 400m, 1600m </td>
+                            <td>0</td>
+                            <td>2</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>한국</td>
+                            <td>권 산</td>
+                            <td>100m, 400m, 1600m </td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="board_page">
+                <a href="#" class="bt first">&lt;&lt;</a>
+                <a href="#" class="bt prev">&lt;</a>
+                <a href="#" class="num on">1</a>
+                <a href="#" class="num">2</a>
+                <a href="#" class="num">3</a>
+                <a href="#" class="num">4</a>
+                <a href="#" class="num">5</a>
+                <a href="#" class="bt next">&gt;</a>
+                <a href="#" class="bt last">&gt;&gt;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <p class="footer_text">
+            Copyright © 2022, 20th Asian U20 Athletics Championships
+            Yecheon. All rights reserved.
+        </p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>U20</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav>
+        <a class="logo" href="#" style="padding-left: 20px;">
+            <!--패딩 20px줌-->
+            <img src="img/logo.png" alt="Logo" class="logo_img" />
+        </a>
+        </div>
+    </nav>
+    <section class="something container">
+        <div class="left_menu">
+            <ul class="menu2">
+                <li>
+                    <a href="#" onclick="test(0)">참가자 관리</a>
+                    <ul class="sub_menu">
+                        <li><a href="#">심판 목록</a></li>
+                        <li><a href="#">임원 목록</a></li>
+                        <li><a href="#">코치 목록</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="test(1)">선수 관리</a>
+                    <ul class="sub_menu">
+                        <li><a href="#">선수 목록</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="test(2)">경기 관리</a>
+                    <ul class="sub_menu">
+                        <li><a href="#">경기 목록</a></li>
+                        <li><a href="#">국가 목록</a></li>
+                        <li><a href="#">일정 목록</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="test(3)">기록 관리</a>
+                    <ul class="sub_menu">
+                        <li><a href="/resultManagement.html">경기결과 목록</a></li>
+                        <li><a href="#">역대기록 목록</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="test(4)">통계 관리</a>
+                    <ul class="sub_menu" style="display: block;">
+                        <li><a href="/playerRankListing.html">선수별 순위보기</a></li>
+                        <li><a href="/newRecordListing.html">신기록 경기기록</a></li>
+                        <li><a href="/scheduleRankListing.html">경기별 순위보기</a></li>
+                        <li><a href="/scheduleListing.html">경기별 메달보기</a></li>
+                        <li><a href="/countryListing.html">국가별 순위보기</a></li>
+                    </ul>
+                </li>
+                <li onclick="test(5)">
+                    <a href="#">계정 관리</a>
+                    <ul class="sub_menu">
+                        <li><a href="#">마이페이지</a></li>
+                        <li><a href="#">비밀번호 변경</a></li>
+                        <li><a href="#">권한 변경</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        </div>
+        <div class="contents_wrap">
+            <div class="selectWrap">
+                <div class="selectArea float_r">
+                    <div class="select_box mr10">
+                        <select class="d_select" title="날짜" style="width: 172.667px;">
+                            <option value="1">날짜</option>
+                            <option value="2">2023-06-04</option>
+                            <option value="3">2023-06-05</option>
+                            <option value="4">2023-06-06</option>
+                            <option value="5">2023-06-07</option>
+                        </select>
+                    </div>
+
+                    <div class="select_box mr10">
+                        <select class="d_select" title="성별" style="width: 122px;">
+                            <option value="" hidden>성별</option>
+                            <option value="1">남</option>
+                            <option value="2">여</option>
+                        </select>
+                    </div>
+
+                    <div class="select_box mr10">
+                        <select class="d_select" title="구분" style="width: 172.667px;">
+                            <option value="" hidden>종목</option>
+                            <option value="" disabled>단거리달리기</option>
+                            <option value="1">100M</option>
+                            <option value="2">200M</option>
+                            <option value="3">400M</option>
+                            <option value="" disabled>중/장거리</option>
+                            <option value="4">800M</option>
+                            <option value="5">1500M</option>
+                            <option value="6">5000M</option>
+                            <option value="7">10000M</option>
+                            <option value="8">3000M 장애물</option>
+                            <option value="" disabled>허들달리기</option>
+                            <option value="9">110M 허들</option>
+                            <option value="10">400M 허들</option>
+                            <option value="" disabled>점프경기</option>
+                            <option value="11">높이뛰기</option>
+                            <option value="12">장대높이뛰기</option>
+                            <option value="13">멀리뛰기</option>
+                            <option value="14">삼단뛰기</option>
+                            <option value="" disabled>던지기</option>
+                            <option value="15">투포환</option>
+                            <option value="16">원반던지기</option>
+                            <option value="17">해머던지기</option>
+                            <option value="18">창던지기</option>
+                            <option value="" disabled>종합</option>
+                            <option value="19">10종 경기</option>
+                            <option value="" disabled>경보</option>
+                            <option value="20">10000M 경보</option>
+                            <option value="" disabled>릴레이</option>
+                            <option value="21">4x100M 릴레이</option>
+                            <option value="22">4x400M 릴레이</option>
+                            <option value="23">4x400M 혼성</option>
+                        </select>
+                    </div>
+
+                    <a class="btn_search" href="#"><img src="img/btn_search.gif" alt="검색"></a>
+                </div>
+            </div>
+            <!-- select 선택에 따른 종목 결과 나열 -->
+            <div class="tbl_area">
+                <table width="100%" cellspacing="0" cellpadding="0" class="tbl_t01">
+                    <colgroup>
+                        <col style="width:10%;">
+                        <col style="width:25%;">
+                        <col style="width:15%;">
+                        <col style="width:25%;">
+                        <col style="width:25%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>등수</th>
+                            <th>이름</th>
+                            <th>국가</th>
+                            <th>결과</th>
+                            <th>비고</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>MinJi Kim</td>
+                            <td>KOR</td>
+                            <td>0:10:12</td>
+                            <td>World Record</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Yoshitaku Nagasako</td>
+                            <td>JPN</td>
+                            <td>0:10:46</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Elena Potapenko</td>
+                            <td>KAZ</td>
+                            <td>0:10:95</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Mingyu Zhang</td>
+                            <td>CHN</td>
+                            <td>0:11:26</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Alise Fakhrutdinova</td>
+                            <td>UZB</td>
+                            <td>0:11:49</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Tsogtbaatar Tsend-Ochir</td>
+                            <td>MGL</td>
+                            <td>0:12:46</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Sulaiman Hamad</td>
+                            <td>KSA</td>
+                            <td>0:12:75</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Chamara Repiyallage</td>
+                            <td>SRI</td>
+                            <td>0:00:00</td>
+                            <td>Disqualified</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="board_page">
+                <a href="#" class="bt first">&lt;&lt;</a>
+                <a href="#" class="bt prev">&lt;</a>
+                <a href="#" class="num on">1</a>
+                <a href="#" class="num">2</a>
+                <a href="#" class="num">3</a>
+                <a href="#" class="num">4</a>
+                <a href="#" class="num">5</a>
+                <a href="#" class="bt next">&gt;</a>
+                <a href="#" class="bt last">&gt;&gt;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <p class="footer_text">
+            Copyright © 2022, 20th Asian U20 Athletics Championships
+            Yecheon. All rights reserved.
+        </p>
+    </footer>
+</body>
+
+</html>
