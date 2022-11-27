@@ -32,40 +32,43 @@
 }
 
 @font-face {
-	font-family: 'Noto Sans KR';
-	font-style: normal;
-	font-weight: 100;
-	src: local('Noto Sans Light'), local('NotoSans-Light'), url(fonts/NotoSans-Light.eot);
-	src: url(fonts/NotoSans-Light.eot?#iefix) format('embedded-opentype'),
-	url(fonts/NotoSans-Light.woff2) format('woff2'),
-	url(fonts/NotoSans-Light.woff) format('woff');
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Noto Sans Light'), local('NotoSans-Light'), url(fonts/NotoSans-Light.eot);
+    src: url(fonts/NotoSans-Light.eot?#iefix) format('embedded-opentype'),
+        url(fonts/NotoSans-Light.woff2) format('woff2'),
+        url(fonts/NotoSans-Light.woff) format('woff');
 }
+
 @font-face {
-	font-family: 'Noto Sans KR';
-	font-style: normal;
-	font-weight: 300;
-	src: local('Noto Sans Regular'), local('NotoSans-Regular'), url(fonts/NotoSans-Regular.eot);
-	src: url(fonts/NotoSans-Regular.eot?#iefix) format('embedded-opentype'),
-	url(fonts/NotoSans-Regular.woff2) format('woff2'),
-	url(fonts/NotoSans-Regular.woff) format('woff');
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Noto Sans Regular'), local('NotoSans-Regular'), url(fonts/NotoSans-Regular.eot);
+    src: url(fonts/NotoSans-Regular.eot?#iefix) format('embedded-opentype'),
+        url(fonts/NotoSans-Regular.woff2) format('woff2'),
+        url(fonts/NotoSans-Regular.woff) format('woff');
 }
+
 @font-face {
-	font-family: 'Noto Sans KR';
-	font-style: normal;
-	font-weight: 500;
-	src: local('Noto Sans Medium'), local('NotoSans-Medium'), url(fonts/NotoSans-Medium.eot);
-	src: url(fonts/NotoSans-Medium.eot?#iefix) format('embedded-opentype'),
-	url(fonts/NotoSans-Medium.woff2) format('woff2'),
-	url(fonts/NotoSans-Medium.woff) format('woff');
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Noto Sans Medium'), local('NotoSans-Medium'), url(fonts/NotoSans-Medium.eot);
+    src: url(fonts/NotoSans-Medium.eot?#iefix) format('embedded-opentype'),
+        url(fonts/NotoSans-Medium.woff2) format('woff2'),
+        url(fonts/NotoSans-Medium.woff) format('woff');
 }
+
 @font-face {
-	font-family: 'Noto Sans KR';
-	font-style: normal;
-	font-weight: 700;
-	src: local('Noto Sans Bold'), local('NotoSans-Bold'), url(fonts/NotoSans-Bold.eot);
-	src: url(fonts/NotoSans-Bold.eot?#iefix) format('embedded-opentype'),
-	url(fonts/NotoSans-Bold.woff2) format('woff2'),
-	url(fonts/NotoSans-Bold.woff) format('woff');
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Noto Sans Bold'), local('NotoSans-Bold'), url(fonts/NotoSans-Bold.eot);
+    src: url(fonts/NotoSans-Bold.eot?#iefix) format('embedded-opentype'),
+        url(fonts/NotoSans-Bold.woff2) format('woff2'),
+        url(fonts/NotoSans-Bold.woff) format('woff');
 }
 
 body {
@@ -101,7 +104,7 @@ a {
 
 ul {
     padding-left: 0;
-	margin: 0;
+    margin: 0;
 }
 
 li {
@@ -349,7 +352,7 @@ table.team_table.center {
 }
 
 .table>tbody>tr:nth-of-type(even) {
-	background-color: #f7f7f7;
+    background-color: #f7f7f7;
 }
 
 /* 페이징 */
@@ -430,21 +433,19 @@ header {
 header>div {
     position: relative;
     margin: 0 auto;
-	display: flex;
-	justify-content: space-between;
+    justify-content: space-between;
     align-items: center;
 }
 
 header>div ul.navbar {
     margin: 0;
-	padding: 7px;
-	display: flex;
-	align-items: center;
+    padding: 7px;
+    align-items: center;
     justify-content: space-between;
 }
 
 header>div ul.navbar.left {
-	width: 230px;
+    width: 230px;
 }
 
 header>div ul.navbar>li {
@@ -454,7 +455,7 @@ header>div ul.navbar>li {
 }
 
 header>div ul.navbar>li.logo {
-	position: relative;
+    position: relative;
     left: 15px;
 }
 
@@ -500,7 +501,7 @@ header>div ul.navbar>li>label {
     width: 230px;
     height: 100%;
     background-color: var(--color-light-blue);
-	border-right: 1px solid var(--color-light-white);
+    border-right: 1px solid var(--color-light-white);
     z-index: 10;
     transition: all .35s
 }
@@ -579,14 +580,14 @@ header>div ul.navbar>li>label {
 }
 
 .accordion_content>ul>li>a:before {
-	content: "";
-	display: inline-block;
-	width: 4px;
+    content: "";
+    display: inline-block;
+    width: 4px;
     height: 4px;
     border-radius: 100% !important;
-	background: var(--color-black);
-	margin-right: 10px;
-	vertical-align: middle;
+    background: var(--color-black);
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
 .accordion_content>ul>li>a:hover {
