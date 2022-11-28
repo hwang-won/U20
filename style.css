@@ -195,7 +195,8 @@ p {
 
 .something {
     position: relative;
-    height: 100vh;
+    height: auto;
+    min-height: 100%;
     margin-bottom: 100px;
 }
 
