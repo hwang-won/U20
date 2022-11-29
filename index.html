@@ -7,13 +7,10 @@
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="fontawesome/css/all.min.css" />
         <script src="/fontawesome/js/all.min.js"></script>
-        <!-- <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        /> -->
+        <!--Data Tables-->
+        <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
+        <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+        <script type="text/javascript" src="useDataTables.js"></script>
         <title>U20</title>
     </head>
     <body>
@@ -271,7 +268,7 @@
                 <!-- 국가 별 순위 -->
                 <div class="country_table space">
                     <div class="team_tabs-content tab">
-                        <table class="table table-hover team_table">
+                        <table class="table table-hover team_table" id="nation_rank" data-order='[[ 1, "asc" ]]' data-page-length='25'>
                             <h2 class="country_h2">국가랭킹</h2>
                             <colgroup>
                                 <col width="auto" />
@@ -291,7 +288,7 @@
                                     <th scope="col">합계</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <!-- <tbody>
                                 <tr>
                                     <td scope="col">0</td>
                                     <td scope="col">INDIA</td>
@@ -300,7 +297,7 @@
                                     <td scope="col">0</td>
                                     <td scope="col">0</td>
                                 </tr>
-                            </tbody>
+                            </tbody> -->
                         </table>
                     </div>
                 </div>
