@@ -6,8 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
-    <script src="/fontawesome/js/all.min.js"></script>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    <script src="script.js"></script>
     <title>U20</title>
 </head>
 
@@ -18,7 +24,7 @@
         <div>
             <ul class="navbar">
                 <li class="logo">
-                    <a href="index.html"><img src="img/logo.png" alt="Logo" class="logo_img" /></a>
+                    <a href="./home.html"><img src="img/logo.png" alt="Logo" class="logo_img" /></a>
                 </li>
                 <li>
                     <label for="sidebar_icon" class="sidebar_btn">
@@ -170,6 +176,7 @@
             </ul>
         </div>
     </div>
+    <div class="container">
     <div class="something contents">
         <div class="contents_wrap">
             <div class="selectWrap">
@@ -237,17 +244,22 @@
                         </select>
                     </div>
 
-                    <a class="btn_search" href="#"><img src="img/btn_search.gif" alt="검색"></a>
+                    <div class="search" style="width: 50px;">
+                        <button type="submit" class="btn_search" title="검색"></a>
+                    </div>
                 </div>
             </div>
             <!-- select 선택에 따른 종목 결과 나열 -->
-            <div class="tbl_area">
-                <table width="100%" cellspacing="0" cellpadding="0" class="tbl_t01">
+            <div class="tbl_area" style="padding:0 60px 0 60px">
+                <table width="100%" cellspacing="0" cellpadding="0" class="table table-hover team_table">
                     <colgroup>
-                        <col style="width:20%;">
+                        <col style="width:13%;">
                         <col style="width:10%;">
-                        <col style="width:25%;">
-                        <col style="width:25%;">
+                        <col style="width:15%;">
+                        <col style="width:10%;">
+                        <col style="width:10%;">
+                        <col style="width:10%;">
+                        <col style="width:12%;">
                         <col style="width:10%;">
                         <col style="width:10%;">
                     </colgroup>
@@ -257,6 +269,9 @@
                             <th>종목</th>
                             <th>경기 이름</th>
                             <th>경기 라운드</th>
+                            <th>선수 이름</th>
+                            <th>심판 이름</th>
+                            <th>기록</th>
                             <th>기록 방식</th>
                             <th> </th>
                         </tr>
@@ -267,76 +282,104 @@
                             <td>원반던지기</td>
                             <td>원반던지기(여)</td>
                             <td>1차</td>
+                            <td>김아랑</td>
+                            <td>tony Kim</td>
+                            <td>12.54m</td>
                             <td>수동</td>
-                            <td><input type="button" onclick="erase(this)" value="삭제" class="bt_erase"></td>
+                            <td><input type="button" onclick="window.open('/modifyResult.html')" value="수정" class="bt_erase"></td>
                         </tr>
                         <tr>
                             <td>2023-06-05</td>
                             <td>원반던지기</td>
                             <td>원반던지기(남)</td>
                             <td>1차</td>
+                            <td>권산</td>
+                            <td>tony Kim</td>
+                            <td>12.54m</td>
                             <td>수동</td>
-                            <td><input type="button" onclick="erase(this)" value="삭제" class="bt_erase"></td>
+                            <td><input type="button" onclick="window.open('/modifyResult.html')" value="수정" class="bt_erase"></td>
                         </tr>
                         <tr>
                             <td>2023-06-05</td>
                             <td>3000M 장애물</td>
                             <td>3000M 장애물 본선</td>
                             <td>3라운드</td>
+                            <td>권산</td>
+                            <td>tony Kim</td>
+                            <td>07:43:34</td>
                             <td>자동</td>
-                            <td><input type="button" onclick="erase(this)" value="삭제" class="bt_erase"></td>
+                            <td><input type="button" onclick="window.open('/modifyResult.html')" value="수정" class="bt_erase"></td>
                         </tr>
                         <tr>
                             <td>2023-06-05</td>
                             <td>100M</td>
                             <td>100M 결승</td>
                             <td></td>
+                            <td>권산</td>
+                            <td>tony Kim</td>
+                            <td>07:43:34</td>
                             <td>자동</td>
-                            <td><input type="button" onclick="erase(this)" value="삭제" class="bt_erase"></td>
+                            <td><input type="button" onclick="window.open('/modifyResult.html')" value="수정" class="bt_erase"></td>
                         </tr>
                         <tr>
                             <td>2023-06-05</td>
                             <td>100M</td>
                             <td>100M 예선</td>
                             <td>3라운드</td>
+                            <td>권산</td>
+                            <td>tony Kim</td>
+                            <td>07:43:34</td>
                             <td>자동</td>
-                            <td><input type="button" onclick="erase(this)" value="삭제" class="bt_erase"></td>
+                            <td><input type="button" onclick="window.open('/modifyResult.html')" value="수정" class="bt_erase"></td>
                         </tr>
                         <tr>
                             <td>2023-06-05</td>
                             <td>100M</td>
                             <td>100M 예선</td>
                             <td>3라운드</td>
+                            <td>권산</td>
+                            <td>tony Kim</td>
+                            <td>07:43:34</td>
                             <td>자동</td>
-                            <td><input type="button" onclick="erase(this)" value="삭제" class="bt_erase"></td>
+                            <td><input type="button" onclick="window.open('/modifyResult.html')" value="수정" class="bt_erase"></td>
                         </tr>
                         <tr>
                             <td>2023-06-05</td>
                             <td>100M</td>
                             <td>100M 예선</td>
                             <td>3라운드</td>
+                            <td>권산</td>
+                            <td>tony Kim</td>
+                            <td>07:43:34</td>
                             <td>자동</td>
-                            <td><input type="button" onclick="erase(this)" value="삭제" class="bt_erase"></td>
+                            <td><input type="button" onclick="window.open('/modifyResult.html')" value="수정" class="bt_erase"></td>
                         </tr>
                       
                     </tbody>
                 </table>
             </div>
-            <div class="board_page">
+            <div class="page_wrap">
+                <div class="page_nation">
                 <input type="button" onclick="window.open('/addresult.html')" value="등록" class="bt_insert">
-                <a href="#" class="bt first">&lt;&lt;</a>
-                <a href="#" class="bt prev">&lt;</a>
-                <a href="#" class="num on">1</a>
-                <a href="#" class="num">2</a>
-                <a href="#" class="num">3</a>
-                <a href="#" class="num">4</a>
-                <a href="#" class="num">5</a>
-                <a href="#" class="bt next">&gt;</a>
-                <a href="#" class="bt last">&gt;&gt;</a>
+                <a class="arrow pprev" href="#"></a>
+                <a class="arrow prev" href="#"></a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+                <a class="arrow next" href="#"></a>
+                <a class="arrow nnext" href="#"></a>
+                </div>
             </div>
         </div>
     </div>
-
+</div>
     <!-- footer -->
     <footer>
         <p class="footer_text">

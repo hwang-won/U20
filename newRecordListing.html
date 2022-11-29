@@ -5,8 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="fontawesome/css/all.min.css" />
-        <script src="/fontawesome/js/all.min.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
         <title>U20</title>
     </head>
     <body>
@@ -262,6 +267,9 @@
         <div class="container">
             <div class="contents something">
                 <div class="selectWrap">
+                    <div class="selectWrap"><div class="btn_base base_mar col_right" style="float: left;">
+                        <input type="button" onclick="" class="btn_excel" value="엑셀 출력" >
+                    </div>
                     <div class="selectArea float_r">
                         <div class="select_box mr10">
                             <select class="d_select" title="성별" style="width: 122px;">
@@ -308,11 +316,13 @@
                                 <option value="23">4x400M 혼성</option>
                             </select>
                         </div>
-                        <a class="btn_search" href="#"><img src="img/btn_search.gif" alt="검색"></a>
+                        <div class="search" style="width: 50px;">
+                            <button type="submit" class="btn_search" title="검색"></a>
+                        </div>
                     </div>
                 </div>
                 <div class="tbl_area">
-                    <table width="100%" cellspacing="0" cellpadding="0" class="tbl_t01">
+                    <table width="100%" cellspacing="0" cellpadding="0" class="table table-hover team_table">
                         <colgroup>
                             <col style="width:15%;">
                             <col style="width:15%;">
@@ -431,17 +441,24 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="board_page">
-                    <a href="#" class="bt first">&lt;&lt;</a>
-                    <a href="#" class="bt prev">&lt;</a>
-                    <a href="#" class="num on">1</a>
-                    <a href="#" class="num">2</a>
-                    <a href="#" class="num">3</a>
-                    <a href="#" class="num">4</a>
-                    <a href="#" class="num">5</a>
-                    <a href="#" class="bt next">&gt;</a>
-                    <a href="#" class="bt last">&gt;&gt;</a>
-                </div> 
+                <div class="page_wrap">
+                    <div class="page_nation">
+                    <a class="arrow pprev" href="#"></a>
+                    <a class="arrow prev" href="#"></a>
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">7</a>
+                    <a href="#">8</a>
+                    <a href="#">9</a>
+                    <a href="#">10</a>
+                    <a class="arrow next" href="#"></a>
+                    <a class="arrow nnext" href="#"></a>
+                    </div>
+                </div>
             </div>
         </div>
 
