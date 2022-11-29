@@ -4,17 +4,22 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/css/style.css" />
-        <link rel="stylesheet" href="fontawesome/css/all.min.css" />
-        <script src="/fontawesome/js/all.min.js"></script>
-        <title>mypage</title>
+        <link rel="stylesheet" href="/U20/css/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <title>U20</title>
     </head>
     <body>
         <!-- header -->
         <input type="checkbox" id="sidebar_icon" />
         <header>
             <div>
-                <ul class="navbar">
+                <ul class="navbar left">
                     <li class="logo">
                         <a href="index.html"
                             ><img
@@ -26,12 +31,12 @@
                     <li>
                         <label for="sidebar_icon" class="sidebar_btn">
                             메뉴
-                            <i class="fa-regular fa-square-caret-down"></i
+                            <i class="fas fa-bars"></i
                         ></label>
                     </li>
-                    <ul class="navbar right">
-                        <li><a href="mypage.html">마이페이지</a></li>
-                    </ul>
+                </ul>
+                <ul class="navbar right">
+                    <li><a href="login.html">로그인</a></li>
                 </ul>
             </div>
         </header>
@@ -260,35 +265,140 @@
 
         <!-- contents 본문 내용 -->
         <div class="container">
-            <div class="contents something">
-                <div class="mypage">
-                    <h3>계정 정보</h3>
-                    <hr />
-
-                    <div class="mypage_box">
-                        <span>아이디</span>
-                        <span>test123</span>
+            <div class="contents main-table">
+                <!-- 국가 별 순위 -->
+                <div class="country_table space">
+                    <div class="team_tabs-content tab">
+                        <table class="table table-hover team_table">
+                            <h2 class="country_h2">국가랭킹</h2>
+                            <colgroup>
+                                <col width="auto" />
+                                <col width="auto" />
+                                <col width="auto" />
+                                <col width="auto" />
+                                <col width="auto" />
+                                <col width="auto" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">순위</th>
+                                    <th scope="col">국가</th>
+                                    <th scope="col">금</th>
+                                    <th scope="col">은</th>
+                                    <th scope="col">동</th>
+                                    <th scope="col">합계</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="col">0</td>
+                                    <td scope="col">INDIA</td>
+                                    <td scope="col">0</td>
+                                    <td scope="col">0</td>
+                                    <td scope="col">0</td>
+                                    <td scope="col">0</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-
-                    <div class="mypage_box">
-                        <span>이름</span>
-                        <span>황근원</span>
+                </div>
+                <!-- 국가 랭킹 페이징 -->
+                <div class="page_wrap">
+                    <div class="page_nation">
+                        <a class="arrow pprev" href="#"></a>
+                        <a class="arrow prev" href="#"></a>
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">7</a>
+                        <a href="#">8</a>
+                        <a href="#">9</a>
+                        <a href="#">10</a>
+                        <a class="arrow next" href="#"></a>
+                        <a class="arrow nnext" href="#"></a>
                     </div>
+                </div>
 
-                    <div class="mypage_box">
-                        <span>권한</span>
-                        <span>운영진</span>
+                <!-- 선수 별 순위 -->
+                <div class="country_table space">
+                    <div class="team_tabs-content tab">
+                        <table class="table table-hover team_table">
+                            <h2 class="country_h2">선수 랭킹</h2>
+                            <colgroup>
+                                <col width="auto" />
+                                <col width="auto" />
+                                <col width="auto" />
+                                <col width="auto" />
+                                <col width="auto" />
+                                <col width="auto" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">순위</th>
+                                    <th scope="col">선수</th>
+                                    <th scope="col">금</th>
+                                    <th scope="col">은</th>
+                                    <th scope="col">동</th>
+                                    <th scope="col">합계</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="col">0</td>
+                                    <td scope="col">홍길동</td>
+                                    <td scope="col">0</td>
+                                    <td scope="col">0</td>
+                                    <td scope="col">0</td>
+                                    <td scope="col">0</td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">0</td>
+                                    <td scope="col">홍길동</td>
+                                    <td scope="col">0</td>
+                                    <td scope="col">0</td>
+                                    <td scope="col">0</td>
+                                    <td scope="col">0</td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">0</td>
+                                    <td scope="col">홍길동</td>
+                                    <td scope="col">0</td>
+                                    <td scope="col">0</td>
+                                    <td scope="col">0</td>
+                                    <td scope="col">0</td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">0</td>
+                                    <td scope="col">홍길동</td>
+                                    <td scope="col">0</td>
+                                    <td scope="col">0</td>
+                                    <td scope="col">0</td>
+                                    <td scope="col">0</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-
-                    <div class="mypage_box">
-                        <span>비밀번호 변경일 : </span>
-                        <span>2022년 12월 31일</span>
-                        <span>
-                            <a href="change_pw.html">
-                                비밀번호 변경
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </a>
-                        </span>
+                </div>
+                <!-- 선수 랭킹 페이징 -->
+                <div class="page_wrap">
+                    <div class="page_nation">
+                        <a class="arrow pprev" href="#"></a>
+                        <a class="arrow prev" href="#"></a>
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">7</a>
+                        <a href="#">8</a>
+                        <a href="#">9</a>
+                        <a href="#">10</a>
+                        <a class="arrow next" href="#"></a>
+                        <a class="arrow nnext" href="#"></a>
                     </div>
                 </div>
             </div>
