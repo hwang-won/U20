@@ -857,20 +857,29 @@ header>div ul.navbar>li {
     margin: 10px 0 20px 0;
 }
 
-.input_row>label {
-    margin-right: 20px;
+.form_check {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.form_check label:nth-child(2) {
+    position: absolute;
+    left: 45%;
+}
+
+.form_check>label {
     color: var(--color-dark-grey);
     font-weight: var(--weight-regular);
 }
 
-.input_row>label>input {
-    margin: 4px;
-}
 
-.input_row>label>span:hover {
+.form_check>label>span:hover {
     cursor: pointer;
 }
 
+
+/* checkbox 꾸미기 */
 [type="checkbox"] {
     vertical-align: middle;
     border: 2px solid var(--color-grey);
