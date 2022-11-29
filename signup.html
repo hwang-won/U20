@@ -276,10 +276,7 @@
                     <hr />
                     <div class="mypage_notice">
                         <h5>새로운 계정의 정보를 입력해 주세요.</h5>
-                        <p>
-                            - 비밀번호는 8 ~ 32 자의 영문 대소문자, 숫자,
-                            특수문자를 조합하여 설정해 주세요.
-                        </p>
+                        <p>- 비밀번호는 4 ~ 20 자로 설정해 주세요.</p>
                     </div>
                     <form action="#" method="post" class="form">
                         <div class="input_row">
@@ -325,7 +322,7 @@
                                 class="input_text"
                                 value=""
                                 minlength="4"
-                                maxlength="30"
+                                maxlength="20"
                                 required=""
                                 onkeyup="check();"
                             />
@@ -339,7 +336,7 @@
                                 class="input_text"
                                 value=""
                                 minlength="4"
-                                maxlength="30"
+                                maxlength="20"
                                 required=""
                                 onkeyup="check();"
                             />
@@ -358,63 +355,173 @@
                             />
                         </div>
 
-                        <h3>권한</h3>
+                        <h3>권한 설정</h3>
                         <div class="input_row">
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    name="auth"
-                                    value="1"
-                                    id="authEntrys"
-                                    class="radiobox"
-                                    required
-                                />
-                                <span>authEntrys</span>
-                            </label>
+                            <div class="form_check">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="auth"
+                                        value="1"
+                                        id="authEntrys"
+                                        class=""
+                                        required
+                                    />
+                                    <span>authEntrys</span>
+                                </label>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="auth"
+                                        value="1"
+                                        id="authEntrys"
+                                        class=""
+                                    />
+                                    <span>읽기</span>
+                                </label>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="auth"
+                                        value="1"
+                                        id="authEntrys"
+                                        class=""
+                                    />
+                                    <span>수정/삭제/등록</span>
+                                </label>
+                            </div>
 
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    name="auth"
-                                    value="2"
-                                    id="authAthletes"
-                                    class="radiobox"
-                                />
-                                <span>authAthletes</span>
-                            </label>
+                            <div class="form_check">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="auth"
+                                        value="2"
+                                        id="authAthletes"
+                                        class=""
+                                    />
+                                    <span>authAthletes</span>
+                                </label>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="auth"
+                                        value="1"
+                                        id="authEntrys"
+                                        class=""
+                                    />
+                                    <span>읽기</span>
+                                </label>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="auth"
+                                        value="1"
+                                        id="authEntrys"
+                                        class=""
+                                    />
+                                    <span>수정/삭제/등록</span>
+                                </label>
+                            </div>
 
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    name="auth"
-                                    value="3"
-                                    id="authSchedules"
-                                    class="radiobox"
-                                />
-                                <span>authSchedules</span>
-                            </label>
+                            <div class="form_check">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="auth"
+                                        value="3"
+                                        id="authSchedules"
+                                        class=""
+                                    />
+                                    <span>authSchedules</span>
+                                </label>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="auth"
+                                        value="1"
+                                        id="authEntrys"
+                                        class=""
+                                    />
+                                    <span>읽기</span>
+                                </label>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="auth"
+                                        value="1"
+                                        id="authEntrys"
+                                        class=""
+                                    />
+                                    <span>수정/삭제/등록</span>
+                                </label>
+                            </div>
 
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    name="auth"
-                                    value="4"
-                                    id="authRecords"
-                                    class="radiobox"
-                                />
-                                <span>authRecords</span>
-                            </label>
+                            <div class="form_check">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="auth"
+                                        value="4"
+                                        id="authRecords"
+                                        class=""
+                                    />
+                                    <span>authRecords</span>
+                                </label>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="auth"
+                                        value="1"
+                                        id="authEntrys"
+                                        class=""
+                                    />
+                                    <span>읽기</span>
+                                </label>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="auth"
+                                        value="1"
+                                        id="authEntrys"
+                                        class=""
+                                    />
+                                    <span>수정/삭제/등록</span>
+                                </label>
+                            </div>
 
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    name="auth"
-                                    value="5"
-                                    id="authStatics"
-                                    class="radiobox"
-                                />
-                                <span>authStatics</span>
-                            </label>
+                            <div class="form_check">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="auth"
+                                        value="5"
+                                        id="authStatics"
+                                        class=""
+                                    />
+                                    <span>authStatics</span>
+                                </label>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="auth"
+                                        value="1"
+                                        id="authEntrys"
+                                        class=""
+                                    />
+                                    <span>읽기</span>
+                                </label>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="auth"
+                                        value="1"
+                                        id="authEntrys"
+                                        class=""
+                                    />
+                                    <span>수정/삭제/등록</span>
+                                </label>
+                            </div>
                         </div>
 
                         <div class="signup_submit">
