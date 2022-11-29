@@ -196,6 +196,7 @@ p {
 .something {
     position: relative;
     height: 1000px;
+    padding: 55px;
 }
 
 .center {
@@ -855,7 +856,7 @@ header>div ul.navbar>li {
 }
 
 .accordion_li:nth-of-type(6) :target~.accordion_content {
-    height: 200px;
+    height: 250px;
 }
 
 .accordion_li:nth-of-type(n) :target~.close-accordion p {
@@ -1000,6 +1001,11 @@ header>div ul.navbar>li {
 /* mypage */
 .mypage {
     width: 60%;
+    margin: 0 auto;
+}
+
+.mypage_85 {
+    width: 85%;
     margin: 0 auto;
 }
 
