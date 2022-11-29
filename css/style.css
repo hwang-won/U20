@@ -506,6 +506,10 @@ margin-right: 10px !important;
     float: right;
     margin-left: 15px;
 }
+.col_left{
+    float: left;
+    margin-right: 15px;
+}
 .btn_base a,.btn_base input, .btn_base button{
     display: block;
     text-align: center;
@@ -549,6 +553,23 @@ margin-right: 10px !important;
 .btn_view:hover{
     background: #002c4f;
 }
+.btn_modify{
+    text-align: center;
+    padding:0.2em 1.25em;
+    font-size: 0.85em;
+    text-decoration: none;
+    background:#63B2F7;
+    color:#fff;
+    font-family: 'NotoSansKR-Regular';
+    border-radius: 3px;
+}
+.btn_modify span.btn_txt{
+    position: relative;
+    top:-1px;
+}
+.btn_modify:hover{
+    background: #0088ff;
+}
 .btn_delete{
     text-align: center;
     padding:0.2em 1.25em;
@@ -573,8 +594,8 @@ margin-right: 10px !important;
     text-decoration: none;
     /* background:#5CB762; */
     /* background:#024274; */
-    background:#e9eaed;
-    color:#444444;
+    background:#147E47;
+    color:#FFFFFF;
     font-family: 'NotoSansKR-Regular';
     border-radius: 3px;
 }
@@ -584,7 +605,7 @@ margin-right: 10px !important;
 .btn_excel:hover{
     /* background: #217b27 ; */
     /* background: #002c4f ; */
-    background: #bdbdbd ;
+    background: #0a572b ;
 }
 
 /* judge_info.html */
