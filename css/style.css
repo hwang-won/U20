@@ -433,39 +433,24 @@ header {
 header>div {
     position: relative;
     margin: 0 auto;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 header>div ul.navbar {
     margin: 0;
-    padding: 7px;
+    padding: 8px;
+    display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-header>div ul.navbar.left {
-    width: 230px;
 }
 
 header>div ul.navbar>li {
     font-size: var(--font-small);
     display: inline-block;
-    vertical-align: middle;
-}
-
-header>div ul.navbar>li.logo {
-    position: relative;
-    left: 15px;
-}
-
-header>div ul.navbar>li>label {
-    display: block;
-    margin-left: 50px;
-}
-
-.navbar.right>li>a {
-    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .navbar>li>label {
@@ -476,15 +461,6 @@ header>div ul.navbar>li>label {
     height: 40px;
     width: auto;
 }
-
-.area {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-}
-
 
 /* sidebar */
 .sidebar_btn {
@@ -1012,7 +988,7 @@ footer {
     position: relative;
     bottom: 0px;
     width: 100%;
-    background-image: url(img/footer.png);
+    background-image: url(/U20/img/footer.png);
     background-size: 100%;
     line-height: 60px;
     z-index: 100;
