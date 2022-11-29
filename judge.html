@@ -4,9 +4,18 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/style.css" />
+        
+        <!--style.css-->
+        <link rel="stylesheet" href="/css/style.css" />
+        <!--Font Awesome-->
         <link rel="stylesheet" href="fontawesome/css/all.min.css" />
         <script src="/fontawesome/js/all.min.js"></script>
+        <!--Data Tables-->
+        <link rel="stylesheet" type="text/css" href="DataTables/datatables.css">
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="DataTables/datatables.js"></script>
+        <script type="text/javascript" src="js/useDataTables.js"></script>
+        
         <title>U20</title>
     </head>
     <body>
@@ -222,7 +231,7 @@
                     <div class="team_tabs-content tab">
                         <h2 class="country_h2">심판진</h2>
                         <!-- 검색 -->
-                        <div class="selectWrap">
+                        <div class="queryBox">
                             <form action="" class="searchForm" name="coach_searchForm" method="post">
                                 <div class="selectArea">
                                     <div class="select_box mr10">
@@ -298,7 +307,7 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="selectWrap">
+                        <div class="upper_btn_group">
                             <!-- 등록 버튼 -->
                             <div class="btn_base base_mar col_right">
                                 <a href="/judge_input.html" onclick="" class="btn_add">
@@ -314,7 +323,7 @@
                             </div>
                         </div>
                         <!-- 심판 테이블 -->
-                        <table class="table table-hover team_table display" id="table_id">
+                        <table class="table table-hover team_table display" id="judge_table">
                             <colgroup>
                                 <col width="auto">
                                 <col width="auto">
@@ -376,7 +385,7 @@
                          </table>
                     </div>  
                 </div>
-                <!-- 심판 페이징 -->
+                <!-- 심판 페이징 
                 <div class="page_wrap">
                     <div class="page_nation">
                     <a class="arrow pprev" href="#"></a>
@@ -395,6 +404,7 @@
                     <a class="arrow nnext" href="#"></a>
                     </div>
                 </div>
+                -->
             </div>
         </div>
         <!-- footer -->

@@ -395,22 +395,22 @@ table.team_table.center {
 }
 
 .page_nation .pprev {
-    background: #f8f8f8 url('img/page_pprev.png') no-repeat center center;
+    background: #f8f8f8 url('../img/page_pprev.png') no-repeat center center;
     margin-left: 0;
 }
 
 .page_nation .prev {
-    background: #f8f8f8 url('img/page_prev.png') no-repeat center center;
+    background: #f8f8f8 url('../img/page_prev.png') no-repeat center center;
     margin-right: 7px;
 }
 
 .page_nation .next {
-    background: #f8f8f8 url('img/page_next.png') no-repeat center center;
+    background: #f8f8f8 url('../img/page_next.png') no-repeat center center;
     margin-left: 7px;
 }
 
 .page_nation .nnext {
-    background: #f8f8f8 url('img/page_nnext.png') no-repeat center center;
+    background: #f8f8f8 url('../img/page_nnext.png') no-repeat center center;
     margin-right: 0;
 }
 
@@ -459,6 +459,31 @@ margin-right: 10px !important;
 /*coach.html*/
 /*judge.html*/
 /* 검색창 */
+.queryBox {
+    margin: 10px 0 12px 0;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.queryBox:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+
+.queryBox:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+
 .searchForm{
     margin: 0;
     padding: 0;
@@ -490,6 +515,30 @@ margin-right: 10px !important;
     min-height: 35px;
     width: 50px;
     background: url(/img/icon_search.png) no-repeat 50% 50% rgba(0,0,0,.03) !important;
+}
+
+/*director.html*/
+/*coach.html*/
+/*judge.html*/
+/*상단 버튼*/
+.upper_btn_group {
+    margin: 10px 0 0 0;
+}
+
+.upper_btn_group:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+
+.upper_btn_group:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
 }
 
 /*homepage.html*/
@@ -1253,10 +1302,10 @@ table.tbl_t02 td:first-child {
 /* footer */
 footer {
     height: 60px;
-    position: relative;
+    position: absolute;
     bottom: 0px;
     width: 100%;
-    background-image: url(/U20/img/footer.png);
+    background-image: url(../img/footer.png);
     background-size: 100%;
     line-height: 60px;
     z-index: 1000;
