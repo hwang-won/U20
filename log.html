@@ -7,7 +7,18 @@
         <link rel="stylesheet" href="/U20/css/style.css" />
         <link rel="stylesheet" href="fontawesome/css/all.min.css" />
         <script src="/fontawesome/js/all.min.js"></script>
-        <title>mypage</title>
+        <!--Data Tables-->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="DataTables/datatables.min.css"
+        />
+        <script
+            type="text/javascript"
+            src="DataTables/datatables.min.js"
+        ></script>
+        <script type="text/javascript" src="useDataTables.js"></script>
+        <title>U20</title>
     </head>
     <body>
         <!-- header -->
@@ -293,34 +304,16 @@
         <!-- contents 본문 내용 -->
         <div class="container">
             <div class="contents something">
-                <div class="mypage">
-                    <h3>계정 정보</h3>
+                <div class="">
+                    <h3>계정 목록</h3>
                     <hr />
-
-                    <div class="mypage_box">
-                        <span>아이디</span>
-                        <span>test123</span>
-                    </div>
-
-                    <div class="mypage_box">
-                        <span>이름</span>
-                        <span>황근원</span>
-                    </div>
-
-                    <div class="mypage_box">
-                        <span>권한</span>
-                        <span>운영진</span>
-                    </div>
-
-                    <div class="mypage_box">
-                        <span>비밀번호 변경일 : </span>
-                        <span>2022년 12월 31일</span>
-                        <span>
-                            <a href="change_pw.html">
-                                비밀번호 변경
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </a>
-                        </span>
+                    <div class="mypage_notice">
+                        <h5>권한을 변경해 주세요.</h5>
+                        <p>- authEntrys : 참가자 관리</p>
+                        <p>- authAthletes : 선수 관리</p>
+                        <p>- authSchedules : 경기 관리</p>
+                        <p>- authRecords : 기록 관리</p>
+                        <p>- authStatics : 통계 관리</p>
                     </div>
                 </div>
             </div>
