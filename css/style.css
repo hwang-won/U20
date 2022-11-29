@@ -36,10 +36,10 @@
   font-style: normal;
   font-weight: 100;
   src: local("Noto Sans Light"), local("NotoSans-Light"),
-    url(fonts/NotoSans-Light.eot);
-  src: url(fonts/NotoSans-Light.eot?#iefix) format("embedded-opentype"),
-    url(fonts/NotoSans-Light.woff2) format("woff2"),
-    url(fonts/NotoSans-Light.woff) format("woff");
+    url(../fonts/NotoSans-Light.eot);
+  src: url(../fonts/NotoSans-Light.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/NotoSans-Light.woff2) format("woff2"),
+    url(../fonts/NotoSans-Light.woff) format("woff");
 }
 
 @font-face {
@@ -47,10 +47,10 @@
   font-style: normal;
   font-weight: 300;
   src: local("Noto Sans Regular"), local("NotoSans-Regular"),
-    url(fonts/NotoSans-Regular.eot);
-  src: url(fonts/NotoSans-Regular.eot?#iefix) format("embedded-opentype"),
-    url(fonts/NotoSans-Regular.woff2) format("woff2"),
-    url(fonts/NotoSans-Regular.woff) format("woff");
+    url(../fonts/NotoSans-Regular.eot);
+  src: url(../fonts/NotoSans-Regular.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/NotoSans-Regular.woff2) format("woff2"),
+    url(../fonts/NotoSans-Regular.woff) format("woff");
 }
 
 @font-face {
@@ -58,10 +58,10 @@
   font-style: normal;
   font-weight: 500;
   src: local("Noto Sans Medium"), local("NotoSans-Medium"),
-    url(fonts/NotoSans-Medium.eot);
-  src: url(fonts/NotoSans-Medium.eot?#iefix) format("embedded-opentype"),
-    url(fonts/NotoSans-Medium.woff2) format("woff2"),
-    url(fonts/NotoSans-Medium.woff) format("woff");
+    url(../fonts/NotoSans-Medium.eot);
+  src: url(../fonts/NotoSans-Medium.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/NotoSans-Medium.woff2) format("woff2"),
+    url(../fonts/NotoSans-Medium.woff) format("woff");
 }
 
 @font-face {
@@ -69,10 +69,10 @@
   font-style: normal;
   font-weight: 700;
   src: local("Noto Sans Bold"), local("NotoSans-Bold"),
-    url(fonts/NotoSans-Bold.eot);
-  src: url(fonts/NotoSans-Bold.eot?#iefix) format("embedded-opentype"),
-    url(fonts/NotoSans-Bold.woff2) format("woff2"),
-    url(fonts/NotoSans-Bold.woff) format("woff");
+    url(../fonts/NotoSans-Bold.eot);
+  src: url(../fonts/NotoSans-Bold.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/NotoSans-Bold.woff2) format("woff2"),
+    url(../fonts/NotoSans-Bold.woff) format("woff");
 }
 
 body {
@@ -436,8 +436,8 @@ table.team_table.center {
   position: relative;
   float: left;
   height: 40px;
-  background: var(--color-white) url(img/bg_selectArrow_down.png) right center
-    no-repeat;
+  background: var(--color-white) url(../img/bg_selectArrow_down.png) right
+    center no-repeat;
   border-color: #aaa !important;
   border: 1px solid #aaa !important;
   border-radius: 6px;
@@ -517,7 +517,7 @@ table.team_table.center {
   height: 100%;
   min-height: 35px;
   width: 50px;
-  background: url(/img/icon_search.png) no-repeat 50% 50% rgba(0, 0, 0, 0.03) !important;
+  background: url(../img/icon_search.png) no-repeat 50% 50% rgba(0, 0, 0, 0.03) !important;
 }
 
 /*director.html*/
@@ -1132,8 +1132,8 @@ header > div ul.navbar > li {
   position: relative;
   float: left;
   height: 40px;
-  background: var(--color-white) url(img/bg_selectArrow_down.png) right center
-    no-repeat;
+  background: var(--color-white) url(../img/bg_selectArrow_down.png) right
+    center no-repeat;
   border: 1px solid var(--color-black);
 }
 
@@ -1312,13 +1312,14 @@ table.tbl_t02 td:first-child {
 /* footer */
 footer {
   height: 60px;
-  position: absolute;
+  position: relative;
   bottom: 0px;
   width: 100%;
   background-image: url(../img/footer.png);
   background-size: 100%;
   line-height: 60px;
   z-index: 1000;
+  transform: translateY(300%);
 }
 
 .footer_text {
