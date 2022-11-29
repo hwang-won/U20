@@ -158,7 +158,6 @@ p {
     margin: 0 auto;
     height: auto;
     min-height: 100%;
-    ;
     padding-bottom: 60px;
 }
 
@@ -173,7 +172,7 @@ p {
     left: 230px;
     width: 1030px;
     transition: all 0.35s;
-    padding-top: 100px;
+    padding-top: 60px;
 }
 
 .flex {
@@ -196,9 +195,7 @@ p {
 
 .something {
     position: relative;
-    height: auto;
-    min-height: 100%;
-    margin-bottom: 100px;
+    height: 1000px;
 }
 
 .center {
@@ -1038,6 +1035,7 @@ header>div ul.navbar>li {
 .mypage_notice p {
     font-size: var(--font-micro);
     color: var(--color-dark-grey);
+    padding-bottom: 8px;
 }
 
 .mypage_notice h5 {
