@@ -9,11 +9,11 @@
         <!-- Font Awesome -->
         <link rel="stylesheet" href="fontawesome/css/all.min.css" />
         <script src="/fontawesome/js/all.min.js"></script>
-        <!-- Data Tables -->
+        <!-- Data Tables
         <link rel="stylesheet" type="text/css" href="DataTables/datatables.css">
         <script src="js/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" charset="utf8" src="DataTables/datatables.js"></script>
-        <script type="text/javascript" src="js/useDataTables.js"></script>
+        <script type="text/javascript" src="js/useDataTables.js"></script> -->
         <!-- script -->
         <script type="text/javascript" src="js/script.js"></script>
         <title>U20</title>
@@ -317,17 +317,17 @@
             </div>
         </div>
 
+        <!-- contents 본문 내용 -->
         <div class="container">
             <div class="contents main-table">
                 <div class="country_table space">			      		
                     <div class="team_tabs-content tab">
                         <h2 class="country_h2">코치진</h2>
                         <!-- 검색 -->
-                        <div class="queryBox">
-                            <form action="" enctype="multipart/form-data" class="searchForm" name="coach_searchForm" method="post">
-                                <div class="selectArea">
-                                    <div class="select_box mr10">
-                                        <select class="d_select" title="국가" style="width: 130px;">
+                            <form action="" enctype="multipart/form-data" class="searchForm" name="judge_searchForm" method="post">
+                            <div class="selectArea float_r">
+                                <div class="select_box mr10">
+                                        <select class="d_select" title="국가" style="width: 8em;">
                                             <option value="" hidden="">국가</option>
                                             <option value="1">한국</option>
                                             <option value="2">일본</option>
@@ -336,35 +336,35 @@
                                         </select>
                                     </div>
                                     <div class="select_box mr10">
-                                        <select class="d_select" title="지역" style="width: 100px;">
+                                        <select class="d_select" title="지역" style="width: 8em;">
                                             <option value="" hidden="">지역</option>
                                             <option value="1">서울</option>
                                             <option value="2">도쿄</option>
                                         </select>
                                     </div>
                                     <div class="select_box mr10">
-                                        <select class="d_select" title="소속" style="width: 120px;">
+                                        <select class="d_select" title="소속" style="width: 8em;">
                                             <option value="" hidden="">소속</option>
                                             <option value="1">국제코치협회</option>
                                             <option value="2">한국코치연맹</option>
                                         </select>
                                     </div>
                                     <div class="select_box mr10">
-                                        <select class="d_select" title="성별" style="width: 80px;">
+                                        <select class="d_select" title="성별" style="width:5em;">
                                             <option value="" hidden="">성별</option>
                                             <option value="1">남</option>
                                             <option value="2">여</option>
                                         </select>
                                     </div>
                                     <div class="select_box mr10">
-                                        <select class="d_select" title="직무" style="width: 150px;">
+                                        <select class="d_select" title="직무" style="width:8em;">
                                             <option value="" hidden="">직무</option>
                                             <option value="1">헤드 코치</option>
                                             <option value="2">서브 코치</option>
                                         </select>
                                     </div>
                                     <div class="select_box mr10">
-                                        <select class="d_select" title="참가경기" style="width: 150px;">
+                                        <select class="d_select" title="참가경기" style="width: 8em;">
                                             <option value="" hidden="">참가경기</option>
                                             <option value="" disabled="">단거리달리기</option>
                                             <option value="1">100M</option>
@@ -399,29 +399,20 @@
                                             <option value="23">4x400M 혼성</option>
                                         </select>
                                     </div>
-                                    <div class="search" style="width: 260px;">
-                                        <input type="text" id="search_coach" class="word" name="search_coach" placeholder="검색어를 입력해주세요" maxlength="30" style="width: 270px;">
+                                    <div class="search" style="width: 15em;">
+                                        <input type="text" id="search_judge" class="word" name="search_judge" placeholder="검색어를 입력해주세요" maxlength="30">
                                         <button type="submit" class="btn_search" title="검색"></a>
                                     </div>
                                 </div>
                             </form>
-                        </div>                        
-                        <div class="upper_btn_group">
-                            <!-- 등록 버튼 -->
-                            <div class="btn_base base_mar col_right">
-                                <a href="coach_input.html" onclick="" class="btn_add">
-                                    <span class="btn_txt bold">등록</span>
-                                </a>
-                            </div>
                             <!-- 엑셀 출력 버튼 -->
                             <div class="btn_base base_mar col_left">
                                 <input type="button" onclick="" class="btn_excel bold" value="엑셀 출력">
                             </div>
                             <!-- 엑셀 입력 버튼 -->
                             <form action="" enctype="multipart/form-data">
-                                <input type="file" id="upload_coach" hidden/><label for="upload_coach" class="btn_excel label_for_excel_import bold">엑셀 입력</label>
-                            </form>
-                        </div>                 
+                                <input type="file" id="upload_judge" hidden/><label for="upload_judge" class="btn_excel label_for_excel_import bold">엑셀 입력</label>
+                            </form>           
                         <!-- 코치 테이블 -->
                         <table class="table table-hover team_table" id="coach_table">
                             <colgroup>
@@ -466,8 +457,8 @@
                                     <td scope="col">25</td>
                                     <td scope="col">헤드 코치</td>
                                     <td scope="col">100m</td>
-                                    <td scope="col"><a href="coach_info.html" target="_blank" onclick="" class="btn_view">보기</a></td>
-                                    <td scope="col"><a href="coach_modify.html" target="_blank" onclick="" class="btn_modify">수정</a></td>
+                                    <td><input type="button" onclick="window.open('coach_input.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')" value="보기" class="btn_view"></td>
+                                    <td><input type="button" onclick="window.open('coach_modify.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')" value="수정" class="btn_modify"></td>
                                     <td scope="col"><a href="#" onclick="" class="btn_delete">삭제</a></td>
                                 </tr>                 
                                 <tr>
@@ -481,12 +472,18 @@
                                     <td scope="col">25</td>
                                     <td scope="col">헤드 코치</td>
                                     <td scope="col">100m</td>
-                                    <td scope="col"><a href="coach_info.html" target="_blank" onclick="" class="btn_view">보기</a></td>
-                                    <td scope="col"><a href="coach_modify.html" target="_blank" onclick="" class="btn_modify">수정</a></td>
+                                    <td><input type="button" onclick="window.open('coach_input.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')" value="보기" class="btn_view"></td>
+                                    <td><input type="button" onclick="window.open('coach_modify.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')" value="수정" class="btn_modify"></td>
                                     <td scope="col"><a href="#" onclick="" class="btn_delete">삭제</a></td>
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                    <!-- 등록 버튼 -->
+                    <div class="btn_base base_mar col_right">
+                        <a href="coach_input.html" onclick="" class="btn_add">
+                            <span class="btn_txt bold">등록</span>
+                        </a>
                     </div>  
                 </div>
                 <!-- 코치 페이징
