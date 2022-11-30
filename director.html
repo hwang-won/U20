@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
         <!-- style.css -->
-        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="css/style.css" />
         <!-- Font Awesome -->
         <link rel="stylesheet" href="fontawesome/css/all.min.css" />
         <script src="/fontawesome/js/all.min.js"></script>
@@ -37,13 +37,17 @@
                     <li>
                         <label for="sidebar_icon" class="sidebar_btn">
                             메뉴
-                            <i class="fa-regular fa-square-caret-down"></i
+                            <i class="fas fa-bars"></i
                         ></label>
                     </li>
-                    <ul class="navbar right">
-                        <!-- <li><a>마이페이지</a></li> -->
-                        <li><a href="#">로그인</a></li>
-                    </ul>
+                </ul>
+                <ul class="navbar right">
+                    <li><a href="mypage.html">마이페이지</a></li>
+                    <li>
+                        <a href="login.html"
+                            ><i class="fas fa-sign-out-alt"></i
+                        ></a>
+                    </li>
                 </ul>
             </div>
         </header>
@@ -87,6 +91,7 @@
                             </ul>
                         </div>
                     </li>
+
                     <li class="accordion_li">
                         <span class="target" id="accordion2"></span>
                         <a
@@ -115,10 +120,15 @@
                         </a>
                         <div class="accordion_content">
                             <ul>
-                                <li><a href="#">선수 목록</a></li>
+                                <li>
+                                    <a href="athletemanagement.html"
+                                        >선수 목록</a
+                                    >
+                                </li>
                             </ul>
                         </div>
                     </li>
+
                     <li class="accordion_li">
                         <span class="target" id="accordion3"></span>
                         <a
@@ -147,12 +157,23 @@
                         </a>
                         <div class="accordion_content">
                             <ul>
-                                <li><a href="#">경기 목록</a></li>
-                                <li><a href="#">국가 목록</a></li>
-                                <li><a href="#">일정 목록</a></li>
+                                <li>
+                                    <a href="sportmanagement.html">경기 목록</a>
+                                </li>
+                                <li>
+                                    <a href="countrymanagement.html"
+                                        >국가 목록</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="schedulemanagement.html"
+                                        >일정 목록</a
+                                    >
+                                </li>
                             </ul>
                         </div>
                     </li>
+
                     <li class="accordion_li">
                         <span class="target" id="accordion4"></span>
                         <a
@@ -181,11 +202,20 @@
                         </a>
                         <div class="accordion_content">
                             <ul>
-                                <li><a href="#">경기결과 목록</a></li>
-                                <li><a href="#">역대기록 목록</a></li>
+                                <li>
+                                    <a href="resultManagement.html"
+                                        >경기결과 목록</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="recordHistory.html"
+                                        >역대기록 목록</a
+                                    >
+                                </li>
                             </ul>
                         </div>
                     </li>
+
                     <li class="accordion_li">
                         <span class="target" id="accordion5"></span>
                         <a
@@ -214,11 +244,74 @@
                         </a>
                         <div class="accordion_content">
                             <ul>
-                                <li><a href="#">선수별 순위보기</a></li>
-                                <li><a href="#">신기록 경기기록</a></li>
-                                <li><a href="#">경기별 순위보기</a></li>
-                                <li><a href="#">경기별 메달보기</a></li>
-                                <li><a href="#">국가별 순위보기</a></li>
+                                <li>
+                                    <a href="playerRankListing.html"
+                                        >선수별 순위보기</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="newRecordListing.html"
+                                        >신기록 경기기록</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="scheduleRankListing.html"
+                                        >경기별 순위보기</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="scheduleListing.html"
+                                        >경기별 메달보기</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="countryListing.html"
+                                        >국가별 순위보기</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="accordion_li">
+                        <span class="target" id="accordion6"></span>
+                        <a
+                            href="#accordion6"
+                            class="open-accordion"
+                            title="open"
+                        >
+                            <div>
+                                <p>
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    계정 관리
+                                </p>
+                            </div>
+                        </a>
+                        <a
+                            href="#accordion"
+                            class="close-accordion"
+                            title="close"
+                        >
+                            <div>
+                                <p>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                    계정 관리
+                                </p>
+                            </div>
+                        </a>
+                        <div class="accordion_content">
+                            <ul>
+                                <li><a href="mypage.html">계정 정보</a></li>
+                                <li>
+                                    <a href="change_pw.html">비밀번호 변경</a>
+                                </li>
+                                <li><a href="signup.html">계정 생성</a></li>
+                                <li>
+                                    <a href="user.html">계정 목록</a>
+                                </li>
+                                <li>
+                                    <a href="log.html">로그 목록</a>
+                                </li>
                             </ul>
                         </div>
                     </li>
@@ -312,7 +405,7 @@
                         <div class="upper_btn_group">
                             <!-- 등록 버튼 -->
                             <div class="btn_base base_mar col_right">
-                                <a href="/director_input.html" onclick="" class="btn_add">
+                                <a href="director_input.html" onclick="" class="btn_add">
                                     <span class="btn_txt bold">등록</span>
                                 </a>
                             </div>
@@ -439,8 +532,8 @@
                                     <td class="director_age">25</td>
                                     <td class="director_role">주 심판</td>
                                     <td class="director_attendent_game">100m, 200m</td>
-                                    <td><a href="/director_info.html" target="_blank" onclick="" class="btn_view">보기</a></td>
-                                    <td><a href="/director_modify.html" target="_blank" onclick="" class="btn_modify">수정</a></td>
+                                    <td><a href="director_info.html" target="_blank" onclick="" class="btn_view">보기</a></td>
+                                    <td><a href="director_modify.html" target="_blank" onclick="" class="btn_modify">수정</a></td>
                                     <td><a href="#" onclick="" class="btn_delete">삭제</a></td>
                                 </tr>                        
                                 <tr>
@@ -453,8 +546,8 @@
                                     <td scope="col">69</td>
                                     <td scope="col">부 심판</td>
                                     <td scope="col">투포환</td>
-                                    <td scope="col"><a href="/director_info.html" target="_blank" onclick="" class="btn_view">보기</a></td>
-                                    <td scope="col"><a href="/director_modify.html" target="_blank" onclick="" class="btn_modify">수정</a></td>
+                                    <td scope="col"><a href="director_info.html" target="_blank" onclick="" class="btn_view">보기</a></td>
+                                    <td scope="col"><a href="director_modify.html" target="_blank" onclick="" class="btn_modify">수정</a></td>
                                     <td scope="col"><a href="#" onclick="" class="btn_delete">삭제</a></td>
                                 </tr>         
                             </tbody>
