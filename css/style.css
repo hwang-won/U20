@@ -151,7 +151,7 @@ p {
 }
 
 hr {
-    margin: 0;
+  margin: 0;
 }
 
 .section {
@@ -427,7 +427,6 @@ table.team_table.center {
   color: #fff;
   border: 1px solid #42454c;
 }
-
 
 .selectWrap:after {
   content: "";
@@ -987,7 +986,6 @@ header > div ul.navbar > li {
   color: var(--color-blue);
 }
 
-
 /* signup.html */
 /* signup */
 .form > h3 {
@@ -996,7 +994,6 @@ header > div ul.navbar > li {
   color: var(--color-grey);
   padding-top: 10px;
 }
-
 
 .input_row {
   width: 100%;
@@ -1028,7 +1025,6 @@ header > div ul.navbar > li {
   cursor: pointer;
 }
 
-
 /* checkbox 꾸미기 */
 [type="checkbox"] {
   vertical-align: middle;
@@ -1048,20 +1044,20 @@ header > div ul.navbar > li {
 }
 
 [type="radio"] {
-    vertical-align: middle;
-    border: 2px solid var(--color-grey);
-    border-radius: 50%;
-    width: 16px;
-    height: 16px;
+  vertical-align: middle;
+  border: 2px solid var(--color-grey);
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
 }
 
 [type="radio"]:checked {
-    border: 5px solid var(--color-blue);
+  border: 5px solid var(--color-blue);
 }
 
 [type="radio"]:hover {
-    box-shadow: 0 0 0 4px var(--color-sky);
-    cursor: pointer;
+  box-shadow: 0 0 0 4px var(--color-sky);
+  cursor: pointer;
 }
 
 .input_text {
@@ -1071,7 +1067,6 @@ header > div ul.navbar > li {
   font-size: var(--font-small);
   font-weight: var(--weight-bold);
 }
-
 
 .signup_submit {
   padding-top: 40px;
@@ -1092,7 +1087,6 @@ header > div ul.navbar > li {
 .btn_login:hover {
   background: var(--color-grey);
 }
-
 
 /* login.html */
 /* login */
@@ -1164,7 +1158,6 @@ header > div ul.navbar > li {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-
 
 /* change_pw.html */
 /* change_pw */
@@ -1259,7 +1252,7 @@ header > div ul.navbar > li {
 
 /* 표 */
 .tbl_area {
-    padding: 0 60px 0 60px;
+  padding: 0 60px 0 60px;
 }
 
 table.tbl_t01 {
@@ -1401,13 +1394,14 @@ table.tbl_t02 td:first-child {
 /* footer */
 footer {
   height: 60px;
-  position: absolute;
+  position: relative;
   bottom: 0px;
   width: 100%;
   background-image: url(../img/footer.png);
   background-size: 100%;
   line-height: 60px;
   z-index: 1000;
+  transform: translateY(300%);
 }
 
 .footer_text {
@@ -1421,7 +1415,6 @@ footer {
   margin: 0 auto;
   background-color: rgb(252, 252, 212);
 }
-
 
 /* media quarry */
 @media screen and (max-width: 1280px) {
