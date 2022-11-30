@@ -1303,13 +1303,15 @@ table.tbl_t02 td:first-child {
     padding-left: 40px;
 }
 
-/*addResult_page*/
-/* 산이 */
-.board_page {
-    position: relative;
-    margin-top: 30px;
-    text-align: center;
-    font-size: 0;
+.page_nation .bt_insert {
+  width: 70px;
+  height: 32px;
+  border: 1px solid #000;
+  font-size: 1rem;
+  letter-spacing: -1px;
+  appearance: button;
+  position: absolute;
+  right: 135px;
 }
 
 .board_page .bt_insert {
