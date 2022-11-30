@@ -1278,7 +1278,7 @@ header>div ul.navbar>li {
 
 /* 표 */
 .tbl_area {
-    padding: 0 60px 0 60px;
+    /* padding: 0 60px 0 60px; */
 }
 
 table.tbl_t01 {
@@ -1439,7 +1439,7 @@ footer {
 }
 
 .selectWrap {
-    margin: 10px 0 12px 0;
+    /* margin: 10px 0 12px 0; */
 }
 
 .selectWrap:after {
