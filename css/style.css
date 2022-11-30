@@ -1412,12 +1412,56 @@ footer {
     background-color: rgb(252, 252, 212);
 }
 
-/* media quarry */
-@media screen and (max-width: 1280px) {
-    .contents {
-        /* color: red; */
-    }
+/* 효민 */
+.select_box {
+    position: relative;
+    float: left;
+    height: 40px;
+    background: var(--color-white) url(/U20/img/bg_selectArrow_down.png) right center no-repeat;
+    border: 1px solid var(--color-black);
 }
+
+.select_box select.t_select {
+    width: 100%;
+    height: 40px;
+    min-height: 40px;
+    line-height: 40px;
+    padding: 0px 0px 0px 10px;
+    opacity: 1;
+    font-size: var(--font-micro);
+    filter: alpha(opacity=0);
+    /*IE8*/
+}
+
+.mr10 {
+    margin-right: 10px !important;
+}
+
+.selectWrap {
+    margin: 10px 0 12px 0;
+}
+
+.selectWrap:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+
+.float_r {
+    float: right !important;
+}
+
+.float_l {
+    float: left !important;
+}
+
+
+
+
+/* media quarry */
+@media screen and (max-width: 1280px) {}
 
 /* media quarry */
 @media screen and (min-width: 1500px) {
