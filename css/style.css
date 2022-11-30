@@ -150,6 +150,10 @@ p {
     margin: 0;
 }
 
+hr {
+    margin: 0;
+}
+
 .section {
     padding: 50px;
     text-align: center;
@@ -1025,7 +1029,7 @@ header>div ul.navbar>li {
 
 .mypage>h3,
 .mypage_100>h3 {
-    padding-bottom: 6px;
+    padding-bottom: 14px;
 }
 
 .mypage_box {
@@ -1221,6 +1225,15 @@ table.tbl_t02 td:first-child {
     right: 135px;
 }
 
+/* log.html */
+/* user.html */
+.table_wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
 /* footer */
 footer {
     position: relative;
@@ -1228,7 +1241,7 @@ footer {
     width: 100%;
     line-height: 60px;
     height: 60px;
-    background-image: url(/img/footer.png);
+    background-image: url(/U20/img/footer.png);
     background-size: 100%;
     z-index: 1000;
 }
