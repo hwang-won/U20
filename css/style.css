@@ -402,22 +402,22 @@ table.team_table.center {
 }
 
 .page_nation .pprev {
-    background: #f8f8f8 url("/img/page_pprev.png") no-repeat center center;
+    background: #f8f8f8 url('../img/page_pprev.png') no-repeat center center;
     margin-left: 0;
 }
 
 .page_nation .prev {
-    background: #f8f8f8 url("/img/page_prev.png") no-repeat center center;
+    background: #f8f8f8 url('../img/page_prev.png') no-repeat center center;
     margin-right: 7px;
 }
 
 .page_nation .next {
-    background: #f8f8f8 url("/img/page_next.png") no-repeat center center;
+    background: #f8f8f8 url('../img/page_next.png') no-repeat center center;
     margin-left: 7px;
 }
 
 .page_nation .nnext {
-    background: #f8f8f8 url("/img/page_nnext.png") no-repeat center center;
+    background: #f8f8f8 url('../img/page_nnext.png') no-repeat center center;
     margin-right: 0;
 }
 
@@ -466,7 +466,32 @@ table.team_table.center {
 /*coach.html*/
 /*judge.html*/
 /* 검색창 */
-.searchForm {
+.queryBox {
+    margin: 10px 0 12px 0;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.queryBox:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+
+.queryBox:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+
+.searchForm{
     margin: 0;
     padding: 0;
     border: 0;
@@ -1337,12 +1362,11 @@ table.tbl_t02 td:first-child {
 
 /* footer */
 footer {
-    position: relative;
+    height: 60px;
+    position: absolute;
     bottom: 0px;
     width: 100%;
-    line-height: 60px;
-    height: 60px;
-    background-image: url(/U20/img/footer.png);
+    background-image: url(../img/footer.png);
     background-size: 100%;
     z-index: 1000;
 }
