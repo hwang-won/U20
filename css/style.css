@@ -675,7 +675,8 @@ table.team_table.center {
   cursor: pointer;
 }
 
-/* judge_info.html */
+/* director_info */
+/* coach_info */
 /* judge_info */
 .judge_info {
   width: 60%;
@@ -741,6 +742,28 @@ table.team_table.center {
 .image_resize {
   max-width: 50%;
   height: auto;
+}
+
+/* director_input, director_modify */
+/* coach_input, coach_modify */
+/* judge_input, judge_modify */
+.attendent_game {
+  display: flex;
+  /* justify-content: space-between; */
+  margin-bottom: 10px;
+}
+
+.attendent_game > label {
+  color: var(--color-dark-grey);
+  font-weight: var(--weight-regular);
+}
+
+.attendent_game > label > span:hover {
+  cursor: pointer;
+}
+
+.judge_game_list > li {
+  display: inline;
 }
 
 /* header */
