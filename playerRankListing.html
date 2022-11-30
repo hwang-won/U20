@@ -4,14 +4,13 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+        <script src="/fontawesome/js/all.min.js"></script>
+        <!--Data Tables-->
+        <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
+        <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+        <script type="text/javascript" src="useDataTables.js"></script>
         <title>U20</title>
     </head>
     <body>
@@ -23,7 +22,7 @@
                     <li class="logo">
                         <a href="index.html"
                             ><img
-                                src="img/logo.png"
+                                src="/U20/img/logo.png"
                                 alt="Logo"
                                 class="logo_img"
                         /></a>
@@ -34,9 +33,14 @@
                             <i class="fas fa-bars"></i
                         ></label>
                     </li>
-                    <ul class="navbar right">
-                        <li><a href="login.html">로그인</a></li>
-                    </ul>
+                </ul>
+                <ul class="navbar right">
+                    <li><a href="mypage.html">마이페이지</a></li>
+                    <li>
+                        <a href="login.html"
+                            ><i class="fas fa-sign-out-alt"></i
+                        ></a>
+                    </li>
                 </ul>
             </div>
         </header>
@@ -74,9 +78,9 @@
                         </a>
                         <div class="accordion_content">
                             <ul>
-                                <li><a href="#">심판 목록</a></li>
-                                <li><a href="#">임원 목록</a></li>
-                                <li><a href="#">코치 목록</a></li>
+                                <li><a href="judge.html">심판 목록</a></li>
+                                <li><a href="director.html">임원 목록</a></li>
+                                <li><a href="coach.html">코치 목록</a></li>
                             </ul>
                         </div>
                     </li>
@@ -177,8 +181,8 @@
                         </a>
                         <div class="accordion_content">
                             <ul>
-                                <li><a href="#">경기결과 목록</a></li>
-                                <li><a href="#">역대기록 목록</a></li>
+                                <li><a href="resultManagement.html">경기결과 목록</a></li>
+                                <li><a href="">역대기록 목록</a></li>
                             </ul>
                         </div>
                     </li>
@@ -211,11 +215,11 @@
                         </a>
                         <div class="accordion_content">
                             <ul>
-                                <li><a href="#">선수별 순위보기</a></li>
-                                <li><a href="#">신기록 경기기록</a></li>
-                                <li><a href="#">경기별 순위보기</a></li>
-                                <li><a href="#">경기별 메달보기</a></li>
-                                <li><a href="#">국가별 순위보기</a></li>
+                                <li><a href="playerRankListing.html">선수별 순위보기</a></li>
+                                <li><a href="newRecordListing.html">신기록 경기기록</a></li>
+                                <li><a href="scheduleRankListing.html">경기별 순위보기</a></li>
+                                <li><a href="scheduleListing.html">경기별 메달보기</a></li>
+                                <li><a href="countryListing.html">국가별 순위보기</a></li>
                             </ul>
                         </div>
                     </li>
@@ -262,6 +266,7 @@
                 </ul>
             </div>
         </div>
+
         <!-- contents 본문 내용 -->
         <div class="container">
         <div/div class="something contents">
