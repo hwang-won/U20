@@ -32,55 +32,55 @@
 }
 
 @font-face {
-    font-family: "Noto Sans KR";
-    font-style: normal;
-    font-weight: 100;
-    src: local("Noto Sans Light"), local("NotoSans-Light"),
-        url(fonts/NotoSans-Light.eot);
-    src: url(fonts/NotoSans-Light.eot?#iefix) format("embedded-opentype"),
-        url(fonts/NotoSans-Light.woff2) format("woff2"),
-        url(fonts/NotoSans-Light.woff) format("woff");
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 100;
+  src: local("Noto Sans Light"), local("NotoSans-Light"),
+    url(fonts/NotoSans-Light.eot);
+  src: url(fonts/NotoSans-Light.eot?#iefix) format("embedded-opentype"),
+    url(fonts/NotoSans-Light.woff2) format("woff2"),
+    url(fonts/NotoSans-Light.woff) format("woff");
 }
 
 @font-face {
-    font-family: "Noto Sans KR";
-    font-style: normal;
-    font-weight: 300;
-    src: local("Noto Sans Regular"), local("NotoSans-Regular"),
-        url(fonts/NotoSans-Regular.eot);
-    src: url(fonts/NotoSans-Regular.eot?#iefix) format("embedded-opentype"),
-        url(fonts/NotoSans-Regular.woff2) format("woff2"),
-        url(fonts/NotoSans-Regular.woff) format("woff");
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Noto Sans Regular"), local("NotoSans-Regular"),
+    url(fonts/NotoSans-Regular.eot);
+  src: url(fonts/NotoSans-Regular.eot?#iefix) format("embedded-opentype"),
+    url(fonts/NotoSans-Regular.woff2) format("woff2"),
+    url(fonts/NotoSans-Regular.woff) format("woff");
 }
 
 @font-face {
-    font-family: "Noto Sans KR";
-    font-style: normal;
-    font-weight: 500;
-    src: local("Noto Sans Medium"), local("NotoSans-Medium"),
-        url(fonts/NotoSans-Medium.eot);
-    src: url(fonts/NotoSans-Medium.eot?#iefix) format("embedded-opentype"),
-        url(fonts/NotoSans-Medium.woff2) format("woff2"),
-        url(fonts/NotoSans-Medium.woff) format("woff");
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Noto Sans Medium"), local("NotoSans-Medium"),
+    url(fonts/NotoSans-Medium.eot);
+  src: url(fonts/NotoSans-Medium.eot?#iefix) format("embedded-opentype"),
+    url(fonts/NotoSans-Medium.woff2) format("woff2"),
+    url(fonts/NotoSans-Medium.woff) format("woff");
 }
 
 @font-face {
-    font-family: "Noto Sans KR";
-    font-style: normal;
-    font-weight: 700;
-    src: local("Noto Sans Bold"), local("NotoSans-Bold"),
-        url(fonts/NotoSans-Bold.eot);
-    src: url(fonts/NotoSans-Bold.eot?#iefix) format("embedded-opentype"),
-        url(fonts/NotoSans-Bold.woff2) format("woff2"),
-        url(fonts/NotoSans-Bold.woff) format("woff");
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Noto Sans Bold"), local("NotoSans-Bold"),
+    url(fonts/NotoSans-Bold.eot);
+  src: url(fonts/NotoSans-Bold.eot?#iefix) format("embedded-opentype"),
+    url(fonts/NotoSans-Bold.woff2) format("woff2"),
+    url(fonts/NotoSans-Bold.woff) format("woff");
 }
 
 body {
-    height: 100%;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Noto Sans KR", sans-serif !important;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", sans-serif !important;
 }
 
 button,
@@ -155,7 +155,7 @@ hr {
 }
 
 hr {
-    margin: 0;
+  margin: 0;
 }
 
 .section {
@@ -184,7 +184,6 @@ hr {
   left: 230px;
   width: 1030px;
   transition: all 0.35s;
-  padding-top: 100px;
 }
 
 .flex {
@@ -207,9 +206,8 @@ hr {
 
 .something {
   position: relative;
-  height: auto;
-  min-height: 100%;
-  margin-bottom: 100px;
+  height: 1000px;
+  padding: 55px;
 }
 
 .center {
@@ -441,29 +439,30 @@ table.team_table.center {
 }
 
 .select_box {
-    position: relative;
-    float: left;
-    height: 40px;
-    background: var(--color-white) url(img/bg_selectArrow_down.png) right center no-repeat;
-    border-color: #aaa !important;
-    border: 1px solid #aaa !important;
-    border-radius: 6px;
+  position: relative;
+  float: left;
+  height: 40px;
+  background: var(--color-white) url(img/bg_selectArrow_down.png) right center
+    no-repeat;
+  border-color: #aaa !important;
+  border: 1px solid #aaa !important;
+  border-radius: 6px;
 }
 
 .select_box select.d_select {
-    width: 100%;
-    height: 40px;
-    min-height: 40px;
-    line-height: 40px;
-    padding: 0px 0px 0px 10px;
-    opacity: 1;
-    font-size: var(--font-micro);
-    filter: alpha(opacity=0);
-    /*IE8*/
+  width: 100%;
+  height: 40px;
+  min-height: 40px;
+  line-height: 40px;
+  padding: 0px 0px 0px 10px;
+  opacity: 1;
+  font-size: var(--font-micro);
+  filter: alpha(opacity=0);
+  /*IE8*/
 }
 
 .mr10 {
-    margin-right: 10px !important;
+  margin-right: 10px !important;
 }
 
 /*director.html*/
@@ -501,6 +500,7 @@ table.team_table.center {
   border: 0;
   vertical-align: baseline;
 }
+
 .search {
   position: relative;
   float: left;
@@ -511,12 +511,14 @@ table.team_table.center {
   border-radius: 6px;
   font-size: 14px;
 }
+
 .search > input[type="text"] {
   text-align: left;
   font-size: 14px;
   line-height: 14px;
   vertical-align: middle;
 }
+
 .btn_search {
   position: absolute;
   display: inline-block;
@@ -565,10 +567,12 @@ table.team_table.center {
   float: right;
   margin-left: 15px;
 }
+
 .col_left {
   float: left;
   margin-right: 15px;
 }
+
 .btn_base a,
 .btn_base input,
 .btn_base button,
@@ -582,24 +586,29 @@ table.team_table.center {
   border-radius: 6px;
   font-family: "NotoSansKR-Medium";
 }
+
 .btn_base .btn_add,
 .btn_base a.btn_footer {
   /* background:#024274; */
   background: #e9eaed;
   color: #444444;
 }
+
 .btn_base .btn_add:hover,
 .btn_base a.btn_footer {
   /* background:#002c4f;  */
   background: #bdbdbd;
 }
+
 .btn_base a.btn_footer {
   border-radius: 0;
 }
+
 .btn_base .btn_add i {
   position: relative;
   left: -6px;
 }
+
 .btn_view {
   text-align: center;
   padding: 0.2em 1.25em;
@@ -610,13 +619,16 @@ table.team_table.center {
   font-family: "NotoSansKR-Regular";
   border-radius: 3px;
 }
+
 .btn_view span.btn_txt {
   position: relative;
   top: -1px;
 }
+
 .btn_view:hover {
   background: #002c4f;
 }
+
 .btn_modify {
   text-align: center;
   padding: 0.2em 1.25em;
@@ -627,13 +639,16 @@ table.team_table.center {
   font-family: "NotoSansKR-Regular";
   border-radius: 3px;
 }
+
 .btn_modify span.btn_txt {
   position: relative;
   top: -1px;
 }
+
 .btn_modify:hover {
   background: #0088ff;
 }
+
 .btn_delete {
   text-align: center;
   padding: 0.2em 1.25em;
@@ -644,13 +659,16 @@ table.team_table.center {
   font-family: "NotoSansKR-Regular";
   border-radius: 3px;
 }
+
 .btn_delete span.btn_txt {
   position: relative;
   top: -1px;
 }
+
 .btn_delete:hover {
   background: #720101;
 }
+
 /*엑셀 입,출력*/
 .btn_excel {
   text-align: center;
@@ -661,13 +679,16 @@ table.team_table.center {
   font-family: "NotoSansKR-Regular";
   border-radius: 3px;
 }
+
 .btn_excel span.btn_txt {
   position: relative;
   top: -1px;
 }
+
 .btn_excel:hover {
   background: #0a572b;
 }
+
 .label_for_excel_import {
   display: inline-block;
   background-color: #147e47;
@@ -682,6 +703,7 @@ table.team_table.center {
   font-family: "NotoSansKR-Medium";
   cursor: pointer;
 }
+
 /*엑셀 입,출력*/
 .btn_excel {
   text-align: center;
@@ -692,13 +714,16 @@ table.team_table.center {
   font-family: "NotoSansKR-Regular";
   border-radius: 3px;
 }
+
 .btn_excel span.btn_txt {
   position: relative;
   top: -1px;
 }
+
 .btn_excel:hover {
   background: #0a572b;
 }
+
 .label_for_excel_import {
   display: inline-block;
   background-color: #147e47;
@@ -746,40 +771,41 @@ table.team_table.center {
 
 /*이미지 등록 폼*/
 .form-control {
-    display: block;
-    width: 100%;
-    height: 34px;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #555;
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
-    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
-    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+  box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+  -webkit-transition: border-color ease-in-out 0.15s,
+    box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 
 /*수정 안내 span*/
 .input_guide {
-    font-size: 0.85em;
-    color: var(--color-light-grey);
+  font-size: 0.85em;
+  color: var(--color-light-grey);
 }
 
 .main_list {
-    color: #333;
+  color: #333;
 }
 
 .main_list:hover {
-    text-decoration: underline;
-    color: #024274;
+  text-decoration: underline;
+  color: #024274;
 }
 
 .bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 /* 이미지 재조정 */
@@ -816,12 +842,12 @@ table.team_table.center {
 }
 
 header {
-    position: fixed;
-    width: 100%;
-    height: 60px;
-    background-color: var(--color-white);
-    z-index: 50;
-    border-bottom: 1px solid var(--color-light-white);
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  background-color: var(--color-white);
+  z-index: 50;
+  border-bottom: 1px solid var(--color-light-white);
 }
 
 header > div {
@@ -865,15 +891,15 @@ header > div ul.navbar > li {
 }
 
 .sidebar {
-    position: fixed;
-    top: 60px;
-    left: 0;
-    width: 230px;
-    height: 100%;
-    background-color: var(--color-light-blue);
-    border-right: 1px solid var(--color-light-white);
-    z-index: 10;
-    transition: all 0.35s;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 230px;
+  height: 100%;
+  background-color: var(--color-light-blue);
+  border-right: 1px solid var(--color-light-white);
+  z-index: 10;
+  transition: all 0.35s;
 }
 
 #sidebar_icon:checked ~ header .sidebar_btn {
@@ -984,8 +1010,8 @@ header > div ul.navbar > li {
   height: 250px;
 }
 
-.accordion_li:nth-of-type(6) :target~.accordion_content {
-    height: 250px;
+.accordion_li:nth-of-type(6) :target ~ .accordion_content {
+  height: 250px;
 }
 
 .accordion_li:nth-of-type(n) :target ~ .close-accordion p {
@@ -1027,8 +1053,8 @@ header > div ul.navbar > li {
   font-weight: var(--weight-regular);
 }
 
-.form_check>label>span:hover {
-    cursor: pointer;
+.form_check > label > span:hover {
+  cursor: pointer;
 }
 
 /* checkbox 꾸미기 */
@@ -1050,28 +1076,28 @@ header > div ul.navbar > li {
 }
 
 [type="radio"] {
-    vertical-align: middle;
-    border: 2px solid var(--color-grey);
-    border-radius: 50%;
-    width: 16px;
-    height: 16px;
+  vertical-align: middle;
+  border: 2px solid var(--color-grey);
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
 }
 
 [type="radio"]:checked {
-    border: 5px solid var(--color-blue);
+  border: 5px solid var(--color-blue);
 }
 
 [type="radio"]:hover {
-    box-shadow: 0 0 0 4px var(--color-sky);
-    cursor: pointer;
+  box-shadow: 0 0 0 4px var(--color-sky);
+  cursor: pointer;
 }
 
 .input_text {
-    position: relative;
-    display: block;
-    width: 100%;
-    font-size: var(--font-small);
-    font-weight: var(--weight-bold);
+  position: relative;
+  display: block;
+  width: 100%;
+  font-size: var(--font-small);
+  font-weight: var(--weight-bold);
 }
 
 .signup_submit {
@@ -1145,13 +1171,13 @@ header > div ul.navbar > li {
 }
 
 .mypage_100 {
-    width: 100%;
-    margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.mypage>h3,
-.mypage_100>h3 {
-    padding-bottom: 14px;
+.mypage > h3,
+.mypage_100 > h3 {
+  padding-bottom: 14px;
 }
 
 .mypage_box {
@@ -1179,9 +1205,9 @@ header > div ul.navbar > li {
 }
 
 .mypage_notice p {
-    font-size: var(--font-micro);
-    color: var(--color-dark-grey);
-    padding-bottom: 8px;
+  font-size: var(--font-micro);
+  color: var(--color-dark-grey);
+  padding-bottom: 8px;
 }
 
 .mypage_notice h5 {
@@ -1208,8 +1234,8 @@ header > div ul.navbar > li {
 }
 
 .selectWrap {
-    margin: 10px 0 12px 0;
-    padding: 0 60px 0 60px;
+  margin: 10px 0 12px 0;
+  padding: 0 60px 0 60px;
 }
 
 .selectWrap:after {
@@ -1251,7 +1277,7 @@ header > div ul.navbar > li {
 
 /* 표 */
 .tbl_area {
-    padding: 0 60px 0 60px;
+  padding: 0 60px 0 60px;
 }
 
 table.tbl_t01 {
@@ -1284,13 +1310,13 @@ table.tbl_t01 td {
 
 /* 기록 삭제 관련 */
 .bt_erase {
-    width: 60px;
-    height: 32px;
-    border: 1px solid #ddd;
-    font-size: 1rem;
-    letter-spacing: -1px;
-    appearance: button;
-    position: relative;
+  width: 60px;
+  height: 32px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  letter-spacing: -1px;
+  appearance: button;
+  position: relative;
 }
 
 .check {
@@ -1327,9 +1353,9 @@ table.tbl_t02 td {
 }
 
 .kk td img {
-    width: 40px;
-    margin-right: 40px;
-    border: 1px solid var(--color-light-grey);
+  width: 40px;
+  margin-right: 40px;
+  border: 1px solid var(--color-light-grey);
 }
 
 table.tbl_t02 td:first-child {
@@ -1338,35 +1364,35 @@ table.tbl_t02 td:first-child {
 }
 
 .page_nation .bt_insert {
-    width: 70px;
-    height: 32px;
-    border: 1px solid #000;
-    font-size: 1rem;
-    letter-spacing: -1px;
-    appearance: button;
-    position: absolute;
-    right: 135px;
+  width: 70px;
+  height: 32px;
+  border: 1px solid #000;
+  font-size: 1rem;
+  letter-spacing: -1px;
+  appearance: button;
+  position: absolute;
+  right: 135px;
 }
 
 /* log.html */
 /* user.html */
 .table_wrap {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
 }
 
 /* footer */
 footer {
-    position: relative;
-    bottom: 0px;
-    width: 100%;
-    line-height: 60px;
-    height: 60px;
-    background-image: url(/U20/img/footer.png);
-    background-size: 100%;
-    z-index: 1000;
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  line-height: 60px;
+  height: 60px;
+  background-image: url(/U20/img/footer.png);
+  background-size: 100%;
+  z-index: 1000;
 }
 
 .footer_text {
@@ -1384,14 +1410,14 @@ footer {
 /* media quarry */
 @media screen and (max-width: 1280px) {
   body {
-    color: red;
+    /* color: red; */
   }
 }
 
 /* media quarry */
 @media screen and (min-width: 1500px) {
   .contents {
-    color: green;
+    /* color: green; */
     left: 100px;
     width: 1280px;
   }
@@ -1400,7 +1426,7 @@ footer {
 /* media quarry */
 @media screen and (min-width: 1750px) {
   .contents {
-    color: blue;
+    /* color: blue; */
     left: 0px;
     width: 1280px;
   }
