@@ -1016,12 +1016,13 @@ header > div ul.navbar > li {
   margin: 0 auto;
 }
 
-.mypage_85 {
-    width: 85%;
+.mypage_100 {
+    width: 100%;
     margin: 0 auto;
 }
 
-.mypage>h3 {
+.mypage>h3,
+.mypage_100>h3 {
     padding-bottom: 6px;
 }
 
