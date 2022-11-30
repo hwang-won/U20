@@ -4,9 +4,20 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css" />
+        
+        <!-- style.css -->
+        <link rel="stylesheet" href="/css/style.css" />
+        <!-- Font Awesome -->
         <link rel="stylesheet" href="fontawesome/css/all.min.css" />
         <script src="/fontawesome/js/all.min.js"></script>
+        <!-- Data Tables -->
+        <link rel="stylesheet" type="text/css" href="DataTables/datatables.css">
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="DataTables/datatables.js"></script>
+        <script type="text/javascript" src="js/useDataTables.js"></script>
+        <!-- script -->
+        <script type="text/javascript" src="js/script.js"></script>
+
         <title>U20</title>
     </head>
     <body>
@@ -222,8 +233,8 @@
                     <div class="team_tabs-content tab">
                         <h2 class="country_h2">임원진</h2>
                         <!-- 검색 -->
-                        <div class="selectWrap">
-                            <form action="" class="searchForm" name="coach_searchForm" method="post">
+                        <div class="queryBox">
+                            <form action="" enctype="multipart/form-data" class="searchForm" name="coach_searchForm" method="post">
                                 <div class="selectArea">
                                     <div class="select_box mr10">
                                         <select class="d_select" title="국가" style="width: 130px;">
@@ -298,21 +309,97 @@
                                 </div>
                             </form>
                         </div>
-                        <!-- 등록 버튼 -->
-                        <div class="btn_base base_mar col_right">
-                            <a href="#" onclick="" class="btn_add">
-                                <span class="btn_txt bold">등록</span>
-                            </a>
+                        <div class="upper_btn_group">
+                            <!-- 등록 버튼 -->
+                            <div class="btn_base base_mar col_right">
+                                <a href="/director_input.html" onclick="" class="btn_add">
+                                    <span class="btn_txt bold">등록</span>
+                                </a>
+                            </div>
+                            <!-- 엑셀 출력 버튼 -->
+                            <div class="btn_base base_mar col_left">
+                                <input type="button" onclick="" class="btn_excel bold" value="엑셀 출력">
+                            </div>
+                            <!-- 엑셀 입력 버튼 -->
+                            <form action="" enctype="multipart/form-data">
+                                <input type="file" id="upload_director" hidden/><label for="upload_director" class="btn_excel label_for_excel_import bold">엑셀 입력</label>
+                            </form>
                         </div>
-                        <!-- 엑셀 출력 버튼 -->
-                        <div class="btn_base base_mar col_right">
-                            <input type="button" onclick="" class="btn_excel" value="엑셀 출력">
-                        </div>
-                        <div class="btn_base base_mar col_right">
-                            <input type="button" onclick="" class="btn_excel" value="엑셀 입력" >
-                        </div>
+                        <!-- 엑셀 입력 스크립트 -->
+                        <script>
+                            // 임원 엑셀 입력
+
+                            $(document).on("click", ".table tbody tr td .btn-success", function () {
+                            var html = "";
+                            html += "<tr><td class='txtcode'> </td>";
+                            html += "<td class='txtdesc'></td>";
+                            html += "<td class='txtprice'></td>";
+                            html += "<td class='txtqty' ></td>";
+                            html +=
+                                "<td><button type='button' class='btn btn-success'>Add</button> <button class='btn btn-danger' type='button'>Remove</button> </td>";
+                            html += "</tr>";
+
+                            $(this).parent().parent().after(html);
+                            });
+
+                            $(document).on("click", ".table tbody tr td .btn-danger", function () {
+                            $(this).parent().parent().remove();
+                            });
+
+                            var ExcelToJSON = function () {
+                            this.parseExcel = function (file) {
+                                var reader = new FileReader();
+
+                                reader.onload = function (e) {
+                                var data = e.target.result;
+                                var workbook = XLSX.read(data, {
+                                    type: "binary",
+                                });
+                                workbook.SheetNames.forEach(function (sheetName) {
+                                    // Here is your object
+                                    var XL_row_object = XLSX.utils.sheet_to_row_object_array(
+                                    workbook.Sheets[sheetName]
+                                    );
+                                    var json_object = JSON.stringify(XL_row_object);
+                                    productList = JSON.parse(json_object);
+
+                                    var rows = $(".table tbody tr");
+                                    console.log(productList);
+                                    for (i = 0; i < productList.length; i++) {
+                                    var columns = Object.values(productList[i]);
+                                    rows.eq(i).find("td.director_no").text(columns[0]);
+                                    rows.eq(i).find("td.director_name").text(columns[1]);
+                                    rows.eq(i).find("td.director_nation").text(columns[2]);
+                                    rows.eq(i).find("td.director_division").text(columns[3]);
+                                    rows.eq(i).find("td.director_gender").text(columns[4]);
+                                    rows.eq(i).find("td.director_birth").text(columns[5]);
+                                    rows.eq(i).find("td.director_age").text(columns[6]);
+                                    rows.eq(i).find("td.director_role").text(columns[7]);
+                                    rows.eq(i).find("td.director_attendent_game").text(columns[8]);
+                                    }
+                                });
+                                };
+                                reader.onerror = function (ex) {
+                                console.log(ex);
+                                };
+
+                                reader.readAsBinaryString(file);
+                            };
+                            };
+
+                            function handleFileSelect(evt) {
+                            var files = evt.target.files; // FileList object
+                            var xl2json = new ExcelToJSON();
+                            xl2json.parseExcel(files[0]);
+                            }
+
+                            document
+                            .getElementById("upload_director")
+                            .addEventListener("change", handleFileSelect, false);
+                        </script>
+                        
                         <!-- 임원 테이블 -->
-                        <table class="table table-hover team_table">
+                        <table class="table table-hover team_table display" id="director_table">
                             <colgroup>
                                 <col width="auto">
                                 <col width="auto">
@@ -327,8 +414,8 @@
                             </colgroup>
                             <thead>
                                 <tr>
-                                <th scope="col">번호</th>
-                                <th scope="col">이름</th>
+                                    <th scope="col">번호</th>
+                                    <th scope="col">이름</th>
                                 <th scope="col">국가</th>
                                 <th scope="col">소속</th>
                                 <th scope="col">성별</th>
@@ -343,87 +430,38 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td scope="col">1</td>
-                                    <td scope="col">고길동</td>
-                                    <td scope="col">한국</td>				                    
-                                    <td scope="col">한국심판협회</td>				                    
-                                    <td scope="col">남</td>				                    
-                                    <td scope="col">1998년 11월 15일</td>
-                                    <td scope="col">25</td>
-                                    <td scope="col">일정 관리팀</td>
-                                    <td scope="col">100m, 200m</td>
-                                    <td scope="col"><a href="#" onclick="" class="btn_view">보기</a></td>
-                                    <td scope="col"><a href="#" onclick="" class="btn_view">수정</a></td>
-                                    <td scope="col"><a href="#" onclick="" class="btn_delete">삭제</a></td>
+                                    <td class="director_no">1</td>
+                                    <td class="director_name">고길동</td>
+                                    <td class="director_nation">한국</td>				                    
+                                    <td class="director_division">한국심판협회</td>				                    
+                                    <td class="director_gender">남</td>				                    
+                                    <td class="director_birth">1998년 11월 15일</td>
+                                    <td class="director_age">25</td>
+                                    <td class="director_role">주 심판</td>
+                                    <td class="director_attendent_game">100m, 200m</td>
+                                    <td><a href="/director_info.html" target="_blank" onclick="" class="btn_view">보기</a></td>
+                                    <td><a href="/director_modify.html" target="_blank" onclick="" class="btn_modify">수정</a></td>
+                                    <td><a href="#" onclick="" class="btn_delete">삭제</a></td>
                                 </tr>                        
                                 <tr>
                                     <td scope="col">2</td>
-                                    <td scope="col">고길동</td>
-                                    <td scope="col">한국</td>				                    
-                                    <td scope="col">한국심판협회</td>				                    
-                                    <td scope="col">남</td>				                    
-                                    <td scope="col">1998년 11월 15일</td>
-                                    <td scope="col">25</td>
-                                    <td scope="col">인사담당팀</td>
-                                    <td scope="col">100m, 200m</td>
-                                    <td scope="col"><a href="#" onclick="" class="btn_view">보기</a></td>
-                                    <td scope="col"><a href="#" onclick="" class="btn_view">수정</a></td>
+                                    <td scope="col">김순자</td>
+                                    <td scope="col">미국</td>				                    
+                                    <td scope="col">미국심판협회</td>				                    
+                                    <td scope="col">여</td>				                    
+                                    <td scope="col">1968년 11월 15일</td>
+                                    <td scope="col">69</td>
+                                    <td scope="col">부 심판</td>
+                                    <td scope="col">투포환</td>
+                                    <td scope="col"><a href="/director_info.html" target="_blank" onclick="" class="btn_view">보기</a></td>
+                                    <td scope="col"><a href="/director_modify.html" target="_blank" onclick="" class="btn_modify">수정</a></td>
                                     <td scope="col"><a href="#" onclick="" class="btn_delete">삭제</a></td>
-                                </tr>                        
-                                <tr>
-                                    <td scope="col">3</td>
-                                    <td scope="col">고길동</td>
-                                    <td scope="col">한국</td>				                    
-                                    <td scope="col">한국심판협회</td>				                    
-                                    <td scope="col">남</td>				                    
-                                    <td scope="col">1998년 11월 15일</td>
-                                    <td scope="col">25</td>
-                                    <td scope="col">회장</td>
-                                    <td scope="col">100m, 200m</td>
-                                    <td scope="col"><a href="#" onclick="" class="btn_view">보기</a></td>
-                                    <td scope="col"><a href="#" onclick="" class="btn_view">수정</a></td>
-                                    <td scope="col"><a href="#" onclick="" class="btn_delete">삭제</a></td>
-                                </tr>                        
-                                <tr>
-                                    <td scope="col">4</td>
-                                    <td scope="col">고길동</td>
-                                    <td scope="col">한국</td>				                    
-                                    <td scope="col">한국심판협회</td>				                    
-                                    <td scope="col">남</td>				                    
-                                    <td scope="col">1998년 11월 15일</td>
-                                    <td scope="col">25</td>
-                                    <td scope="col">통역팀</td>
-                                    <td scope="col">100m, 200m</td>
-                                    <td scope="col"><a href="#" onclick="" class="btn_view">보기</a></td>
-                                    <td scope="col"><a href="#" onclick="" class="btn_view">수정</a></td>
-                                    <td scope="col"><a href="#" onclick="" class="btn_delete">삭제</a></td>
-                                </tr>                        
-                                <tr>
-                                    <td scope="col">5</td>
-                                    <td scope="col">고길동</td>
-                                    <td scope="col">한국</td>				                    
-                                    <td scope="col">한국심판협회</td>				                    
-                                    <td scope="col">남</td>				                    
-                                    <td scope="col">1998년 11월 15일</td>
-                                    <td scope="col">25</td>
-                                    <td scope="col">경기관리팀</td>
-                                    <td scope="col">100m, 200m</td>
-                                    <td scope="col"><a href="#" onclick="" class="btn_view">보기</a></td>
-                                    <td scope="col"><a href="#" onclick="" class="btn_view">수정</a></td>
-                                    <td scope="col"><a href="#" onclick="" class="btn_delete">삭제</a></td>
-                                </tr>          
+                                </tr>         
                             </tbody>
                          </table>
-                         <!-- 엑셀 출력 버튼 -->
-                         <div class="btn_base base_mar col_right">
-                            <input type="button" onclick="" class="btn_excel" value="엑셀 출력">
-                        </div>
-                         <div class="btn_base base_mar col_right">
-                            <input type="button" onclick="" class="btn_excel" value="엑셀 입력">
-                        </div>
                     </div>  
                 </div>
-                <!-- 임원 페이징 -->
+                <!-- 임원 페이징 
                 <div class="page_wrap">
                     <div class="page_nation">
                     <a class="arrow pprev" href="#"></a>
@@ -442,9 +480,9 @@
                     <a class="arrow nnext" href="#"></a>
                     </div>
                 </div>
+                -->
             </div>
         </div>
-
 
         <!-- footer -->
         <footer>
