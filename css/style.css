@@ -150,6 +150,10 @@ p {
     margin: 0;
 }
 
+hr {
+    margin: 0;
+}
+
 .section {
     padding: 50px;
     text-align: center;
@@ -1109,7 +1113,7 @@ header>div ul.navbar>li {
 
 .mypage>h3,
 .mypage_100>h3 {
-    padding-bottom: 6px;
+    padding-bottom: 14px;
 }
 
 .mypage_box {
@@ -1306,51 +1310,14 @@ table.tbl_t02 td:first-child {
     right: 135px;
 }
 
-.board_page .bt_insert {
-    width: 70px;
-    height: 32px;
-    border: 1px solid #000;
-    font-size: 1rem;
-    letter-spacing: -1px;
-    appearance: button;
-    position: absolute;
-    bottom: 0px;
-    right: 33px;
+/* log.html */
+/* user.html */
+.table_wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
 }
-
-.board_page a {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    box-sizing: border-box;
-    vertical-align: middle;
-    border: 1px solid #ddd;
-    border-left: 0;
-    line-height: 100%;
-}
-
-.board_page a.bt {
-    padding-top: 10px;
-    font-size: 0.8rem;
-    letter-spacing: -1px;
-}
-
-.board_page .first {
-    border-left: 1px solid #ddd;
-}
-
-.board_page a.num {
-    padding-top: 9px;
-    font-size: 1rem;
-}
-
-.board_page a.num.on {
-    border-color: var(--color-black);
-    background: var(--color-black);
-    color: #fff;
-}
-
-
 
 /* footer */
 footer {
@@ -1359,7 +1326,7 @@ footer {
     width: 100%;
     line-height: 60px;
     height: 60px;
-    background-image: url(/img/footer.png);
+    background-image: url(/U20/img/footer.png);
     background-size: 100%;
     z-index: 1000;
 }
