@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <title>U20</title>
+    </head>
+    <body>
+        <!-- header -->
+        <input type="checkbox" id="sidebar_icon" />
+        <header>
+            <div>
+                <ul class="navbar">
+                    <li class="logo">
+                        <a href="index.html"
+                            ><img
+                                src="img/logo.png"
+                                alt="Logo"
+                                class="logo_img"
+                        /></a>
+                    </li>
+                    <li>
+                        <label for="sidebar_icon" class="sidebar_btn">
+                            메뉴
+                            <i class="fas fa-bars"></i
+                        ></label>
+                    </li>
+                </ul>
+                <ul class="navbar right">
+                    <li><a href="mypage.html">마이페이지</a></li>
+                    <li>
+                        <a href="login.html"
+                            ><i class="fas fa-sign-out-alt"></i
+                        ></a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- sidebar -->
+        <div class="container">
+            <div class="sidebar">
+                <ul class="accordion">
+                    <span class="target" id="accordion"></span>
+                    <li class="accordion_li">
+                        <span class="target" id="accordion1"></span>
+                        <a
+                            href="#accordion1"
+                            class="open-accordion"
+                            title="open"
+                        >
+                            <div>
+                                <p>
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    참가자 관리
+                                </p>
+                            </div>
+                        </a>
+                        <a
+                            href="#accordion"
+                            class="close-accordion"
+                            title="close"
+                        >
+                            <div class="ab">
+                                <p>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                    참가자 관리
+                                </p>
+                            </div>
+                        </a>
+                        <div class="accordion_content">
+                            <ul>
+                                <li><a href="judge.html">심판 목록</a></li>
+                                <li><a href="director.html">임원 목록</a></li>
+                                <li><a href="coach.html">코치 목록</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="accordion_li">
+                        <span class="target" id="accordion2"></span>
+                        <a
+                            href="#accordion2"
+                            class="open-accordion"
+                            title="open"
+                        >
+                            <div>
+                                <p>
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    선수 관리
+                                </p>
+                            </div>
+                        </a>
+                        <a
+                            href="#accordion"
+                            class="close-accordion"
+                            title="close"
+                        >
+                            <div>
+                                <p>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                    선수 관리
+                                </p>
+                            </div>
+                        </a>
+                        <div class="accordion_content">
+                            <ul>
+                                <li>
+                                    <a href="athletemanagement.html"
+                                        >선수 목록</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="accordion_li">
+                        <span class="target" id="accordion3"></span>
+                        <a
+                            href="#accordion3"
+                            class="open-accordion"
+                            title="open"
+                        >
+                            <div>
+                                <p>
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    경기 관리
+                                </p>
+                            </div>
+                        </a>
+                        <a
+                            href="#accordion"
+                            class="close-accordion"
+                            title="close"
+                        >
+                            <div>
+                                <p>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                    경기 관리
+                                </p>
+                            </div>
+                        </a>
+                        <div class="accordion_content">
+                            <ul>
+                                <li>
+                                    <a href="sportmanagement.html">경기 목록</a>
+                                </li>
+                                <li>
+                                    <a href="countrymanagement.html"
+                                        >국가 목록</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="schedulemanagement.html"
+                                        >일정 목록</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="accordion_li">
+                        <span class="target" id="accordion4"></span>
+                        <a
+                            href="#accordion4"
+                            class="open-accordion"
+                            title="open"
+                        >
+                            <div>
+                                <p>
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    기록 관리
+                                </p>
+                            </div>
+                        </a>
+                        <a
+                            href="#accordion"
+                            class="close-accordion"
+                            title="close"
+                        >
+                            <div>
+                                <p>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                    기록 관리
+                                </p>
+                            </div>
+                        </a>
+                        <div class="accordion_content">
+                            <ul>
+                                <li>
+                                    <a href="resultManagement.html"
+                                        >경기결과 목록</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="recordHistory.html"
+                                        >역대기록 목록</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="accordion_li">
+                        <span class="target" id="accordion5"></span>
+                        <a
+                            href="#accordion5"
+                            class="open-accordion"
+                            title="open"
+                        >
+                            <div>
+                                <p>
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    통계 관리
+                                </p>
+                            </div>
+                        </a>
+                        <a
+                            href="#accordion"
+                            class="close-accordion"
+                            title="close"
+                        >
+                            <div>
+                                <p>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                    통계 관리
+                                </p>
+                            </div>
+                        </a>
+                        <div class="accordion_content">
+                            <ul>
+                                <li>
+                                    <a href="playerRankListing.html"
+                                        >선수별 순위보기</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="newRecordListing.html"
+                                        >신기록 경기기록</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="scheduleRankListing.html"
+                                        >경기별 순위보기</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="scheduleListing.html"
+                                        >경기별 메달보기</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="countryListing.html"
+                                        >국가별 순위보기</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="accordion_li">
+                        <span class="target" id="accordion6"></span>
+                        <a
+                            href="#accordion6"
+                            class="open-accordion"
+                            title="open"
+                        >
+                            <div>
+                                <p>
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    계정 관리
+                                </p>
+                            </div>
+                        </a>
+                        <a
+                            href="#accordion"
+                            class="close-accordion"
+                            title="close"
+                        >
+                            <div>
+                                <p>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                    계정 관리
+                                </p>
+                            </div>
+                        </a>
+                        <div class="accordion_content">
+                            <ul>
+                                <li><a href="mypage.html">계정 정보</a></li>
+                                <li>
+                                    <a href="change_pw.html">비밀번호 변경</a>
+                                </li>
+                                <li><a href="signup.html">계정 생성</a></li>
+                                <li>
+                                    <a href="user.html">계정 목록</a>
+                                </li>
+                                <li>
+                                    <a href="log.html">로그 목록</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- contents 본문 내용 -->
+        <div class="container">
+            <div class="contents main-table">
+                    <div class="contents main-table">
+                        <div class="country_table space">
+                            <div class="team_tabs-content tab">
+                                <table class="table table-hover team_table">
+                                    <h2 class="country_h2">국가 목록</h2>
+                                    <div class="selectWrap">
+                                      <div class="selectArea float_l">
+                                        <div class="select_box mr10">
+                                          <a href="#">엑셀 출력</a>
+                                        </div>
+                                        <div class="select_box mr10">
+                                          <a href="#">엑셀 출력</a>
+                                        </div>
+                                      </div>
+                                      <div class="selectArea float_r">
+                                        <div class="select_box mr10">
+                                          <select class="t_select" name="" title="경기종목" style="width:170px">
+                                      <option value="" hidden>경기종목선택</option>
+                                      <option value="1">100m</option>
+                                      <option value="2">200m</option>
+                                      <option value="3">400m</option>
+                                      <option value="4">800m</option>
+                                      <option value="5">1500m</option>
+                                      <option value="6">3000m</option>
+                                      <option value="7">5000m</option>
+                                      <option value="8">10000m</option>
+                                      <option value="9">3000m 장애물</option>
+                                      <option value="10">100m 허들</option>
+                                      <option value="11">110m 허들</option>
+                                      <option value="12">400m 허들</option>
+                                      <option value="13">높이뛰기</option>
+                                      <option value="14">장대높이뛰기</option>
+                                      <option value="15">멀리뛰기</option>
+                                      <option value="16">삼단뛰기</option>
+                                      <option value="17">투포환</option>
+                                      <option value="18">원반던지기</option>
+                                      <option value="19">해머던지기</option>
+                                      <option value="20">창던지기</option>
+                                      <option value="21">7종경기</option>
+                                      <option value="22">10종경기</option>
+                                    </select>
+                                        </div>
+                                        <div class="select_box mr10">
+                                          <select class="t_select" name="" title="성별">
+                                      <option value="" hidden>성별</option>
+                                      <option value="1">남</option>
+                                      <option value="2" collapse=2>여</option>
+                                      <option value="3" collapse=2>혼</option>
+                                    </select>
+                                        </div>
+                                          <a class="search_btn" type="button" href="#"><img src="/logo.png" alt="검색">
+                                          </a>
+
+                                      <colgroup>
+                                        <col width="auto" />
+                                        <col width="auto" />
+                                        <col width="auto" />
+                                        <col width="auto" />
+                                        <col width="auto" />
+                                        <col width="auto" />
+                                      </colgroup>
+                                    </div>
+                                    </div>
+                                      <!-- <option value="3"></option>
+                                      <option value="4"></option>
+                                      <option value="5"></option>
+                                      <option value="6"></option>
+                                      <option value="7"></option>
+                                      <option value="8">10000m</option>
+                                      <option value="9">3000m 장애물</option>
+                                      <option value="10">100m 허들</option>
+                                      <option value="11">110m 허들</option>
+                                      <option value="12">400m 허들</option>
+                                      <option value="13">높이뛰기</option>
+                                      <option value="14">장대높이뛰기</option>
+                                      <option value="15">멀리뛰기</option>
+                                      <option value="16">삼단뛰기</option>
+                                      <option value="17">투포환</option>
+                                      <option value="18">원반던지기</option>
+                                      <option value="19">해머던지기</option>
+                                      <option value="20">창던지기</option>
+                                      <option value="21">7종경기</option>
+                                      <option value="22">10종경기</option> -->
+                                    </select>
+                                    <!-- <select class="t_select" name="" title="성별">
+                                      <option value="" hidden></option>
+                                      <option value="1">남</option>
+                                      <option value="2" collapse=2>여</option>
+                                      <option value="3" collapse=2>혼</option>
+                                    </select> -->
+                                    <a class="search_btn" type="button" href="#">검색</a>
+                                    <colgroup>
+                                        <col width="auto" />
+                                        <col width="auto" />
+                                        <col width="auto" />
+                                        <col width="auto" />
+                                        <col width="auto" />
+                                        <col width="auto" />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+
+                                            <th scope="col">구분</th>
+                                            <th colspan="3"scope="col">국가 이름</th>
+                                            <th colspan="3"scope="col">지역</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td scope="col">0</td>
+                                            <td colspan="3"scope="col">[KOR]korea</td>
+                                            <td colspan="3"scope="col">서울</td>
+                                            <tbody>
+                                                <tr>
+                                                    <td scope="col">1</td>
+                                                    <td colspan="3"scope="col">[JPN] Japan</td>
+                                                    <td colspan="3"scope="col">도쿄</td>
+                                                </tr>
+                                            </tbody>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="selectArea float_r">
+                                  <div class="select_box mr10">
+                                    <a class="search_btn" type="button" href="#">등록</a>
+                                  </div>
+                                <colgroup>
+                                  <col width="auto" />
+                                  <col width="auto" />
+                                  <col width="auto" />
+                                  <col width="auto" />
+                                  <col width="auto" />
+                                  <col width="auto" />
+                                </colgroup>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="page_wrap">
+                            <div class="page_nation">
+                                <a href="#" class="active">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#">6</a>
+                                <a href="#">7</a>
+                                <a href="#">8</a>
+                                <a href="#">9</a>
+                                <a href="#">10</a>
+                            </div>
+                        </div>
+
+
+
+        <!-- footer -->
+        <footer>
+            <p class="footer_text">
+                Copyright © 2022, 20th Asian U20 Athletics Championships
+                Yecheon. All rights reserved.
+            </p>
+        </footer>
+    </body>
+</html>
