@@ -1,165 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/U20/css/style.css" />
-        <link rel="stylesheet" href="fontawesome/css/all.min.css" />
-        <script src="/fontawesome/js/all.min.js"></script>
-        <!--Data Tables-->
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="DataTables/datatables.min.css"
-        />
-        <script
-            type="text/javascript"
-            src="DataTables/datatables.min.js"
-        ></script>
-        <script type="text/javascript" src="useDataTables.js"></script>
-        <title>U20</title>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--style.css-->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <script src="/fontawesome/js/all.min.js"></script>
+    <!--Data Tables-->
+    <link rel="stylesheet" type="text/css" href="DataTables/datatables.css" />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="DataTables/datatables.js"
+    ></script>
+    <script type="text/javascript" src="js/useDataTables.js"></script>
 
-    <body>
-        <!-- header -->
-        <input type="checkbox" id="sidebar_icon" />
-        <header>
-            <div>
-                <ul class="navbar">
-                    <li class="logo">
-                        <a href="index.html"
-                            ><img
-                                src="img/logo.png"
-                                alt="Logo"
-                                class="logo_img"
-                        /></a>
-                    </li>
-                    <li>
-                        <label for="sidebar_icon" class="sidebar_btn">
-                            메뉴
-                            <i class="fas fa-bars"></i
-                        ></label>
-                    </li>
-                </ul>
-                <ul class="navbar right">
-                    <li><a href="mypage.html">마이페이지</a></li>
-                    <li>
-                        <a href="login.html"
-                            ><i class="fas fa-sign-out-alt"></i
-                        ></a>
-                    </li>
-                </ul>
+
+    <title>U20</title>
+  </head>
+  <body>
+    <!-- header -->
+    <input type="checkbox" id="sidebar_icon" />
+    <header>
+      <div>
+        <ul class="navbar">
+          <li class="logo">
+            <a href="index.html"
+              ><img src="img/logo.png" alt="Logo" class="logo_img"
+            /></a>
+          </li>
+          <li>
+            <label for="sidebar_icon" class="sidebar_btn">
+              메뉴
+              <i class="fas fa-bars"></i
+            ></label>
+          </li>
+        </ul>
+        <ul class="navbar right">
+          <li><a href="mypage.html">마이페이지</a></li>
+          <li>
+            <a href="login.html"><i class="fas fa-sign-out-alt"></i></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+  <body>
+    <!-- header -->
+    <input type="checkbox" id="sidebar_icon" />
+    <header>
+      <div>
+        <ul class="navbar">
+          <li class="logo">
+            <a href="index.html"
+              ><img src="img/logo.png" alt="Logo" class="logo_img"
+            /></a>
+          </li>
+          <li>
+            <label for="sidebar_icon" class="sidebar_btn">
+              메뉴
+              <i class="fas fa-bars"></i
+            ></label>
+          </li>
+        </ul>
+        <ul class="navbar right">
+          <li><a href="mypage.html">마이페이지</a></li>
+          <li>
+            <a href="login.html"><i class="fas fa-sign-out-alt"></i></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- sidebar -->
+    <div class="container">
+      <div class="sidebar">
+        <ul class="accordion">
+          <span class="target" id="accordion"></span>
+          <li class="accordion_li">
+            <span class="target" id="accordion1"></span>
+            <a href="#accordion1" class="open-accordion" title="open">
+              <div>
+                <p>
+                  <i class="fa-solid fa-angle-right"></i>
+                  참가자 관리
+                </p>
+              </div>
+            </a>
+            <a href="#accordion" class="close-accordion" title="close">
+              <div class="ab">
+                <p>
+                  <i class="fa-solid fa-angle-down"></i>
+                  참가자 관리
+                </p>
+              </div>
+            </a>
+            <div class="accordion_content">
+              <ul>
+                <li><a href="judge.html">심판 목록</a></li>
+                <li><a href="director.html">임원 목록</a></li>
+                <li><a href="coach.html">코치 목록</a></li>
+              </ul>
             </div>
-        </header>
+          </li>
 
-        <!-- sidebar -->
-        <div class="container">
-            <div class="sidebar">
-                <ul class="accordion">
-                    <span class="target" id="accordion"></span>
-                    <li class="accordion_li">
-                        <span class="target" id="accordion1"></span>
-                        <a
-                            href="#accordion1"
-                            class="open-accordion"
-                            title="open"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    참가자 관리
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="#accordion"
-                            class="close-accordion"
-                            title="close"
-                        >
-                            <div class="ab">
-                                <p>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    참가자 관리
-                                </p>
-                            </div>
-                        </a>
-                        <div class="accordion_content">
-                            <ul>
-                                <li><a href="judge.html">심판 목록</a></li>
-                                <li><a href="director.html">임원 목록</a></li>
-                                <li><a href="coach.html">코치 목록</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="accordion_li">
-                        <span class="target" id="accordion2"></span>
-                        <a
-                            href="#accordion2"
-                            class="open-accordion"
-                            title="open"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    선수 관리
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="#accordion"
-                            class="close-accordion"
-                            title="close"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    선수 관리
-                                </p>
-                            </div>
-                        </a>
-                        <div class="accordion_content">
-                            <ul>
-                                <li><a href="#">선수 목록</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="accordion_li">
-                        <span class="target" id="accordion3"></span>
-                        <a
-                            href="#accordion3"
-                            class="open-accordion"
-                            title="open"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    경기 관리
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="#accordion"
-                            class="close-accordion"
-                            title="close"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    경기 관리
-                                </p>
-                            </div>
-                        </a>
-                        <div class="accordion_content">
-                            <ul>
-                                <li><a href="#">경기 목록</a></li>
-                                <li><a href="#">국가 목록</a></li>
-                                <li><a href="#">일정 목록</a></li>
-                            </ul>
-                        </div>
-                    </li>
 
                     <li class="accordion_li">
                         <span class="target" id="accordion4"></span>
@@ -300,136 +248,238 @@
                     </li>
                 </ul>
             </div>
-        </div>
-
-        <!-- contents 본문 내용 -->
-        <div class="container">
-            <div class="contents main-table">
-                <!-- 국가 별 순위 -->
-                <div class="country_table space">
-                    <div class="team_tabs-content tab">
-                        <table
-                            class="table table-hover team_table"
-                            id="nation_rank"
-                            data-order='[[ 1, "asc" ]]'
-                            data-page-length="25"
-                        >
-                            <h2 class="country_h2">국가랭킹</h2>
-                            <colgroup>
-                                <col width="auto" />
-                                <col width="auto" />
-                                <col width="auto" />
-                                <col width="auto" />
-                                <col width="auto" />
-                                <col width="auto" />
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th scope="col">순위</th>
-                                    <th scope="col">국가</th>
-                                    <th scope="col">금</th>
-                                    <th scope="col">은</th>
-                                    <th scope="col">동</th>
-                                    <th scope="col">합계</th>
-                                </tr>
-                            </thead>
-                            <!-- <tbody>
-                                <tr>
-                                    <td scope="col">0</td>
-                                    <td scope="col">INDIA</td>
-                                    <td scope="col">0</td>
-                                    <td scope="col">0</td>
-                                    <td scope="col">0</td>
-                                    <td scope="col">0</td>
-                                </tr>
-                            </tbody> -->
-                        </table>
-                    </div>
-                </div>
-                <!-- 국가 랭킹 페이징 -->
-                <div class="page_wrap">
-                    <div class="page_nation">
-                        <a class="arrow pprev" href="#"></a>
-                        <a class="arrow prev" href="#"></a>
-                        <a href="#" class="active">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#">4</a>
-                        <a href="#">5</a>
-                        <a href="#">6</a>
-                        <a href="#">7</a>
-                        <a href="#">8</a>
-                        <a href="#">9</a>
-                        <a href="#">10</a>
-                        <a class="arrow next" href="#"></a>
-                        <a class="arrow nnext" href="#"></a>
-                    </div>
-                </div>
-
-                <!-- 선수 별 순위 -->
-                <div class="country_table space">
-                    <div class="team_tabs-content tab">
-                        <table class="table table-hover team_table">
-                            <h2 class="country_h2">선수 랭킹</h2>
-                            <colgroup>
-                                <col width="auto" />
-                                <col width="auto" />
-                                <col width="auto" />
-                                <col width="auto" />
-                                <col width="auto" />
-                                <col width="auto" />
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th scope="col">순위</th>
-                                    <th scope="col">선수</th>
-                                    <th scope="col">금</th>
-                                    <th scope="col">은</th>
-                                    <th scope="col">동</th>
-                                    <th scope="col">합계</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td scope="col">0</td>
-                                    <td scope="col">홍길동</td>
-                                    <td scope="col">0</td>
-                                    <td scope="col">0</td>
-                                    <td scope="col">0</td>
-                                    <td scope="col">0</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <!-- 선수 랭킹 페이징 -->
-                <div class="page_wrap">
-                    <div class="page_nation">
-                        <a class="arrow pprev" href="#"></a>
-                        <a class="arrow prev" href="#"></a>
-                        <a href="#" class="active">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#">4</a>
-                        <a href="#">5</a>
-                        <a href="#">6</a>
-                        <a href="#">7</a>
-                        <a href="#">8</a>
-                        <a href="#">9</a>
-                        <a href="#">10</a>
-                        <a class="arrow next" href="#"></a>
-                        <a class="arrow nnext" href="#"></a>
-                    </div>
-                </div>
+          </li>
+          <li class="accordion_li">
+            <span class="target" id="accordion5"></span>
+            <a href="#accordion5" class="open-accordion" title="open">
+              <div>
+                <p>
+                  <i class="fa-solid fa-angle-right"></i>
+                  통계 관리
+                </p>
+              </div>
+            </a>
+            <a href="#accordion" class="close-accordion" title="close">
+              <div>
+                <p>
+                  <i class="fa-solid fa-angle-down"></i>
+                  통계 관리
+                </p>
+              </div>
+            </a>
+            <div class="accordion_content">
+              <ul>
+                <li><a href="playerRankListing.html">선수별 순위보기</a></li>
+                <li><a href="newRecordListing.html">신기록 경기기록</a></li>
+                <li><a href="scheduleRankListing.html">경기별 순위보기</a></li>
+                <li><a href="scheduleListing.html">경기별 메달보기</a></li>
+                <li><a href="countryListing.html">국가별 순위보기</a></li>
+              </ul>
             </div>
-        </div>
+          </li>
 
-        <!-- footer -->
-        <footer>
-            <p class="footer_text">
-                Copyright © 2022, 20th Asian U20 Athletics Championships
-                Yecheon. All rights reserved.
-            </p>
-        </footer>
-    </body>
+          <li class="accordion_li">
+            <span class="target" id="accordion6"></span>
+            <a href="#accordion6" class="open-accordion" title="open">
+              <div>
+                <p>
+                  <i class="fa-solid fa-angle-right"></i>
+                  계정 관리
+                </p>
+              </div>
+            </a>
+            <a href="#accordion" class="close-accordion" title="close">
+              <div>
+                <p>
+                  <i class="fa-solid fa-angle-down"></i>
+                  계정 관리
+                </p>
+              </div>
+            </a>
+            <div class="accordion_content">
+              <ul>
+                <li><a href="mypage.html">계정 정보</a></li>
+                <li>
+                  <a href="change_pw.html">비밀번호 변경</a>
+                </li>
+                <li><a href="signup.html">계정 생성</a></li>
+                <li>
+                  <a href="user.html">계정 목록</a>
+                </li>
+                <li>
+                  <a href="log.html">로그 목록</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- contents 본문 내용 -->
+    <div class="container">
+      <div class="contents main-table">
+        <!-- 국가 별 순위 -->
+        <div class="country_table space">
+          <div class="team_tabs-content tab">
+            <table class="table table-hover team_table" id="nation_rank">
+              <h2 class="country_h2">국가랭킹</h2>
+              <colgroup>
+                <col width="auto" />
+                <col width="auto" />
+                <col width="auto" />
+                <col width="auto" />
+                <col width="auto" />
+                <col width="auto" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">순위</th>
+                  <th scope="col">국가</th>
+                  <th scope="col">금</th>
+                  <th scope="col">은</th>
+                  <th scope="col">동</th>
+                  <th scope="col">합계</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="col">0</td>
+                  <td scope="col">INDIA</td>
+                  <td scope="col">0</td>
+                  <td scope="col">0</td>
+                  <td scope="col">0</td>
+                  <td scope="col">0</td>
+                </tr>
+                <tr>
+                  <td scope="col">1</td>
+                  <td scope="col">INDIA</td>
+                  <td scope="col">0</td>
+                  <td scope="col">0</td>
+                  <td scope="col">0</td>
+                  <td scope="col">0</td>
+                </tr>
+                <tr>
+                  <td scope="col">2</td>
+                  <td scope="col">INDIA</td>
+                  <td scope="col">0</td>
+                  <td scope="col">0</td>
+                  <td scope="col">0</td>
+                  <td scope="col">0</td>
+                </tr>
+                <tr>
+                  <td scope="col">0</td>
+                  <td scope="col">INDIA</td>
+                  <td scope="col">0</td>
+                  <td scope="col">0</td>
+                  <td scope="col">0</td>
+                  <td scope="col">0</td>
+                </tr>
+                <tr>
+                  <td scope="col">0</td>
+                  <td scope="col">INDIA</td>
+                  <td scope="col">0</td>
+                  <td scope="col">0</td>
+                  <td scope="col">0</td>
+                  <td scope="col">0</td>
+                </tr>
+                <tr>
+                  <td scope="col">0</td>
+                  <td scope="col">INDIA</td>
+                  <td scope="col">0</td>
+                  <td scope="col">0</td>
+                  <td scope="col">0</td>
+                  <td scope="col">0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- 국가 랭킹 페이징 
+                <div class="page_wrap">
+                    <div class="page_nation">
+                        <a class="arrow pprev" href="#"></a>
+                        <a class="arrow prev" href="#"></a>
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">7</a>
+                        <a href="#">8</a>
+                        <a href="#">9</a>
+                        <a href="#">10</a>
+                        <a class="arrow next" href="#"></a>
+                        <a class="arrow nnext" href="#"></a>
+                    </div>
+                </div> -->
+
+        <!-- 선수 별 순위 -->
+        <div class="country_table space">
+          <div class="team_tabs-content tab">
+            <table class="table table-hover team_table" id="player_rank">
+              <h2 class="country_h2">선수 랭킹</h2>
+              <colgroup>
+                <col width="auto" />
+                <col width="auto" />
+                <col width="auto" />
+                <col width="auto" />
+                <col width="auto" />
+                <col width="auto" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">순위</th>
+                  <th scope="col">선수</th>
+                  <th scope="col">금</th>
+                  <th scope="col">은</th>
+                  <th scope="col">동</th>
+                  <th scope="col">합계</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="col">0</td>
+                  <td scope="col">홍길동</td>
+                  <td scope="col">0</td>
+                  <td scope="col">0</td>
+                  <td scope="col">0</td>
+                  <td scope="col">0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- 선수 랭킹 페이징 
+                <div class="page_wrap">
+                    <div class="page_nation">
+                        <a class="arrow pprev" href="#"></a>
+                        <a class="arrow prev" href="#"></a>
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">7</a>
+                        <a href="#">8</a>
+                        <a href="#">9</a>
+                        <a href="#">10</a>
+                        <a class="arrow next" href="#"></a>
+                        <a class="arrow nnext" href="#"></a>
+                    </div>
+                </div>
+                -->
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <p class="footer_text">
+        Copyright © 2022, 20th Asian U20 Athletics Championships Yecheon. All
+        rights reserved.
+      </p>
+    </footer>
+  </body>
 </html>
