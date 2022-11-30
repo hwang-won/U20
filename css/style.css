@@ -32,43 +32,47 @@
 }
 
 @font-face {
-    font-family: 'Noto Sans KR';
+    font-family: "Noto Sans KR";
     font-style: normal;
     font-weight: 100;
-    src: local('Noto Sans Light'), local('NotoSans-Light'), url(fonts/NotoSans-Light.eot);
-    src: url(fonts/NotoSans-Light.eot?#iefix) format('embedded-opentype'),
-        url(fonts/NotoSans-Light.woff2) format('woff2'),
-        url(fonts/NotoSans-Light.woff) format('woff');
+    src: local("Noto Sans Light"), local("NotoSans-Light"),
+        url(fonts/NotoSans-Light.eot);
+    src: url(fonts/NotoSans-Light.eot?#iefix) format("embedded-opentype"),
+        url(fonts/NotoSans-Light.woff2) format("woff2"),
+        url(fonts/NotoSans-Light.woff) format("woff");
 }
 
 @font-face {
-    font-family: 'Noto Sans KR';
+    font-family: "Noto Sans KR";
     font-style: normal;
     font-weight: 300;
-    src: local('Noto Sans Regular'), local('NotoSans-Regular'), url(fonts/NotoSans-Regular.eot);
-    src: url(fonts/NotoSans-Regular.eot?#iefix) format('embedded-opentype'),
-        url(fonts/NotoSans-Regular.woff2) format('woff2'),
-        url(fonts/NotoSans-Regular.woff) format('woff');
+    src: local("Noto Sans Regular"), local("NotoSans-Regular"),
+        url(fonts/NotoSans-Regular.eot);
+    src: url(fonts/NotoSans-Regular.eot?#iefix) format("embedded-opentype"),
+        url(fonts/NotoSans-Regular.woff2) format("woff2"),
+        url(fonts/NotoSans-Regular.woff) format("woff");
 }
 
 @font-face {
-    font-family: 'Noto Sans KR';
+    font-family: "Noto Sans KR";
     font-style: normal;
     font-weight: 500;
-    src: local('Noto Sans Medium'), local('NotoSans-Medium'), url(fonts/NotoSans-Medium.eot);
-    src: url(fonts/NotoSans-Medium.eot?#iefix) format('embedded-opentype'),
-        url(fonts/NotoSans-Medium.woff2) format('woff2'),
-        url(fonts/NotoSans-Medium.woff) format('woff');
+    src: local("Noto Sans Medium"), local("NotoSans-Medium"),
+        url(fonts/NotoSans-Medium.eot);
+    src: url(fonts/NotoSans-Medium.eot?#iefix) format("embedded-opentype"),
+        url(fonts/NotoSans-Medium.woff2) format("woff2"),
+        url(fonts/NotoSans-Medium.woff) format("woff");
 }
 
 @font-face {
-    font-family: 'Noto Sans KR';
+    font-family: "Noto Sans KR";
     font-style: normal;
     font-weight: 700;
-    src: local('Noto Sans Bold'), local('NotoSans-Bold'), url(fonts/NotoSans-Bold.eot);
-    src: url(fonts/NotoSans-Bold.eot?#iefix) format('embedded-opentype'),
-        url(fonts/NotoSans-Bold.woff2) format('woff2'),
-        url(fonts/NotoSans-Bold.woff) format('woff');
+    src: local("Noto Sans Bold"), local("NotoSans-Bold"),
+        url(fonts/NotoSans-Bold.eot);
+    src: url(fonts/NotoSans-Bold.eot?#iefix) format("embedded-opentype"),
+        url(fonts/NotoSans-Bold.woff2) format("woff2"),
+        url(fonts/NotoSans-Bold.woff) format("woff");
 }
 
 body {
@@ -76,7 +80,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Noto Sans KR', sans-serif !important;
+    font-family: "Noto Sans KR", sans-serif !important;
 }
 
 button,
@@ -294,12 +298,12 @@ table.modal_table caption {
 table.team_table tr {
     background: #fff;
     border-bottom: 1px solid #ddd;
-    padding: .35em;
+    padding: 0.35em;
 }
 
 table.team_table th,
 table.team_table td {
-    padding: .825em;
+    padding: 0.825em;
     text-align: center;
 }
 
@@ -310,7 +314,7 @@ table.modal_table tr.border_bg {
 
 table.team_table th {
     font-size: 1em;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
     background: #f3f6f9;
     color: #2f2f2f;
     white-space: nowrap;
@@ -394,23 +398,23 @@ table.team_table.center {
 }
 
 .page_nation .pprev {
-  background: #f8f8f8 url("/img/page_pprev.png") no-repeat center center;
-  margin-left: 0;
+    background: #f8f8f8 url("/img/page_pprev.png") no-repeat center center;
+    margin-left: 0;
 }
 
 .page_nation .prev {
-  background: #f8f8f8 url("/img/page_prev.png") no-repeat center center;
-  margin-right: 7px;
+    background: #f8f8f8 url("/img/page_prev.png") no-repeat center center;
+    margin-right: 7px;
 }
 
 .page_nation .next {
-  background: #f8f8f8 url("/img/page_next.png") no-repeat center center;
-  margin-left: 7px;
+    background: #f8f8f8 url("/img/page_next.png") no-repeat center center;
+    margin-left: 7px;
 }
 
 .page_nation .nnext {
-  background: #f8f8f8 url("/img/page_nnext.png") no-repeat center center;
-  margin-right: 0;
+    background: #f8f8f8 url("/img/page_nnext.png") no-repeat center center;
+    margin-right: 0;
 }
 
 .page_nation a.active {
@@ -822,7 +826,7 @@ header>div ul.navbar>li {
     background-color: var(--color-light-blue);
     border-right: 1px solid var(--color-light-white);
     z-index: 10;
-    transition: all .35s
+    transition: all 0.35s;
 }
 
 #sidebar_icon:checked~header .sidebar_btn {
@@ -978,7 +982,6 @@ header>div ul.navbar>li {
     font-weight: var(--weight-regular);
 }
 
-
 .form_check>label>span:hover {
     cursor: pointer;
 }
@@ -1001,22 +1004,24 @@ header>div ul.navbar>li {
     box-shadow: 0 0 0 4px var(--color-sky);
     cursor: pointer;
 }
+
 [type="radio"] {
-  vertical-align: middle;
-  border: 2px solid var(--color-grey);
-  border-radius: 50%;
-  width: 16px;
-  height: 16px;
+    vertical-align: middle;
+    border: 2px solid var(--color-grey);
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
 }
 
 [type="radio"]:checked {
-  border: 5px solid var(--color-blue);
+    border: 5px solid var(--color-blue);
 }
 
 [type="radio"]:hover {
-  box-shadow: 0 0 0 4px var(--color-sky);
-  cursor: pointer;
+    box-shadow: 0 0 0 4px var(--color-sky);
+    cursor: pointer;
 }
+
 .input_text {
     position: relative;
     display: block;
@@ -1163,6 +1168,7 @@ header>div ul.navbar>li {
 
 .selectWrap {
     margin: 10px 0 12px 0;
+    padding: 0 60px 0 60px;
 }
 
 .selectWrap:after {
@@ -1201,25 +1207,11 @@ header>div ul.navbar>li {
     float: right !important;
 }
 
-/* 검색창  */
-.text_box {
-    position: relative;
-    float: left;
-    height: 40px;
-    border: 1px solid var(--color-black);
-}
-
-.area {
-    width: 170px;
-    height: 40px;
-    text-align: center;
-    font-size: var(--font-regular);
-}
-
 /* 표 */
 .tbl_area {
-  padding: 0 60px 0 60px;
+    padding: 0 60px 0 60px;
 }
+
 table.tbl_t01 {
     width: 100%;
     border-collapse: collapse;
@@ -1249,7 +1241,7 @@ table.tbl_t01 td {
 }
 
 /* 기록 삭제 관련 */
-table.tbl_t01 td .bt_erase {
+.bt_erase {
     width: 60px;
     height: 32px;
     border: 1px solid #ddd;
@@ -1257,7 +1249,6 @@ table.tbl_t01 td .bt_erase {
     letter-spacing: -1px;
     appearance: button;
     position: relative;
-
 }
 
 .check {
@@ -1293,7 +1284,7 @@ table.tbl_t02 td {
     font-size: var(--font-medium);
 }
 
-table.tbl_t02 td img {
+.kk td img {
     width: 40px;
     margin-right: 40px;
     border: 1px solid var(--color-light-grey);
@@ -1305,14 +1296,14 @@ table.tbl_t02 td:first-child {
 }
 
 .page_nation .bt_insert {
-  width: 70px;
-  height: 32px;
-  border: 1px solid #000;
-  font-size: 1rem;
-  letter-spacing: -1px;
-  appearance: button;
-  position: absolute;
-  right: 135px;
+    width: 70px;
+    height: 32px;
+    border: 1px solid #000;
+    font-size: 1rem;
+    letter-spacing: -1px;
+    appearance: button;
+    position: absolute;
+    right: 135px;
 }
 
 .board_page .bt_insert {
