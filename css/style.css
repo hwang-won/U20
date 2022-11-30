@@ -595,8 +595,24 @@ table.team_table.center {
 .btn_view:hover {
     background: #002c4f;
 }
-
-.btn_delete {
+.btn_modify{
+    text-align: center;
+    padding:0.2em 1.25em;
+    font-size: 0.85em;
+    text-decoration: none;
+    background:#63B2F7;
+    color:#fff;
+    font-family: 'NotoSansKR-Regular';
+    border-radius: 3px;
+}
+.btn_modify span.btn_txt{
+    position: relative;
+    top:-1px;
+}
+.btn_modify:hover{
+    background: #0088ff;
+}
+.btn_delete{
     text-align: center;
     padding: 0.2em 1.25em;
     font-size: 0.85em;
@@ -623,8 +639,8 @@ table.team_table.center {
     text-decoration: none;
     /* background:#5CB762; */
     /* background:#024274; */
-    background: #e9eaed;
-    color: #444444;
+    background:#147E47;
+    color:#FFFFFF;
     font-family: 'NotoSansKR-Regular';
     border-radius: 3px;
 }
@@ -637,7 +653,7 @@ table.team_table.center {
 .btn_excel:hover {
     /* background: #217b27 ; */
     /* background: #002c4f ; */
-    background: #bdbdbd;
+    background: #0a572b ;
 }
 /*엑셀 입,출력*/
 .btn_excel {
