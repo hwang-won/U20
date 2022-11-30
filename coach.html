@@ -4,9 +4,18 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/style.css" />
+        <!-- style.css -->
+        <link rel="stylesheet" href="/css/style.css" />
+        <!-- Font Awesome -->
         <link rel="stylesheet" href="fontawesome/css/all.min.css" />
         <script src="/fontawesome/js/all.min.js"></script>
+        <!-- Data Tables -->
+        <link rel="stylesheet" type="text/css" href="DataTables/datatables.css">
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="DataTables/datatables.js"></script>
+        <script type="text/javascript" src="js/useDataTables.js"></script>
+        <!-- script -->
+        <script type="text/javascript" src="js/script.js"></script>
         <title>U20</title>
     </head>
     <body>
@@ -215,15 +224,14 @@
             </div>
         </div>
 
-        <!-- contents 본문 내용 -->
         <div class="container">
             <div class="contents main-table">
                 <div class="country_table space">			      		
                     <div class="team_tabs-content tab">
                         <h2 class="country_h2">코치진</h2>
                         <!-- 검색 -->
-                        <div class="selectWrap">
-                            <form action="" class="searchForm" name="coach_searchForm" method="post">
+                        <div class="queryBox">
+                            <form action="" enctype="multipart/form-data" class="searchForm" name="coach_searchForm" method="post">
                                 <div class="selectArea">
                                     <div class="select_box mr10">
                                         <select class="d_select" title="국가" style="width: 130px;">
@@ -304,22 +312,25 @@
                                     </div>
                                 </div>
                             </form>
-                        </div>
-                        <!-- 등록 버튼 -->
-                        <div class="btn_base base_mar col_right">
-                            <a href="#" onclick="" class="btn_add">
-                                <span class="btn_txt bold">등록</span>
-                            </a>
-                        </div>
-                        <!-- 엑셀 출력 버튼 -->
-                        <div class="btn_base base_mar col_right">
-                            <input type="button" onclick="" class="btn_excel" value="엑셀 출력">
-                        </div>
-                        <div class="btn_base base_mar col_right">
-                            <input type="button" onclick="" class="btn_excel" value="엑셀 입력" >
-                        </div>                                
+                        </div>                        
+                        <div class="upper_btn_group">
+                            <!-- 등록 버튼 -->
+                            <div class="btn_base base_mar col_right">
+                                <a href="/coach_input.html" onclick="" class="btn_add">
+                                    <span class="btn_txt bold">등록</span>
+                                </a>
+                            </div>
+                            <!-- 엑셀 출력 버튼 -->
+                            <div class="btn_base base_mar col_left">
+                                <input type="button" onclick="" class="btn_excel bold" value="엑셀 출력">
+                            </div>
+                            <!-- 엑셀 입력 버튼 -->
+                            <form action="" enctype="multipart/form-data">
+                                <input type="file" id="upload_coach" hidden/><label for="upload_coach" class="btn_excel label_for_excel_import bold">엑셀 입력</label>
+                            </form>
+                        </div>                 
                         <!-- 코치 테이블 -->
-                        <table class="table table-hover team_table">
+                        <table class="table table-hover team_table" id="coach_table">
                             <colgroup>
                                 <col width="auto">
                                 <col width="auto">
@@ -362,8 +373,8 @@
                                     <td scope="col">25</td>
                                     <td scope="col">헤드 코치</td>
                                     <td scope="col">100m</td>
-                                    <td scope="col"><a href="#" onclick="" class="btn_view">보기</a></td>
-                                    <td scope="col"><a href="#" onclick="" class="btn_view">수정</a></td>
+                                    <td scope="col"><a href="/coach_info.html" target="_blank" onclick="" class="btn_view">보기</a></td>
+                                    <td scope="col"><a href="/coach_modify.html" target="_blank" onclick="" class="btn_modify">수정</a></td>
                                     <td scope="col"><a href="#" onclick="" class="btn_delete">삭제</a></td>
                                 </tr>                 
                                 <tr>
@@ -377,55 +388,10 @@
                                     <td scope="col">25</td>
                                     <td scope="col">헤드 코치</td>
                                     <td scope="col">100m</td>
-                                    <td scope="col"><a href="#" onclick="" class="btn_view">보기</a></td>
-                                    <td scope="col"><a href="#" onclick="" class="btn_view">수정</a></td>
+                                    <td scope="col"><a href="/coach_info.html" target="_blank" onclick="" class="btn_view">보기</a></td>
+                                    <td scope="col"><a href="/coach_modify.html" target="_blank" onclick="" class="btn_modify">수정</a></td>
                                     <td scope="col"><a href="#" onclick="" class="btn_delete">삭제</a></td>
-                                </tr>                 
-                                <tr>
-                                    <td scope="col">3</td>
-                                    <td scope="col">고길동</td>
-                                    <td scope="col">한국</td>				                    
-                                    <td scope="col">서울</td>				                    
-                                    <td scope="col">팀 아누</td>				                    
-                                    <td scope="col">남</td>				                    
-                                    <td scope="col">1998년 11월 15일</td>
-                                    <td scope="col">25</td>
-                                    <td scope="col">헤드 코치</td>
-                                    <td scope="col">100m</td>
-                                    <td scope="col"><a href="#" onclick="" class="btn_view">보기</a></td>
-                                    <td scope="col"><a href="#" onclick="" class="btn_view">수정</a></td>
-                                    <td scope="col"><a href="#" onclick="" class="btn_delete">삭제</a></td>
-                                </tr>                 
-                                <tr>
-                                    <td scope="col">4</td>
-                                    <td scope="col">고길동</td>
-                                    <td scope="col">한국</td>				                    
-                                    <td scope="col">서울</td>				                    
-                                    <td scope="col">팀 아누</td>				                    
-                                    <td scope="col">남</td>				                    
-                                    <td scope="col">1998년 11월 15일</td>
-                                    <td scope="col">25</td>
-                                    <td scope="col">헤드 코치</td>
-                                    <td scope="col">100m</td>
-                                    <td scope="col"><a href="#" onclick="" class="btn_view">보기</a></td>
-                                    <td scope="col"><a href="#" onclick="" class="btn_view">수정</a></td>
-                                    <td scope="col"><a href="#" onclick="" class="btn_delete">삭제</a></td>
-                                </tr>                 
-                                <tr>
-                                    <td scope="col">5</td>
-                                    <td scope="col">고길동</td>
-                                    <td scope="col">한국</td>				                    
-                                    <td scope="col">서울</td>				                    
-                                    <td scope="col">팀 아누</td>				                    
-                                    <td scope="col">남</td>				                    
-                                    <td scope="col">1998년 11월 15일</td>
-                                    <td scope="col">25</td>
-                                    <td scope="col">헤드 코치</td>
-                                    <td scope="col">100m</td>
-                                    <td scope="col"><a href="#" onclick="" class="btn_view">보기</a></td>
-                                    <td scope="col"><a href="#" onclick="" class="btn_view">수정</a></td>
-                                    <td scope="col"><a href="#" onclick="" class="btn_delete">삭제</a></td>
-                                </tr>           
+                                </tr>
                             </tbody>
                         </table>
                     </div>  
