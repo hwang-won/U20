@@ -1,417 +1,268 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
-        <!-- style.css -->
-        <link rel="stylesheet" href="css/style.css" />
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="fontawesome/css/all.min.css" />
-        <script src="/fontawesome/js/all.min.js"></script>
-        <!-- Data Tables
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- style.css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <script src="/fontawesome/js/all.min.js"></script>
+    <!-- Data Tables
         <link rel="stylesheet" type="text/css" href="DataTables/datatables.css">
         <script src="js/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" charset="utf8" src="DataTables/datatables.js"></script>
         <script type="text/javascript" src="js/useDataTables.js"></script> -->
-        <!-- script -->
-        <script type="text/javascript" src="js/script.js"></script>
-        <title>U20</title>
-    </head>
-    <body>
-        <!-- header -->
-        <input type="checkbox" id="sidebar_icon" />
-        <header>
-            <div>
-                <ul class="navbar">
-                    <li class="logo">
-                        <a href="index.html"
-                            ><img
-                                src="img/logo.png"
-                                alt="Logo"
-                                class="logo_img"
-                        /></a>
-                    </li>
-                    <li>
-                        <label for="sidebar_icon" class="sidebar_btn">
-                            메뉴
-                            <i class="fas fa-bars"></i
-                        ></label>
-                    </li>
-                </ul>
-                <ul class="navbar right">
-                    <li><a href="mypage.html">마이페이지</a></li>
-                    <li>
-                        <a href="login.html"
-                            ><i class="fas fa-sign-out-alt"></i
-                        ></a>
-                    </li>
-                </ul>
-            </div>
-        </header>
+    <!-- script -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <title>U20</title>
+</head>
 
-        <!-- sidebar -->
-        <div class="container">
-            <div class="sidebar">
-                <ul class="accordion">
-                    <span class="target" id="accordion"></span>
-                    <li class="accordion_li">
-                        <span class="target" id="accordion1"></span>
-                        <a
-                            href="#accordion1"
-                            class="open-accordion"
-                            title="open"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    참가자 관리
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="#accordion"
-                            class="close-accordion"
-                            title="close"
-                        >
-                            <div class="ab">
-                                <p>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    참가자 관리
-                                </p>
-                            </div>
-                        </a>
-                        <div class="accordion_content">
-                            <ul>
-                                <li><a href="judge.html">심판 목록</a></li>
-                                <li><a href="director.html">임원 목록</a></li>
-                                <li><a href="coach.html">코치 목록</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="accordion_li">
-                        <span class="target" id="accordion2"></span>
-                        <a
-                            href="#accordion2"
-                            class="open-accordion"
-                            title="open"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    선수 관리
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="#accordion"
-                            class="close-accordion"
-                            title="close"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    선수 관리
-                                </p>
-                            </div>
-                        </a>
-                        <div class="accordion_content">
-                            <ul>
-                                <li>
-                                    <a href="athletemanagement.html"
-                                        >선수 목록</a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="accordion_li">
-                        <span class="target" id="accordion3"></span>
-                        <a
-                            href="#accordion3"
-                            class="open-accordion"
-                            title="open"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    경기 관리
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="#accordion"
-                            class="close-accordion"
-                            title="close"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    경기 관리
-                                </p>
-                            </div>
-                        </a>
-                        <div class="accordion_content">
-                            <ul>
-                                <li>
-                                    <a href="sportmanagement.html">경기 목록</a>
-                                </li>
-                                <li>
-                                    <a href="countrymanagement.html"
-                                        >국가 목록</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="schedulemanagement.html"
-                                        >일정 목록</a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="accordion_li">
-                        <span class="target" id="accordion4"></span>
-                        <a
-                            href="#accordion4"
-                            class="open-accordion"
-                            title="open"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    기록 관리
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="#accordion"
-                            class="close-accordion"
-                            title="close"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    기록 관리
-                                </p>
-                            </div>
-                        </a>
-                        <div class="accordion_content">
-                            <ul>
-                                <li>
-                                    <a href="resultManagement.html"
-                                        >경기결과 목록</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="recordHistory.html"
-                                        >역대기록 목록</a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="accordion_li">
-                        <span class="target" id="accordion5"></span>
-                        <a
-                            href="#accordion5"
-                            class="open-accordion"
-                            title="open"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    통계 관리
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="#accordion"
-                            class="close-accordion"
-                            title="close"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    통계 관리
-                                </p>
-                            </div>
-                        </a>
-                        <div class="accordion_content">
-                            <ul>
-                                <li>
-                                    <a href="playerRankListing.html"
-                                        >선수별 순위보기</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="newRecordListing.html"
-                                        >신기록 경기기록</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="scheduleRankListing.html"
-                                        >경기별 순위보기</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="scheduleListing.html"
-                                        >경기별 메달보기</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="countryListing.html"
-                                        >국가별 순위보기</a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="accordion_li">
-                        <span class="target" id="accordion6"></span>
-                        <a
-                            href="#accordion6"
-                            class="open-accordion"
-                            title="open"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    계정 관리
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="#accordion"
-                            class="close-accordion"
-                            title="close"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    계정 관리
-                                </p>
-                            </div>
-                        </a>
-                        <div class="accordion_content">
-                            <ul>
-                                <li><a href="mypage.html">계정 정보</a></li>
-                                <li>
-                                    <a href="change_pw.html">비밀번호 변경</a>
-                                </li>
-                                <li><a href="signup.html">계정 생성</a></li>
-                                <li>
-                                    <a href="user.html">계정 목록</a>
-                                </li>
-                                <li>
-                                    <a href="log.html">로그 목록</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+<body>
+    <!-- header -->
+    <input type="checkbox" id="sidebar_icon" />
+    <header>
+        <div>
+            <ul class="navbar">
+                <li class="logo">
+                    <a href="index.html"><img src="img/logo.png" alt="Logo" class="logo_img" /></a>
+                </li>
+                <li>
+                    <label for="sidebar_icon" class="sidebar_btn">
+                        메뉴
+                        <i class="fas fa-bars"></i></label>
+                </li>
+            </ul>
+            <ul class="navbar right">
+                <li><a href="mypage.html">마이페이지</a></li>
+                <li>
+                    <a href="login.html"><i class="fas fa-sign-out-alt"></i></a>
+                </li>
+            </ul>
         </div>
+    </header>
 
-        <!-- contents 본문 내용 -->
-        <div class="container">
-            <div class="contents main-table">
-                <div class="country_table space">			      		
-                    <div class="team_tabs-content tab">
-                        <h2 class="country_h2">심판진</h2>
-                        <!-- 검색 -->
-                            <form action="" enctype="multipart/form-data" class="searchForm" name="judge_searchForm" method="post">
-                            <div class="selectArea float_r">
-                                <div class="select_box mr10">
-                                        <select class="d_select" title="국가" style="width: 8em;">
-                                            <option value="" hidden="">국가</option>
-                                            <option value="1">한국</option>
-                                            <option value="2">일본</option>
-                                            <option value="3">사우디 아라비아</option>
-                                            <option value="4">인도</option>
-                                        </select>
-                                    </div>
-                                    <div class="select_box mr10">
-                                        <select class="d_select" title="소속" style="width: 8em;">
-                                            <option value="" hidden="">소속</option>
-                                            <option value="1">국제코치협회</option>
-                                            <option value="2">한국코치연맹</option>
-                                        </select>
-                                    </div>
-                                    <div class="select_box mr10">
-                                        <select class="d_select" title="성별" style="width:5em;">
-                                            <option value="" hidden="">성별</option>
-                                            <option value="1">남</option>
-                                            <option value="2">여</option>
-                                        </select>
-                                    </div>
-                                    <div class="select_box mr10">
-                                        <select class="d_select" title="직무" style="width:8em;">
-                                            <option value="" hidden="">직무</option>
-                                            <option value="1">헤드 코치</option>
-                                            <option value="2">서브 코치</option>
-                                        </select>
-                                    </div>
-                                    <div class="select_box mr10">
-                                        <select class="d_select" title="참가경기" style="width: 8em;">
-                                            <option value="" hidden="">참가경기</option>
-                                            <option value="" disabled="">단거리달리기</option>
-                                            <option value="1">100M</option>
-                                            <option value="2">200M</option>
-                                            <option value="3">400M</option>
-                                            <option value="" disabled="">중/장거리</option>
-                                            <option value="4">800M</option>
-                                            <option value="5">1500M</option>
-                                            <option value="6">5000M</option>
-                                            <option value="7">10000M</option>
-                                            <option value="8">3000M 장애물</option>
-                                            <option value="" disabled="">허들달리기</option>
-                                            <option value="9">110M 허들</option>
-                                            <option value="10">400M 허들</option>
-                                            <option value="" disabled="">점프경기</option>
-                                            <option value="11">높이뛰기</option>
-                                            <option value="12">장대높이뛰기</option>
-                                            <option value="13">멀리뛰기</option>
-                                            <option value="14">삼단뛰기</option>
-                                            <option value="" disabled="">던지기</option>
-                                            <option value="15">투포환</option>
-                                            <option value="16">원반던지기</option>
-                                            <option value="17">해머던지기</option>
-                                            <option value="18">창던지기</option>
-                                            <option value="" disabled="">종합</option>
-                                            <option value="19">10종 경기</option>
-                                            <option value="" disabled="">경보</option>
-                                            <option value="20">10000M 경보</option>
-                                            <option value="" disabled="">릴레이</option>
-                                            <option value="21">4x100M 릴레이</option>
-                                            <option value="22">4x400M 릴레이</option>
-                                            <option value="23">4x400M 혼성</option>
-                                        </select>
-                                    </div>
-                                    <div class="search" style="width: 15em;">
-                                        <input type="text" id="search_judge" class="word" name="search_judge" placeholder="검색어를 입력해주세요" maxlength="30">
-                                        <button type="submit" class="btn_search" title="검색"></a>
-                                    </div>
-                                </div>
-                            </form>
-                            <!-- 엑셀 출력 버튼 -->
-                            <div class="btn_base base_mar col_left">
-                                <input type="button" onclick="" class="btn_excel bold" value="엑셀 출력">
+    <!-- sidebar -->
+    <div class="container">
+        <div class="sidebar">
+            <ul class="accordion">
+                <li class="accordion_li active">
+                    <p class="menu_button">
+                        <i class="fa-solid fa-angle-down"></i>
+                        참가자 관리
+                    </p>
+                    <div class="accordion_content">
+                        <ul>
+                            <li class="active"><a href="judge.html">심판 목록</a></li>
+                            <li><a href="director.html">임원 목록</a></li>
+                            <li><a href="coach.html">코치 목록</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="accordion_li">
+                    <p class="menu_button">
+                        <i class="fa-solid fa-angle-right"></i>
+                        선수 관리
+                    </p>
+                    <div class="accordion_content">
+                        <ul>
+                            <li>
+                                <a href="athletemanagement.html">선수 목록</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="accordion_li">
+                    <p class="menu_button">
+                        <i class="fa-solid fa-angle-right"></i>
+                        경기 관리
+                    </p>
+                    <div class="accordion_content">
+                        <ul>
+                            <li>
+                                <a href="sportmanagement.html">경기 목록</a>
+                            </li>
+                            <li>
+                                <a href="countrymanagement.html">국가 목록</a>
+                            </li>
+                            <li>
+                                <a href="schedulemanagement.html">일정 목록</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="accordion_li">
+                    <p class="menu_button">
+                        <i class="fa-solid fa-angle-right"></i>
+                        기록 관리
+                    </p>
+                    <div class="accordion_content">
+                        <ul>
+                            <li>
+                                <a href="resultManagement.html">경기결과 목록</a>
+                            </li>
+                            <li>
+                                <a href="recordHistory.html">역대기록 목록</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="accordion_li">
+                    <p class="menu_button">
+                        <i class="fa-solid fa-angle-right"></i>
+                        통계 관리
+                    </p>
+                    <div class="accordion_content">
+                        <ul>
+                            <li>
+                                <a href="playerRankListing.html">선수별 순위보기</a>
+                            </li>
+                            <li>
+                                <a href="newRecordListing.html">신기록 경기기록</a>
+                            </li>
+                            <li>
+                                <a href="scheduleRankListing.html">경기별 순위보기</a>
+                            </li>
+                            <li>
+                                <a href="scheduleListing.html">경기별 메달보기</a>
+                            </li>
+                            <li>
+                                <a href="countryListing.html">국가별 순위보기</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="accordion_li on">
+                    <p class="menu_button">
+                        <i class="fa-solid fa-angle-right"></i>
+                        계정 관리
+                    </p>
+                    <div class="accordion_content">
+                        <ul>
+                            <li><a href="mypage.html">계정 정보</a></li>
+                            <li>
+                                <a href="change_pw.html">비밀번호 변경</a>
+                            </li>
+                            <li><a href="signup.html">계정 생성</a></li>
+                            <li>
+                                <a href="user.html">계정 목록</a>
+                            </li>
+                            <li>
+                                <a href="log.html">로그 목록</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- contents 본문 내용 -->
+    <div class="container">
+        <div class="contents main-table">
+            <div class="country_table space">
+                <div class="team_tabs-content tab">
+                    <h2 class="country_h2">심판진</h2>
+					<!-- 엑셀 출력 버튼 -->
+					<div class="btn_base base_mar col_left">
+						<input type="button" onclick="" class="btn_excel bold" value="엑셀 출력">
+					</div>
+					<!-- 엑셀 입력 버튼 -->
+					<form action="" enctype="multipart/form-data">
+						<input type="file" id="upload_judge" hidden /><label for="upload_judge"
+							class="btn_excel label_for_excel_import bold float_l">엑셀
+							입력</label>
+					</form>
+                    <!-- 검색 -->
+                    <form action="" enctype="multipart/form-data" class="searchForm" name="judge_searchForm"
+                        method="post"
+                        style="display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end;">
+                        <div class="selectArea float_r">
+                            <div class="select_box mr10">
+                                <select class="d_select" title="국가" style="width: 8em;">
+                                    <option value="" hidden="">국가</option>
+                                    <option value="1">한국</option>
+                                    <option value="2">일본</option>
+                                    <option value="3">사우디 아라비아</option>
+                                    <option value="4">인도</option>
+                                </select>
                             </div>
-                            <!-- 엑셀 입력 버튼 -->
-                            <form action="" enctype="multipart/form-data">
-                                <input type="file" id="upload_judge" hidden/><label for="upload_judge" class="btn_excel label_for_excel_import bold">엑셀 입력</label>
-                            </form>
-                        
-                        <!-- 심판 테이블 -->
-                        <table class="table table-hover team_table display" id="judge_table">
-                            <colgroup>
-                                <!--
+                            <div class="select_box mr10">
+                                <select class="d_select" title="소속" style="width: 8em;">
+                                    <option value="" hidden="">소속</option>
+                                    <option value="1">국제코치협회</option>
+                                    <option value="2">한국코치연맹</option>
+                                </select>
+                            </div>
+                            <div class="select_box mr10">
+                                <select class="d_select" title="성별" style="width:5em;">
+                                    <option value="" hidden="">성별</option>
+                                    <option value="1">남</option>
+                                    <option value="2">여</option>
+                                </select>
+                            </div>
+                            <div class="select_box mr10">
+                                <select class="d_select" title="직무" style="width:8em;">
+                                    <option value="" hidden="">직무</option>
+                                    <option value="1">헤드 코치</option>
+                                    <option value="2">서브 코치</option>
+                                </select>
+                            </div>
+                            <div class="select_box mr10">
+                                <select class="d_select" title="참가경기" style="width: 8em;">
+                                    <option value="" hidden="">참가경기</option>
+                                    <option value="" disabled="">단거리달리기</option>
+                                    <option value="1">100M</option>
+                                    <option value="2">200M</option>
+                                    <option value="3">400M</option>
+                                    <option value="" disabled="">중/장거리</option>
+                                    <option value="4">800M</option>
+                                    <option value="5">1500M</option>
+                                    <option value="6">5000M</option>
+                                    <option value="7">10000M</option>
+                                    <option value="8">3000M 장애물</option>
+                                    <option value="" disabled="">허들달리기</option>
+                                    <option value="9">110M 허들</option>
+                                    <option value="10">400M 허들</option>
+                                    <option value="" disabled="">점프경기</option>
+                                    <option value="11">높이뛰기</option>
+                                    <option value="12">장대높이뛰기</option>
+                                    <option value="13">멀리뛰기</option>
+                                    <option value="14">삼단뛰기</option>
+                                    <option value="" disabled="">던지기</option>
+                                    <option value="15">투포환</option>
+                                    <option value="16">원반던지기</option>
+                                    <option value="17">해머던지기</option>
+                                    <option value="18">창던지기</option>
+                                    <option value="" disabled="">종합</option>
+                                    <option value="19">10종 경기</option>
+                                    <option value="" disabled="">경보</option>
+                                    <option value="20">10000M 경보</option>
+                                    <option value="" disabled="">릴레이</option>
+                                    <option value="21">4x100M 릴레이</option>
+                                    <option value="22">4x400M 릴레이</option>
+                                    <option value="23">4x400M 혼성</option>
+                                </select>
+                            </div>
+                            <div class="search" style="width: 15em;">
+                                <input type="text" id="search_judge" class="word" name="search_judge"
+                                    placeholder="검색어를 입력해주세요" maxlength="30">
+                                <button type="submit" class="btn_search" title="검색"></a>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- 심판 테이블 -->
+                    <table class="table table-hover team_table display" id="judge_table">
+                        <colgroup>
+                            <!--
                                 <col width="5%">
                                 <col width="8%">
                                 <col width="7%">
@@ -425,22 +276,22 @@
                                 <col width="10%">
                                 <col width="10%">
                                 -->
-                                <col width="auto">
-                                <col width="auto">
-                                <col width="auto">
-                                <col width="auto">
-                                <col width="auto">
-                                <col width="auto">
-                                <col width="auto">
-                                <col width="auto">
-                                <col width="auto">
-                                <col width="auto">
-                                <col width="auto">
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th scope="col">번호</th>
-                                    <th scope="col">이름</th>
+                            <col width="auto">
+                            <col width="auto">
+                            <col width="auto">
+                            <col width="auto">
+                            <col width="auto">
+                            <col width="auto">
+                            <col width="auto">
+                            <col width="auto">
+                            <col width="auto">
+                            <col width="auto">
+                            <col width="auto">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">이름</th>
                                 <th scope="col">국가</th>
                                 <th scope="col">소속</th>
                                 <th scope="col">성별</th>
@@ -452,45 +303,55 @@
                                 <th scope="col">수정</th>
                                 <th scope="col">삭제</th>
                             </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="judge_no">1</td>
-                                    <td class="judge_name">고길동</td>
-                                    <td class="judge_nation">한국</td>				                    
-                                    <td class="judge_division">한국심판협회</td>				                    
-                                    <td class="judge_gender">남</td>				                    
-                                    <td class="judge_birth">1998년 11월 15일</td>
-                                    <td class="judge_age">25</td>
-                                    <td class="judge_role">주 심판</td>
-                                    <td class="judge_attendent_game">100m, 200m</td>
-                                    <td><input type="button" onclick="window.open('judge_info.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')" value="보기" class="btn_view"></td>
-                                    <td><input type="button" onclick="window.open('judge_modify.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')" value="수정" class="btn_modify"></td>
-                                    <td><a href="#" onclick="" class="btn_delete">삭제</a></td>
-                                </tr>                        
-                                <tr>
-                                    <td scope="col">2</td>
-                                    <td scope="col">김순자</td>
-                                    <td scope="col">미국</td>				                    
-                                    <td scope="col">미국심판협회</td>				                    
-                                    <td scope="col">여</td>				                    
-                                    <td scope="col">1968년 11월 15일</td>
-                                    <td scope="col">69</td>
-                                    <td scope="col">부 심판</td>
-                                    <td scope="col">투포환</td>
-                                    <td><input type="button" onclick="window.open('judge_info.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')" value="보기" class="btn_view"></td>
-                                    <td><input type="button" onclick="window.open('judge_modify.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')" value="수정" class="btn_modify"></td>
-                                    <td scope="col"><a href="#" onclick="" class="btn_delete">삭제</a></td>
-                                </tr>         
-                            </tbody>
-                         </table>
-                    </div>
-                    <!-- 등록 버튼 -->
-                    <div class="btn_base base_mar col_right">
-                        <input class="btn_add btn_txt bold" type="button" onclick="window.open('judge_input.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')" value="등록" class="btn_view">
-                    </div>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="judge_no">1</td>
+                                <td class="judge_name">고길동</td>
+                                <td class="judge_nation">한국</td>
+                                <td class="judge_division">한국심판협회</td>
+                                <td class="judge_gender">남</td>
+                                <td class="judge_birth">1998년 11월 15일</td>
+                                <td class="judge_age">25</td>
+                                <td class="judge_role">주 심판</td>
+                                <td class="judge_attendent_game">100m, 200m</td>
+                                <td><input type="button"
+                                        onclick="window.open('judge_info.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')"
+                                        value="보기" class="btn_view"></td>
+                                <td><input type="button"
+                                        onclick="window.open('judge_modify.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')"
+                                        value="수정" class="btn_modify"></td>
+                                <td><a href="#" onclick="" class="btn_delete">삭제</a></td>
+                            </tr>
+                            <tr>
+                                <td scope="col">2</td>
+                                <td scope="col">김순자</td>
+                                <td scope="col">미국</td>
+                                <td scope="col">미국심판협회</td>
+                                <td scope="col">여</td>
+                                <td scope="col">1968년 11월 15일</td>
+                                <td scope="col">69</td>
+                                <td scope="col">부 심판</td>
+                                <td scope="col">투포환</td>
+                                <td><input type="button"
+                                        onclick="window.open('judge_info.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')"
+                                        value="보기" class="btn_view"></td>
+                                <td><input type="button"
+                                        onclick="window.open('judge_modify.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')"
+                                        value="수정" class="btn_modify"></td>
+                                <td scope="col"><a href="#" onclick="" class="btn_delete">삭제</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <!-- 심판 페이징 
+                <!-- 등록 버튼 -->
+                <div class="btn_base base_mar col_right">
+                    <input class="btn_add btn_txt bold" type="button"
+                        onclick="window.open('judge_input.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')"
+                        value="등록" class="btn_view">
+                </div>
+            </div>
+            <!-- 심판 페이징 
                 <div class="page_wrap">
                     <div class="page_nation">
                     <a class="arrow pprev" href="#"></a>
@@ -510,16 +371,16 @@
                     </div>
                 </div>
                 -->
-            </div>
         </div>
-        <!-- footer -->
-        <footer>
-            <p class="footer_text">
-                Copyright © 2022, 20th Asian U20 Athletics Championships
-                Yecheon. All rights reserved.
-            </p>
-        </footer>
+    </div>
+    <!-- footer -->
+    <footer>
+        <p class="footer_text">
+            Copyright © 2022, 20th Asian U20 Athletics Championships
+            Yecheon. All rights reserved.
+        </p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
 
-
-    </body>
 </html>
