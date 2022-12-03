@@ -1,259 +1,314 @@
 <!DOCTYPE html>
 <html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--style.css-->
+        <link rel="stylesheet" href="css/style.css" />
+        <!--Font Awesome-->
+        <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+        <script src="/fontawesome/js/all.min.js"></script>
+        <!-- Data Tables -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="DataTables/datatables.css"
+        />
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script
+            type="text/javascript"
+            charset="utf8"
+            src="DataTables/datatables.js"
+        ></script>
+        <script type="text/javascript" src="js/useDataTables.js"></script>
+        <title>U20</title>
+    </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!--style.css-->
-  <link rel="stylesheet" href="css/style.css" />
-  <!--Font Awesome-->
-  <link rel="stylesheet" href="fontawesome/css/all.min.css" />
-  <script src="/fontawesome/js/all.min.js"></script>
-  <!-- Data Tables -->
-  <link rel="stylesheet" type="text/css" href="DataTables/datatables.css" />
-  <script src="js/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" charset="utf8" src="DataTables/datatables.js"></script>
-  <script type="text/javascript" src="js/useDataTables.js"></script>
-  <title>U20</title>
-</head>
-
-<body>
-  <!-- header -->
-  <input type="checkbox" id="sidebar_icon" />
-  <header>
-    <div>
-      <ul class="navbar">
-        <li class="logo">
-          <a href="index.html"><img src="img/logo.png" alt="Logo" class="logo_img" /></a>
-        </li>
-        <li>
-          <label for="sidebar_icon" class="sidebar_btn">
-            메뉴
-            <i class="fas fa-bars"></i></label>
-        </li>
-      </ul>
-      <ul class="navbar right">
-        <li><a href="mypage.html">마이페이지</a></li>
-        <li>
-          <a href="login.html"><i class="fas fa-sign-out-alt"></i></a>
-        </li>
-      </ul>
-    </div>
-  </header>
-
-  <!-- sidebar -->
-  <div class="container">
-    <div class="sidebar">
-      <ul class="accordion">
-        <li class="accordion_li">
-          <p class="menu_button">
-            <i class="fa-solid fa-angle-right"></i>
-            참가자 관리
-          </p>
-          <div class="accordion_content">
-            <ul>
-              <li><a href="judge.html">심판 목록</a></li>
-              <li><a href="director.html">임원 목록</a></li>
-              <li><a href="coach.html">코치 목록</a></li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="accordion_li">
-          <p class="menu_button">
-            <i class="fa-solid fa-angle-right"></i>
-            선수 관리
-          </p>
-          <div class="accordion_content">
-            <ul>
-              <li>
-                <a href="athletemanagement.html">선수 목록</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="accordion_li">
-          <p class="menu_button">
-            <i class="fa-solid fa-angle-right"></i>
-            경기 관리
-          </p>
-          <div class="accordion_content">
-            <ul>
-              <li>
-                <a href="sportmanagement.html">경기 목록</a>
-              </li>
-              <li>
-                <a href="countrymanagement.html">국가 목록</a>
-              </li>
-              <li>
-                <a href="schedulemanagement.html">일정 목록</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="accordion_li">
-          <p class="menu_button">
-            <i class="fa-solid fa-angle-right"></i>
-            기록 관리
-          </p>
-          <div class="accordion_content">
-            <ul>
-              <li>
-                <a href="resultManagement.html">경기결과 목록</a>
-              </li>
-              <li>
-                <a href="recordHistory.html">역대기록 목록</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="accordion_li">
-          <p class="menu_button">
-            <i class="fa-solid fa-angle-right"></i>
-            통계 관리
-          </p>
-          <div class="accordion_content">
-            <ul>
-              <li>
-                <a href="playerRankListing.html">선수별 순위보기</a>
-              </li>
-              <li>
-                <a href="newRecordListing.html">신기록 경기기록</a>
-              </li>
-              <li>
-                <a href="scheduleRankListing.html">경기별 순위보기</a>
-              </li>
-              <li>
-                <a href="scheduleListing.html">경기별 메달보기</a>
-              </li>
-              <li>
-                <a href="countryListing.html">국가별 순위보기</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="accordion_li on">
-          <p class="menu_button">
-            <i class="fa-solid fa-angle-right"></i>
-            계정 관리
-          </p>
-          <div class="accordion_content">
-            <ul>
-              <li><a href="mypage.html">계정 정보</a></li>
-              <li>
-                <a href="change_pw.html">비밀번호 변경</a>
-              </li>
-              <li><a href="signup.html">계정 생성</a></li>
-              <li>
-                <a href="user.html">계정 목록</a>
-              </li>
-              <li>
-                <a href="log.html">로그 목록</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- contents 본문 내용 -->
-  <div class="container">
-    <div class="contents main-table">
-      <!-- 국가 별 순위 -->
-      <div class="country_table space">
-        <div class="team_tabs-content tab">
-          <table class="table table-hover team_table" id="nation_rank">
-            <h2 class="country_h2">국가랭킹</h2>
-            <div style="display: flex; align-items: center; margin-bottom: -30px;">
-              <p>페이지당</p>
-              <div class="select_box mr10" style="height: 25px; z-index: 9999;">
-                <select class="d_select" title="num" style="width: 4em; height: 25px; margin-top: -10px;">
-                  <option value="10">10</option>
-                  <option value="25">25</option>
-                  <option value="50">50</option>
-                  <option value="100">100</option>
-                </select>
-              </div>
-              <p>개씩 보기</p>
+    <body>
+        <!-- header -->
+        <input type="checkbox" id="sidebar_icon" />
+        <header>
+            <div>
+                <ul class="navbar">
+                    <li class="logo">
+                        <a href="index.html"
+                            ><img
+                                src="img/logo.png"
+                                alt="Logo"
+                                class="logo_img"
+                        /></a>
+                    </li>
+                    <li>
+                        <label for="sidebar_icon" class="sidebar_btn">
+                            메뉴
+                            <i class="fas fa-bars"></i
+                        ></label>
+                    </li>
+                </ul>
+                <ul class="navbar right">
+                    <li><a href="mypage.html">마이페이지</a></li>
+                    <li>
+                        <a href="login.html"
+                            ><i class="fas fa-sign-out-alt"></i
+                        ></a>
+                    </li>
+                </ul>
             </div>
-            <colgroup>
-              <col width="auto" />
-              <col width="auto" />
-              <col width="auto" />
-              <col width="auto" />
-              <col width="auto" />
-              <col width="auto" />
-            </colgroup>
-            <thead class="country_lank">
-              <tr>
-                <th scope="col">순위</th>
-                <th scope="col">국가</th>
-                <th scope="col">금</th>
-                <th scope="col">은</th>
-                <th scope="col">동</th>
-                <th scope="col">합계</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td scope="col">1</td>
-                <td scope="col">KOREA</td>
-                <td scope="col">10</td>
-                <td scope="col">8</td>
-                <td scope="col">7</td>
-                <td scope="col">25</td>
-              </tr>
-              <tr>
-                <td scope="col">2</td>
-                <td scope="col">INDIA</td>
-                <td scope="col">7</td>
-                <td scope="col">6</td>
-                <td scope="col">4</td>
-                <td scope="col">17</td>
-              </tr>
-              <tr>
-                <td scope="col">3</td>
-                <td scope="col">JAPAN</td>
-                <td scope="col">6</td>
-                <td scope="col">6</td>
-                <td scope="col">3</td>
-                <td scope="col">15</td>
-              </tr>
-              <tr>
-                <td scope="col">4</td>
-                <td scope="col">INDONESIA</td>
-                <td scope="col">5</td>
-                <td scope="col">5</td>
-                <td scope="col">4</td>
-                <td scope="col">14</td>
-              </tr>
-              <tr>
-                <td scope="col">5</td>
-                <td scope="col">SAUDI ARABIA</td>
-                <td scope="col">5</td>
-                <td scope="col">3</td>
-                <td scope="col">2</td>
-                <td scope="col">10</td>
-              </tr>
-              <tr>
-                <td scope="col">6</td>
-                <td scope="col">CHINA</td>
-                <td scope="col">4</td>
-                <td scope="col">2</td>
-                <td scope="col">1</td>
-                <td scope="col">7</td>
-              </tr>
-            </tbody>
-          </table>
-          <!-- </div> -->
+        </header>
+
+        <!-- sidebar -->
+        <div class="container">
+            <div class="sidebar">
+                <ul class="accordion">
+                    <li class="accordion_li">
+                        <p class="menu_button">
+                            <i class="fa-solid fa-angle-right"></i>
+                            참가자 관리
+                        </p>
+                        <div class="accordion_content">
+                            <ul>
+                                <li><a href="judge.html">심판 목록</a></li>
+                                <li><a href="director.html">임원 목록</a></li>
+                                <li><a href="coach.html">코치 목록</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="accordion_li">
+                        <p class="menu_button">
+                            <i class="fa-solid fa-angle-right"></i>
+                            선수 관리
+                        </p>
+                        <div class="accordion_content">
+                            <ul>
+                                <li>
+                                    <a href="athletemanagement.html"
+                                        >선수 목록</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="accordion_li">
+                        <p class="menu_button">
+                            <i class="fa-solid fa-angle-right"></i>
+                            경기 관리
+                        </p>
+                        <div class="accordion_content">
+                            <ul>
+                                <li>
+                                    <a href="sportmanagement.html">경기 목록</a>
+                                </li>
+                                <li>
+                                    <a href="countrymanagement.html"
+                                        >국가 목록</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="schedulemanagement.html"
+                                        >일정 목록</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="accordion_li">
+                        <p class="menu_button">
+                            <i class="fa-solid fa-angle-right"></i>
+                            기록 관리
+                        </p>
+                        <div class="accordion_content">
+                            <ul>
+                                <li>
+                                    <a href="resultManagement.html"
+                                        >경기결과 목록</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="recordHistory.html"
+                                        >역대기록 목록</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="accordion_li">
+                        <p class="menu_button">
+                            <i class="fa-solid fa-angle-right"></i>
+                            통계 관리
+                        </p>
+                        <div class="accordion_content">
+                            <ul>
+                                <li>
+                                    <a href="playerRankListing.html"
+                                        >선수별 순위보기</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="newRecordListing.html"
+                                        >신기록 경기기록</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="scheduleRankListing.html"
+                                        >경기별 순위보기</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="scheduleListing.html"
+                                        >경기별 메달보기</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="countryListing.html"
+                                        >국가별 순위보기</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="accordion_li on">
+                        <p class="menu_button">
+                            <i class="fa-solid fa-angle-right"></i>
+                            계정 관리
+                        </p>
+                        <div class="accordion_content">
+                            <ul>
+                                <li><a href="mypage.html">계정 정보</a></li>
+                                <li>
+                                    <a href="change_pw.html">비밀번호 변경</a>
+                                </li>
+                                <li><a href="signup.html">계정 생성</a></li>
+                                <li>
+                                    <a href="user.html">계정 목록</a>
+                                </li>
+                                <li>
+                                    <a href="log.html">로그 목록</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <!-- 국가 랭킹 페이징 
+
+        <!-- contents 본문 내용 -->
+        <div class="container">
+            <div class="contents main-table">
+                <!-- 국가 별 순위 -->
+                <div class="country_table space">
+                    <div class="team_tabs-content tab">
+                        <table
+                            class="table table-hover team_table"
+                            id="nation_rank"
+                        >
+                            <h2 class="country_h2">국가랭킹</h2>
+                            <div
+                                style="
+                                    display: flex;
+                                    align-items: center;
+                                    margin-bottom: -30px;
+                                "
+                            >
+                                <p>페이지당</p>
+                                <div
+                                    class="select_box mr10"
+                                    style="height: 25px; z-index: 9999"
+                                >
+                                    <select
+                                        class="d_select"
+                                        title="num"
+                                        style="
+                                            width: 4em;
+                                            height: 25px;
+                                            margin-top: -10px;
+                                        "
+                                    >
+                                        <option value="10">10</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                    </select>
+                                </div>
+                                <p>개씩 보기</p>
+                            </div>
+                            <colgroup>
+                                <col width="auto" />
+                                <col width="auto" />
+                                <col width="auto" />
+                                <col width="auto" />
+                                <col width="auto" />
+                                <col width="auto" />
+                            </colgroup>
+                            <thead class="country_lank">
+                                <tr>
+                                    <th scope="col">순위</th>
+                                    <th scope="col">국가</th>
+                                    <th scope="col">금</th>
+                                    <th scope="col">은</th>
+                                    <th scope="col">동</th>
+                                    <th scope="col">합계</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="col">1</td>
+                                    <td scope="col">KOREA</td>
+                                    <td scope="col">10</td>
+                                    <td scope="col">8</td>
+                                    <td scope="col">7</td>
+                                    <td scope="col">25</td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">2</td>
+                                    <td scope="col">INDIA</td>
+                                    <td scope="col">7</td>
+                                    <td scope="col">6</td>
+                                    <td scope="col">4</td>
+                                    <td scope="col">17</td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">3</td>
+                                    <td scope="col">JAPAN</td>
+                                    <td scope="col">6</td>
+                                    <td scope="col">6</td>
+                                    <td scope="col">3</td>
+                                    <td scope="col">15</td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">4</td>
+                                    <td scope="col">INDONESIA</td>
+                                    <td scope="col">5</td>
+                                    <td scope="col">5</td>
+                                    <td scope="col">4</td>
+                                    <td scope="col">14</td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">5</td>
+                                    <td scope="col">SAUDI ARABIA</td>
+                                    <td scope="col">5</td>
+                                    <td scope="col">3</td>
+                                    <td scope="col">2</td>
+                                    <td scope="col">10</td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">6</td>
+                                    <td scope="col">CHINA</td>
+                                    <td scope="col">4</td>
+                                    <td scope="col">2</td>
+                                    <td scope="col">1</td>
+                                    <td scope="col">7</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- </div> -->
+                    </div>
+                    <!-- 국가 랭킹 페이징 
                 <div class="page_wrap">
                     <div class="page_nation">
                         <a class="arrow pprev" href="#"></a>
@@ -273,75 +328,78 @@
                     </div>
                 </div> -->
 
-        <!-- 선수 별 순위 -->
+                    <!-- 선수 별 순위 -->
 
-        <div class="team_tabs-content tab">
-          <table class="table table-hover team_table" id="player_rank">
-            <h2 class="country_h2">선수 랭킹</h2>
-            <colgroup>
-              <col width="auto" />
-              <col width="auto" />
-              <col width="auto" />
-              <col width="auto" />
-              <col width="auto" />
-              <col width="auto" />
-            </colgroup>
-            <thead>
-              <tr>
-                <th scope="col">순위</th>
-                <th scope="col">선수</th>
-                <th scope="col">금</th>
-                <th scope="col">은</th>
-                <th scope="col">동</th>
-                <th scope="col">합계</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td scope="col">1</td>
-                <td scope="col">홍길동</td>
-                <td scope="col">5</td>
-                <td scope="col">3</td>
-                <td scope="col">2</td>
-                <td scope="col">10</td>
-              </tr>
-              <tr>
-                <td scope="col">2</td>
-                <td scope="col">김기자</td>
-                <td scope="col">3</td>
-                <td scope="col">3</td>
-                <td scope="col">2</td>
-                <td scope="col">8</td>
-              </tr>
-              <tr>
-                <td scope="col">3</td>
-                <td scope="col">이비즈</td>
-                <td scope="col">3</td>
-                <td scope="col">2</td>
-                <td scope="col">2</td>
-                <td scope="col">7</td>
-              </tr>
-              <tr>
-                <td scope="col">4</td>
-                <td scope="col">아시즈</td>
-                <td scope="col">2</td>
-                <td scope="col">2</td>
-                <td scope="col">3</td>
-                <td scope="col">5</td>
-              </tr>
-              <tr>
-                <td scope="col">5</td>
-                <td scope="col">호시타 사이타마</td>
-                <td scope="col">2</td>
-                <td scope="col">1</td>
-                <td scope="col">1</td>
-                <td scope="col">4</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+                    <div class="team_tabs-content tab">
+                        <table
+                            class="table table-hover team_table"
+                            id="player_rank"
+                        >
+                            <h2 class="country_h2">선수 랭킹</h2>
+                            <colgroup>
+                                <col width="auto" />
+                                <col width="auto" />
+                                <col width="auto" />
+                                <col width="auto" />
+                                <col width="auto" />
+                                <col width="auto" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">순위</th>
+                                    <th scope="col">선수</th>
+                                    <th scope="col">금</th>
+                                    <th scope="col">은</th>
+                                    <th scope="col">동</th>
+                                    <th scope="col">합계</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="col">1</td>
+                                    <td scope="col">홍길동</td>
+                                    <td scope="col">5</td>
+                                    <td scope="col">3</td>
+                                    <td scope="col">2</td>
+                                    <td scope="col">10</td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">2</td>
+                                    <td scope="col">김기자</td>
+                                    <td scope="col">3</td>
+                                    <td scope="col">3</td>
+                                    <td scope="col">2</td>
+                                    <td scope="col">8</td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">3</td>
+                                    <td scope="col">이비즈</td>
+                                    <td scope="col">3</td>
+                                    <td scope="col">2</td>
+                                    <td scope="col">2</td>
+                                    <td scope="col">7</td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">4</td>
+                                    <td scope="col">아시즈</td>
+                                    <td scope="col">2</td>
+                                    <td scope="col">2</td>
+                                    <td scope="col">3</td>
+                                    <td scope="col">5</td>
+                                </tr>
+                                <tr>
+                                    <td scope="col">5</td>
+                                    <td scope="col">호시타 사이타마</td>
+                                    <td scope="col">2</td>
+                                    <td scope="col">1</td>
+                                    <td scope="col">1</td>
+                                    <td scope="col">4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
-        <!-- 선수 랭킹 페이징 
+                    <!-- 선수 랭킹 페이징 
                 <div class="page_wrap">
                     <div class="page_nation">
                         <a class="arrow pprev" href="#"></a>
@@ -360,19 +418,17 @@
                         <a class="arrow nnext" href="#"></a>
                     </div>
                 </div>
-                -->
-      </div>
-    </div>
-  </div>
+                --></div>
+            </div>
+        </div>
 
-  <!-- footer -->
-  <footer style="position: relative; bottom: 0; height: 60px;">
-    <p class="footer_text">
-      Copyright © 2022, 20th Asian U20 Athletics Championships
-      Yecheon. All rights reserved.
-    </p>
-  </footer>
-  <script src="js/main.js"></script>
-</body>
-
+        <!-- footer -->
+        <footer style="position: relative; bottom: 0; height: 60px">
+            <p class="footer_text">
+                Copyright © 2022, 20th Asian U20 Athletics Championships
+                Yecheon. All rights reserved.
+            </p>
+        </footer>
+        <script src="js/main.js"></script>
+    </body>
 </html>
