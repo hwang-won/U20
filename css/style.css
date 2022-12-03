@@ -960,7 +960,7 @@ header>div ul.navbar>li {
     font-size: var(--font-small);
     font-weight: var(--weight-semi-bold);
     padding: 20px;
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .accordion_li i {
