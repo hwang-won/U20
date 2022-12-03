@@ -16,378 +16,225 @@
 </head>
 
 <body>
-        <!-- header -->
-        <input type="checkbox" id="sidebar_icon" />
-        <header>
-            <div>
-                <ul class="navbar">
-                    <li class="logo">
-                        <a href="index.html"
-                            ><img
-                                src="img/logo.png"
-                                alt="Logo"
-                                class="logo_img"
-                        /></a>
-                    </li>
-                    <li>
-                        <label for="sidebar_icon" class="sidebar_btn">
-                            메뉴
-                            <i class="fas fa-bars"></i
-                        ></label>
-                    </li>
-                </ul>
-                <ul class="navbar right">
-                    <li><a href="mypage.html">마이페이지</a></li>
-                    <li>
-                        <a href="login.html"
-                            ><i class="fas fa-sign-out-alt"></i
-                        ></a>
-                    </li>
-                </ul>
-            </div>
-        </header>
-
-        <!-- sidebar -->
-        <div class="container">
-            <div class="sidebar">
-                <ul class="accordion">
-                    <span class="target" id="accordion"></span>
-                    <li class="accordion_li">
-                        <span class="target" id="accordion1"></span>
-                        <a
-                            href="#accordion1"
-                            class="open-accordion"
-                            title="open"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    참가자 관리
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="#accordion"
-                            class="close-accordion"
-                            title="close"
-                        >
-                            <div class="ab">
-                                <p>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    참가자 관리
-                                </p>
-                            </div>
-                        </a>
-                        <div class="accordion_content">
-                            <ul>
-                                <li><a href="judge.html">심판 목록</a></li>
-                                <li><a href="director.html">임원 목록</a></li>
-                                <li><a href="coach.html">코치 목록</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="accordion_li">
-                        <span class="target" id="accordion2"></span>
-                        <a
-                            href="#accordion2"
-                            class="open-accordion"
-                            title="open"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    선수 관리
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="#accordion"
-                            class="close-accordion"
-                            title="close"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    선수 관리
-                                </p>
-                            </div>
-                        </a>
-                        <div class="accordion_content">
-                            <ul>
-                                <li>
-                                    <a href="athletemanagement.html"
-                                        >선수 목록</a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="accordion_li">
-                        <span class="target" id="accordion3"></span>
-                        <a
-                            href="#accordion3"
-                            class="open-accordion"
-                            title="open"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    경기 관리
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="#accordion"
-                            class="close-accordion"
-                            title="close"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    경기 관리
-                                </p>
-                            </div>
-                        </a>
-                        <div class="accordion_content">
-                            <ul>
-                                <li>
-                                    <a href="sportmanagement.html">경기 목록</a>
-                                </li>
-                                <li>
-                                    <a href="countrymanagement.html"
-                                        >국가 목록</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="schedulemanagement.html"
-                                        >일정 목록</a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="accordion_li">
-                        <span class="target" id="accordion4"></span>
-                        <a
-                            href="#accordion4"
-                            class="open-accordion"
-                            title="open"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    기록 관리
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="#accordion"
-                            class="close-accordion"
-                            title="close"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    기록 관리
-                                </p>
-                            </div>
-                        </a>
-                        <div class="accordion_content">
-                            <ul>
-                                <li>
-                                    <a href="resultManagement.html"
-                                        >경기결과 목록</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="recordHistory.html"
-                                        >역대기록 목록</a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="accordion_li">
-                        <span class="target" id="accordion5"></span>
-                        <a
-                            href="#accordion5"
-                            class="open-accordion"
-                            title="open"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    통계 관리
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="#accordion"
-                            class="close-accordion"
-                            title="close"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    통계 관리
-                                </p>
-                            </div>
-                        </a>
-                        <div class="accordion_content">
-                            <ul>
-                                <li>
-                                    <a href="playerRankListing.html"
-                                        >선수별 순위보기</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="newRecordListing.html"
-                                        >신기록 경기기록</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="scheduleRankListing.html"
-                                        >경기별 순위보기</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="scheduleListing.html"
-                                        >경기별 메달보기</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="countryListing.html"
-                                        >국가별 순위보기</a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="accordion_li">
-                        <span class="target" id="accordion6"></span>
-                        <a
-                            href="#accordion6"
-                            class="open-accordion"
-                            title="open"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    계정 관리
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="#accordion"
-                            class="close-accordion"
-                            title="close"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    계정 관리
-                                </p>
-                            </div>
-                        </a>
-                        <div class="accordion_content">
-                            <ul>
-                                <li><a href="mypage.html">계정 정보</a></li>
-                                <li>
-                                    <a href="change_pw.html">비밀번호 변경</a>
-                                </li>
-                                <li><a href="signup.html">계정 생성</a></li>
-                                <li>
-                                    <a href="user.html">계정 목록</a>
-                                </li>
-                                <li>
-                                    <a href="log.html">로그 목록</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+    <!-- header -->
+    <input type="checkbox" id="sidebar_icon" />
+    <header>
+        <div>
+            <ul class="navbar">
+                <li class="logo">
+                    <a href="index.html"><img src="img/logo.png" alt="Logo" class="logo_img" /></a>
+                </li>
+                <li>
+                    <label for="sidebar_icon" class="sidebar_btn">
+                        메뉴
+                        <i class="fas fa-bars"></i></label>
+                </li>
+            </ul>
+            <ul class="navbar right">
+                <li><a href="mypage.html">마이페이지</a></li>
+                <li>
+                    <a href="login.html"><i class="fas fa-sign-out-alt"></i></a>
+                </li>
+            </ul>
         </div>
+    </header>
+
+    <!-- sidebar -->
+    <div class="container">
+        <div class="sidebar">
+            <ul class="accordion">
+                <li class="accordion_li">
+                    <p class="menu_button">
+                        <i class="fa-solid fa-angle-right"></i>
+                        참가자 관리
+                    </p>
+                    <div class="accordion_content">
+                        <ul>
+                            <li><a href="judge.html">심판 목록</a></li>
+                            <li><a href="director.html">임원 목록</a></li>
+                            <li><a href="coach.html">코치 목록</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="accordion_li">
+                    <p class="menu_button">
+                        <i class="fa-solid fa-angle-right"></i>
+                        선수 관리
+                    </p>
+                    <div class="accordion_content">
+                        <ul>
+                            <li>
+                                <a href="athletemanagement.html">선수 목록</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="accordion_li">
+                    <p class="menu_button">
+                        <i class="fa-solid fa-angle-right"></i>
+                        경기 관리
+                    </p>
+                    <div class="accordion_content">
+                        <ul>
+                            <li>
+                                <a href="sportmanagement.html">경기 목록</a>
+                            </li>
+                            <li>
+                                <a href="countrymanagement.html">국가 목록</a>
+                            </li>
+                            <li>
+                                <a href="schedulemanagement.html">일정 목록</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="accordion_li active">
+                    <p class="menu_button">
+                        <i class="fa-solid fa-angle-down"></i>
+                        기록 관리
+                    </p>
+                    <div class="accordion_content">
+                        <ul>
+                            <li class="active">
+                                <a href="resultManagement.html">경기결과 목록</a>
+                            </li>
+                            <li>
+                                <a href="recordHistory.html">역대기록 목록</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="accordion_li">
+                    <p class="menu_button">
+                        <i class="fa-solid fa-angle-right"></i>
+                        통계 관리
+                    </p>
+                    <div class="accordion_content">
+                        <ul>
+                            <li>
+                                <a href="playerRankListing.html">선수별 순위보기</a>
+                            </li>
+                            <li>
+                                <a href="newRecordListing.html">신기록 경기기록</a>
+                            </li>
+                            <li>
+                                <a href="scheduleRankListing.html">경기별 순위보기</a>
+                            </li>
+                            <li>
+                                <a href="scheduleListing.html">경기별 메달보기</a>
+                            </li>
+                            <li>
+                                <a href="countryListing.html">국가별 순위보기</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="accordion_li on">
+                    <p class="menu_button">
+                        <i class="fa-solid fa-angle-right"></i>
+                        계정 관리
+                    </p>
+                    <div class="accordion_content">
+                        <ul>
+                            <li><a href="mypage.html">계정 정보</a></li>
+                            <li>
+                                <a href="change_pw.html">비밀번호 변경</a>
+                            </li>
+                            <li><a href="signup.html">계정 생성</a></li>
+                            <li>
+                                <a href="user.html">계정 목록</a>
+                            </li>
+                            <li>
+                                <a href="log.html">로그 목록</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
     <div class="container">
         <div class="something contents">
             <h2 class="country_h2">경기결과 목록</h2>
-            <div class="selectWrap">
-                <div class="selectArea float_r">
-                    <div class="select_box mr10">
-                        <select class="d_select" title="날짜" style="width: 140px;">
-                            <option value="1">날짜</option>
-                            <option value="2">2023-06-04</option>
-                            <option value="3">2023-06-05</option>
-                            <option value="4">2023-06-06</option>
-                            <option value="5">2023-06-07</option>
-                        </select>
-                    </div>
+			<div class="btn_base base_mar" style="float: left;">
+				<input type="button" onclick="" class="btn_excel bold" value="엑셀 출력">
+			</div>
+			<div class="selectArea float_r">
+				<div class="select_box mr10">
+					<select class="d_select" title="날짜" style="width: 140px;">
+						<option value="1">날짜</option>
+						<option value="2">2023-06-04</option>
+						<option value="3">2023-06-05</option>
+						<option value="4">2023-06-06</option>
+						<option value="5">2023-06-07</option>
+					</select>
+				</div>
 
-                    <div class="select_box mr10">
-                        <select class="d_select" title="성별" style="width: 90px;">
-                            <option value="" hidden>성별</option>
-                            <option value="1">남</option>
-                            <option value="2">여</option>
-                        </select>
-                    </div>
+				<div class="select_box mr10">
+					<select class="d_select" title="성별" style="width: 90px;">
+						<option value="" hidden>성별</option>
+						<option value="1">남</option>
+						<option value="2">여</option>
+					</select>
+				</div>
 
-                    <div class="select_box mr10">
-                        <select class="d_select" title="기록 방식" style="width: 122px;">
-                            <option value="" hidden>기록 방식</option>
-                            <option value="1">자동</option>
-                            <option value="2">수동</option>
-                        </select>
-                    </div>
+				<div class="select_box mr10">
+					<select class="d_select" title="기록 방식" style="width: 122px;">
+						<option value="" hidden>기록 방식</option>
+						<option value="1">자동</option>
+						<option value="2">수동</option>
+					</select>
+				</div>
 
-                    <div class="select_box mr10">
-                        <select class="d_select" title="구분" style="width: 172.667px;">
-                            <option value="" hidden>종목</option>
-                            <option value="" disabled>단거리달리기</option>
-                            <option value="1">100M</option>
-                            <option value="2">200M</option>
-                            <option value="3">400M</option>
-                            <option value="" disabled>중/장거리</option>
-                            <option value="4">800M</option>
-                            <option value="5">1500M</option>
-                            <option value="6">5000M</option>
-                            <option value="7">10000M</option>
-                            <option value="8">3000M 장애물</option>
-                            <option value="" disabled>허들달리기</option>
-                            <option value="9">110M 허들</option>
-                            <option value="10">400M 허들</option>
-                            <option value="" disabled>점프경기</option>
-                            <option value="11">높이뛰기</option>
-                            <option value="12">장대높이뛰기</option>
-                            <option value="13">멀리뛰기</option>
-                            <option value="14">삼단뛰기</option>
-                            <option value="" disabled>던지기</option>
-                            <option value="15">투포환</option>
-                            <option value="16">원반던지기</option>
-                            <option value="17">해머던지기</option>
-                            <option value="18">창던지기</option>
-                            <option value="" disabled>종합</option>
-                            <option value="19">10종 경기</option>
-                            <option value="" disabled>경보</option>
-                            <option value="20">10000M 경보</option>
-                            <option value="" disabled>릴레이</option>
-                            <option value="21">4x100M 릴레이</option>
-                            <option value="22">4x400M 릴레이</option>
-                            <option value="23">4x400M 혼성</option>
-                        </select>
-                    </div>
+				<div class="select_box mr10">
+					<select class="d_select" title="구분" style="width: 172.667px;">
+						<option value="" hidden>종목</option>
+						<option value="" disabled>단거리달리기</option>
+						<option value="1">100M</option>
+						<option value="2">200M</option>
+						<option value="3">400M</option>
+						<option value="" disabled>중/장거리</option>
+						<option value="4">800M</option>
+						<option value="5">1500M</option>
+						<option value="6">5000M</option>
+						<option value="7">10000M</option>
+						<option value="8">3000M 장애물</option>
+						<option value="" disabled>허들달리기</option>
+						<option value="9">110M 허들</option>
+						<option value="10">400M 허들</option>
+						<option value="" disabled>점프경기</option>
+						<option value="11">높이뛰기</option>
+						<option value="12">장대높이뛰기</option>
+						<option value="13">멀리뛰기</option>
+						<option value="14">삼단뛰기</option>
+						<option value="" disabled>던지기</option>
+						<option value="15">투포환</option>
+						<option value="16">원반던지기</option>
+						<option value="17">해머던지기</option>
+						<option value="18">창던지기</option>
+						<option value="" disabled>종합</option>
+						<option value="19">10종 경기</option>
+						<option value="" disabled>경보</option>
+						<option value="20">10000M 경보</option>
+						<option value="" disabled>릴레이</option>
+						<option value="21">4x100M 릴레이</option>
+						<option value="22">4x400M 릴레이</option>
+						<option value="23">4x400M 혼성</option>
+					</select>
+				</div>
 
-                    <div class="search" style="width: 50px;">
-                        <button type="submit" class="btn_search" title="검색"></a>
-                    </div>
-                </div>
-            </div>
+				<div class="search" style="width: 50px;">
+					<button type="submit" class="btn_search" title="검색"></a>
+				</div>
+			</div>
             <!-- select 선택에 따른 종목 결과 나열 -->
-            <div class="tbl_area" style="padding:0 60px 0 60px">
+            <div class="tbl_area">
                 <table width="100%" cellspacing="0" cellpadding="0" class="table table-hover team_table">
                     <colgroup>
                         <col style="width:13%;">
@@ -424,8 +271,9 @@
                             <td>tony Kim</td>
                             <td>12.54m</td>
                             <td>수동</td>
-                            <td><input type="button" onclick="window.open('modifyResult.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')" value="수정"
-                                    class="btn_modify"></td>
+                            <td><input type="button"
+                                    onclick="window.open('modifyResult.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')"
+                                    value="수정" class="btn_modify"></td>
                         </tr>
                         <tr>
                             <td>2023-06-05</td>
@@ -436,8 +284,9 @@
                             <td>tony Kim</td>
                             <td>12.54m</td>
                             <td>수동</td>
-                            <td><input type="button" onclick="window.open('modifyResult.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')" value="수정"
-                                    class="btn_modify"></td>
+                            <td><input type="button"
+                                    onclick="window.open('modifyResult.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')"
+                                    value="수정" class="btn_modify"></td>
                         </tr>
                         <tr>
                             <td>2023-06-05</td>
@@ -448,8 +297,9 @@
                             <td>tony Kim</td>
                             <td>07:43:34</td>
                             <td>자동</td>
-                            <td><input type="button" onclick="window.open('modifyResult.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')" value="수정"
-                                    class="btn_modify"></td>
+                            <td><input type="button"
+                                    onclick="window.open('modifyResult.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')"
+                                    value="수정" class="btn_modify"></td>
                         </tr>
                         <tr>
                             <td>2023-06-05</td>
@@ -460,8 +310,9 @@
                             <td>tony Kim</td>
                             <td>07:43:34</td>
                             <td>자동</td>
-                            <td><input type="button" onclick="window.open('modifyResult.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')" value="수정"
-                                    class="btn_modify"></td>
+                            <td><input type="button"
+                                    onclick="window.open('modifyResult.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')"
+                                    value="수정" class="btn_modify"></td>
                         </tr>
                         <tr>
                             <td>2023-06-05</td>
@@ -472,8 +323,9 @@
                             <td>tony Kim</td>
                             <td>07:43:34</td>
                             <td>자동</td>
-                            <td><input type="button" onclick="window.open('modifyResult.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')" value="수정"
-                                    class="btn_modify"></td>
+                            <td><input type="button"
+                                    onclick="window.open('modifyResult.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')"
+                                    value="수정" class="btn_modify"></td>
                         </tr>
                         <tr>
                             <td>2023-06-05</td>
@@ -484,8 +336,9 @@
                             <td>tony Kim</td>
                             <td>07:43:34</td>
                             <td>자동</td>
-                            <td><input type="button" onclick="window.open('modifyResult.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')" value="수정"
-                                    class="btn_modify"></td>
+                            <td><input type="button"
+                                    onclick="window.open('modifyResult.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')"
+                                    value="수정" class="btn_modify"></td>
                         </tr>
                         <tr>
                             <td>2023-06-05</td>
@@ -496,15 +349,17 @@
                             <td>tony Kim</td>
                             <td>07:43:34</td>
                             <td>자동</td>
-                            <td><input type="button" onclick="window.open('modifyResult.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')" value="수정"
-                                    class="btn_modify"></td>
+                            <td><input type="button"
+                                    onclick="window.open('modifyResult.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')"
+                                    value="수정" class="btn_modify"></td>
                         </tr>
 
                     </tbody>
                 </table>
                 <div class="btn_base base_mar col_right">
-                    <input type="button" onclick="window.open('addresult.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')"
-                                    class="btn_add bold" value="등록">
+                    <input type="button"
+                        onclick="window.open('addresult.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')"
+                        class="btn_add bold" value="등록">
                 </div>
             </div>
             <div class="page_wrap">
@@ -534,6 +389,7 @@
             Yecheon. All rights reserved.
         </p>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
