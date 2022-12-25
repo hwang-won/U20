@@ -1,3 +1,4 @@
+//테이플 정렬 함수
 function sortTable(n) {
   var table,
     rows,
@@ -42,5 +43,23 @@ function sortTable(n) {
         switching = true;
       }
     }
+  }
+}
+
+function changesport(e){
+  let c=document.querySelector("#sport");
+  let d=c.children
+  for(i=0;i<d.length;i++){
+    if(e.value==2){
+      if(d[i].value== 8|| d[i].value== 11||d[i].value== 22){
+        d[i].style.display="none"
+        d[i-1].style.display="block"
+      }
+    }else if(e.value==1){
+      if(d[i].value== 7|| d[i].value== 10||d[i].value== 21){
+        d[i].style.display="none"
+        d[i+1].style.display="block"
+      }
+    }  
   }
 }
