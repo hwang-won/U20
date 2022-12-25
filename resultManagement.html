@@ -11,7 +11,8 @@
     <!--Data Tables-->
     <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css" />
     <script type="text/javascript" src="DataTables/datatables.min.js"></script>
-    <script type="text/javascript" src="useDataTables.js"></script>
+    <script type="text/javascript" src="js/useDataTables.js"></script>
+    <script type="text/javascript" src="js/sorting.js"></script>
     <title>U20</title>
 </head>
 
@@ -250,14 +251,14 @@
                     </colgroup>
                     <thead>
                         <tr>
-                            <th>날짜</th>
-                            <th>종목</th>
-                            <th>경기 이름</th>
-                            <th>경기 라운드</th>
-                            <th>선수 이름</th>
-                            <th>심판 이름</th>
-                            <th>기록</th>
-                            <th>기록 방식</th>
+                            <th onclick="sortTable(0)">날짜</th>
+                            <th onclick="sortTable(1)">종목</th>
+                            <th onclick="sortTable(2)">경기 이름</th>
+                            <th onclick="sortTable(3)">경기 라운드</th>
+                            <th onclick="sortTable(4)">선수 이름</th>
+                            <th onclick="sortTable(5)">심판 이름</th>
+                            <th onclick="sortTable(6)">기록</th>
+                            <th onclick="sortTable(7)">기록 방식</th>
                             <th> </th>
                         </tr>
                     </thead>
