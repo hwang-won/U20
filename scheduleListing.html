@@ -11,7 +11,8 @@
     <!--Data Tables-->
     <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css" />
     <script type="text/javascript" src="DataTables/datatables.min.js"></script>
-    <script type="text/javascript" src="useDataTables.js"></script>
+    <script type="text/javascript" src="js/useDataTables.js"></script>
+    <script type="text/javascript" src="js/sorting.js"></script>
     <title>U20</title>
 </head>
 
@@ -230,7 +231,7 @@
                     </colgroup>
                     <thead>
                         <tr>
-                            <th>경기</th>
+                            <th onclick="sortTable(0)">경기</th>
                             <th>금</th>
                             <th>기록</th>
                             <th>은</th>
