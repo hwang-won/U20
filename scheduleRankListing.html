@@ -11,7 +11,8 @@
     <!--Data Tables-->
     <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css" />
     <script type="text/javascript" src="DataTables/datatables.min.js"></script>
-    <script type="text/javascript" src="useDataTables.js"></script>
+    <script type="text/javascript" src="js/useDataTables.js"></script>
+    <script type="text/javascript" src="js/sorting.js"></script>
     <title>U20</title>
 </head>
 
@@ -229,11 +230,11 @@
                     </colgroup>
                     <thead>
                         <tr>
-                            <th>등수</th>
-                            <th>이름</th>
-                            <th>국가</th>
-                            <th>결과</th>
-                            <th>비고</th>
+                            <th onclick="sortTable(0)">등수</th>
+                            <th onclick="sortTable(1)">이름</th>
+                            <th onclick="sortTable(2)">국가</th>
+                            <th onclick="sortTable(3)">결과</th>
+                            <th onclick="sortTable(4)">비고</th>
                         </tr>
                     </thead>
                     <tbody>
