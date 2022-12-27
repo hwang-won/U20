@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="css/style.css" />
         <!--Font Awesome-->
         <link rel="stylesheet" href="fontawesome/css/all.min.css" />
-        <script src="/fontawesome/js/all.min.js"></script>
+        <script src="fontawesome/js/all.min.js"></script>
         <!-- Data Tables -->
         <link
             rel="stylesheet"
@@ -259,5 +259,7 @@
 
         <!-- footer -->
         <?php include 'footer.php'; ?>
+        <!-- sidebar js -->
+        <script src="js/main.js"></script>
     </body>
 </html>
