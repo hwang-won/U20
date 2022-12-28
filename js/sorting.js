@@ -45,7 +45,7 @@ function sortTable(n) {
     }
   }
 }
-
+//성별에 따른 종목 리스트 변경
 function changesport(e){
   let c=document.querySelector("#sport");
   let d=c.children
@@ -61,5 +61,54 @@ function changesport(e){
         d[i+1].style.display="block"
       }
     }  
+  }
+}
+function changesport2(){
+  let a=document.querySelector("#sex");
+  let b=document.querySelector("#recordtype");
+  let c=document.querySelector("#sport");
+  let d=c.children
+  if(a.value==1){
+    if(b.value==1){
+      for(i=0;i<d.length;i++){
+        if(d[i].value== 7|| d[i].value== 10||d[i].value== 21||(d[i].value>12 && d[i].value<21)){
+          d[i].style.display="none"
+          continue
+        }
+          d[i].style.display="block"
+      }
+    }else if(b.value==2){
+      for(i=0;i<d.length;i++){
+        if(d[i].value== 7|| d[i].value== 10||d[i].value== 21||(d[i].value>0 && d[i].value<13) || d[i].value> 22){
+          d[i].style.display="none"
+          continue
+        }
+          d[i].style.display="block"
+      }
+    }else{
+      for(i=0;i<d.length;i++){
+        if(d[i].value== 7|| d[i].value== 10||d[i].value== 21){
+          d[i].style.display="none"
+          continue
+        }
+          d[i].style.display="block"
+      }
+    }
+  }else if(a.value==2){
+    if(b.value==1){
+
+    }else if(b.value==2){
+
+    }else{
+
+    }
+  }else{
+    if(b.value==1){
+
+    }else if(b.value==2){
+
+    }else{
+
+    }
   }
 }
