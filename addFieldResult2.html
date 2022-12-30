@@ -28,7 +28,7 @@
         }
         function uncomma(str) {
             str = String(str);
-            return str.replace(/[^\d]+/g, "");
+            return str.replace(/[^-\d]+/g, "");
         }
         // 기록 경기에서 최고 기록 선정
         function finalresult(obj) {
@@ -59,305 +59,6 @@
 </head>
 
 <body>
-    <!-- header 
-        <input type="checkbox" id="sidebar_icon" />
-        <header>
-            <div>
-                <ul class="navbar">
-                    <li class="logo">
-                        <a href="index.html"
-                            ><img
-                                src="img/logo.png"
-                                alt="Logo"
-                                class="logo_img"
-                        /></a>
-                    </li>
-                    <li>
-                        <label for="sidebar_icon" class="sidebar_btn">
-                            메뉴
-                            <i class="fas fa-bars"></i
-                        ></label>
-                    </li>
-                </ul>
-                <ul class="navbar right">
-                    <li><a href="mypage.html">마이페이지</a></li>
-                    <li>
-                        <a href="login.html"
-                            ><i class="fas fa-sign-out-alt"></i
-                        ></a>
-                    </li>
-                </ul>
-            </div>
-        </header>
-        -->
-
-    <!-- sidebar 
-        <div class="container">
-            <div class="sidebar">
-                <ul class="accordion">
-                    <span class="target" id="accordion"></span>
-                    <li class="accordion_li">
-                        <span class="target" id="accordion1"></span>
-                        <a
-                            href="#accordion1"
-                            class="open-accordion"
-                            title="open"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    참가자 관리
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="#accordion"
-                            class="close-accordion"
-                            title="close"
-                        >
-                            <div class="ab">
-                                <p>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    참가자 관리
-                                </p>
-                            </div>
-                        </a>
-                        <div class="accordion_content">
-                            <ul>
-                                <li><a href="judge.html">심판 목록</a></li>
-                                <li><a href="director.html">임원 목록</a></li>
-                                <li><a href="coach.html">코치 목록</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="accordion_li">
-                        <span class="target" id="accordion2"></span>
-                        <a
-                            href="#accordion2"
-                            class="open-accordion"
-                            title="open"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    선수 관리
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="#accordion"
-                            class="close-accordion"
-                            title="close"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    선수 관리
-                                </p>
-                            </div>
-                        </a>
-                        <div class="accordion_content">
-                            <ul>
-                                <li>
-                                    <a href="athletemanagement.html"
-                                        >선수 목록</a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="accordion_li">
-                        <span class="target" id="accordion3"></span>
-                        <a
-                            href="#accordion3"
-                            class="open-accordion"
-                            title="open"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    경기 관리
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="#accordion"
-                            class="close-accordion"
-                            title="close"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    경기 관리
-                                </p>
-                            </div>
-                        </a>
-                        <div class="accordion_content">
-                            <ul>
-                                <li>
-                                    <a href="sportmanagement.html">경기 목록</a>
-                                </li>
-                                <li>
-                                    <a href="countrymanagement.html"
-                                        >국가 목록</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="schedulemanagement.html"
-                                        >일정 목록</a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="accordion_li">
-                        <span class="target" id="accordion4"></span>
-                        <a
-                            href="#accordion4"
-                            class="open-accordion"
-                            title="open"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    기록 관리
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="#accordion"
-                            class="close-accordion"
-                            title="close"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    기록 관리
-                                </p>
-                            </div>
-                        </a>
-                        <div class="accordion_content">
-                            <ul>
-                                <li>
-                                    <a href="resultManagement.html"
-                                        >경기결과 목록</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="recordHistory.html"
-                                        >역대기록 목록</a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="accordion_li">
-                        <span class="target" id="accordion5"></span>
-                        <a
-                            href="#accordion5"
-                            class="open-accordion"
-                            title="open"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    통계 관리
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="#accordion"
-                            class="close-accordion"
-                            title="close"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    통계 관리
-                                </p>
-                            </div>
-                        </a>
-                        <div class="accordion_content">
-                            <ul>
-                                <li>
-                                    <a href="playerRankListing.html"
-                                        >선수별 순위보기</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="newRecordListing.html"
-                                        >신기록 경기기록</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="scheduleRankListing.html"
-                                        >경기별 순위보기</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="scheduleListing.html"
-                                        >경기별 메달보기</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="countryListing.html"
-                                        >국가별 순위보기</a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="accordion_li">
-                        <span class="target" id="accordion6"></span>
-                        <a
-                            href="#accordion6"
-                            class="open-accordion"
-                            title="open"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    계정 관리
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="#accordion"
-                            class="close-accordion"
-                            title="close"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    계정 관리
-                                </p>
-                            </div>
-                        </a>
-                        <div class="accordion_content">
-                            <ul>
-                                <li><a href="mypage.html">계정 정보</a></li>
-                                <li>
-                                    <a href="change_pw.html">비밀번호 변경</a>
-                                </li>
-                                <li><a href="signup.html">계정 생성</a></li>
-                                <li>
-                                    <a href="user.html">계정 목록</a>
-                                </li>
-                                <li>
-                                    <a href="log.html">로그 목록</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        -->
 
     <!-- contents 본문 내용 -->
     <div class="container">
@@ -374,32 +75,27 @@
                     <input placeholder="심판 이름" type="text" name="refereename" class="input_text" value="권 산"
                         maxlength="30" required="" readonly />
                 </div>
-                <h3>용기구</h3>
-                <div class="input_row">
-                    <input placeholder="용기구" type="text" name="wind" class="input_text" value="" maxlength="16"
-                        required="" />
-                </div>
                 <h3 style="margin-bottom: 10px">결과</h3>
                 <table cellspacing="0" cellpadding="0" class="team_table" style="border-top: 0px">
+                    <colgroup>
+                        <col style="width: 5%" />
+                        <col style="width: 5%" />
+                        <col style="width: 9%" />
+                        <col style="width: 10%" />
+                        <col style="width: 10%" />
+                        <col style="width: 10%" />
+                        <col style="width: 10%" />
+                        <col style="width: 10%" />
+                        <col style="width: 10%" />
+                        <col style="width: 10%" />
+                        <col style="width: 11%" />
+
+                    </colgroup>
                     <thead>
-                        <colgroup>
-                            <col style="width: 7%" />
-                            <col style="width: 7%" />
-                            <col style="width: 9%" />
-                            <col style="width: 7%" />
-                            <col style="width: 7%" />
-                            <col style="width: 7%" />
-                            <col style="width: 7%" />
-                            <col style="width: 7%" />
-                            <col style="width: 7%" />
-                            <col style="width: 7%" />
-                            <col style="width: 7%" />
-                            <col style="width: 7%" />
-                        </colgroup>
                         <tr>
-                            <th style="background: none">등수</th>
-                            <th style="background: none">순서</th>
-                            <th style="background: none">이름</th>
+                            <th style="background: none" rowspan="2" >등수</th>
+                            <th style="background: none" rowspan="2">순서</th>
+                            <th style="background: none" rowspan="2">이름</th>
                             <th style="background: none">1차 시기</th>
                             <th style="background: none">2차 시기</th>
                             <th style="background: none">3차 시기</th>
@@ -408,18 +104,23 @@
                             <th style="background: none">6차 시기</th>
                             <th style="background: none">기록</th>
                             <th style="background: none">비고</th>
+                            
+                        </tr>
+                        <tr>
+                            <th style="background: none" colspan="6">풍속</th>
+                            <th style="background: none"></th>
                             <th style="background: none">신기록</th>
                         </tr>
                     </thead>
                     <tbody id="body">
                         <tr>
-                            <td><input type="number" name="rank" class="input_text" id="rank" value="2" min="1" max="12"
-                                    required="" /></td>
-                            <td><input type="number" name="rain" class="input_text" value="1" min="1" max="12"
-                                    required="" readonly />
+                            <td rowspan="2"><input type="number" name="rank" class="input_text" id="rank" value="2"
+                                    min="1" max="12" required="" /></td>
+                            <td rowspan="2"><input type="number" name="rain" class="input_text" value="1" min="1"
+                                    max="12" required="" readonly />
                             </td>
-                            <td><input placeholder="선수 이름" type="text" name="playername" class="input_text" value="권 산"
-                                    maxlength="30" required="" readonly /></td>
+                            <td rowspan="2"><input placeholder="선수 이름" type="text" name="playername" class="input_text"
+                                    value="권 산" maxlength="30" required="" readonly /></td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult1" class="input_text" value=""
                                     maxlength="5" required="" onkeyup="inputNumberFormat(this)"
@@ -457,6 +158,43 @@
                             </td>
                             <td><input placeholder="비고" type="text" name="bigo" class="input_text" value=""
                                     maxlength="100" /></td>
+                            
+                        <tr>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
                             <td>
                                 <select>
                                     <option>해당없음</option>
@@ -468,13 +206,14 @@
                                 </select>
                             </td>
                         </tr>
+                        </tr>
                         <tr>
-                            <td><input type="number" name="rank" class="input_text" id="rank" value="7" min="1" max="12"
+                            <td rowspan="2"><input type="number" name="rank" class="input_text" id="rank" value="7" min="1" max="12"
                                     required="" /></td>
-                            <td><input type="number" name="rain" class="input_text" value="2" min="1" max="12"
+                            <td rowspan="2"><input type="number" name="rain" class="input_text" value="2" min="1" max="12"
                                     required="" readonly />
                             </td>
-                            <td><input placeholder="선수 이름" type="text" name="playername" class="input_text" value="임지훈"
+                            <td rowspan="2"><input placeholder="선수 이름" type="text" name="playername" class="input_text" value="임지훈"
                                     maxlength="30" required="" readonly /></td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult1" class="input_text" value=""
@@ -513,6 +252,43 @@
                             </td>
                             <td><input placeholder="비고" type="text" name="bigo" class="input_text" value=""
                                     maxlength="100" /></td>
+                            
+                        <tr>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
                             <td>
                                 <select>
                                     <option>해당없음</option>
@@ -524,13 +300,14 @@
                                 </select>
                             </td>
                         </tr>
+                        </tr>
                         <tr>
-                            <td><input type="number" name="rank" class="input_text" id="rank" value="5" min="1" max="12"
+                            <td rowspan="2"><input type="number" name="rank" class="input_text" id="rank" value="5" min="1" max="12"
                                     required="" /></td>
-                            <td><input type="number" name="rain" class="input_text" value="3" min="1" max="12"
+                            <td rowspan="2"><input type="number" name="rain" class="input_text" value="3" min="1" max="12"
                                     required="" readonly />
                             </td>
-                            <td><input placeholder="선수 이름" type="text" name="playername" class="input_text" value="천효민"
+                            <td rowspan="2"><input placeholder="선수 이름" type="text" name="playername" class="input_text" value="천효민"
                                     maxlength="30" required="" readonly /></td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult1" class="input_text" value=""
@@ -569,6 +346,43 @@
                             </td>
                             <td><input placeholder="비고" type="text" name="bigo" class="input_text" value=""
                                     maxlength="100" /></td>
+                            
+                        <tr>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
                             <td>
                                 <select>
                                     <option>해당없음</option>
@@ -580,13 +394,14 @@
                                 </select>
                             </td>
                         </tr>
+                        </tr>
                         <tr>
-                            <td><input type="number" name="rank" class="input_text" id="rank" value="4" min="1" max="12"
+                            <td rowspan="2"><input type="number" name="rank" class="input_text" id="rank" value="4" min="1" max="12"
                                     required="" /></td>
-                            <td><input type="number" name="rain" class="input_text" value="4" min="1" max="12"
+                            <td rowspan="2"><input type="number" name="rain" class="input_text" value="4" min="1" max="12"
                                     required="" readonly />
                             </td>
-                            <td><input placeholder="선수 이름" type="text" name="playername" class="input_text" value="이은비"
+                            <td rowspan="2"><input placeholder="선수 이름" type="text" name="playername" class="input_text" value="이은비"
                                     maxlength="30" required="" readonly /></td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult1" class="input_text" value=""
@@ -625,6 +440,43 @@
                             </td>
                             <td><input placeholder="비고" type="text" name="bigo" class="input_text" value=""
                                     maxlength="100" /></td>
+                            
+                        <tr>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
                             <td>
                                 <select>
                                     <option>해당없음</option>
@@ -636,13 +488,14 @@
                                 </select>
                             </td>
                         </tr>
+                        </tr>
                         <tr>
-                            <td><input type="number" name="rank" class="input_text" id="rank" value="1" min="1" max="12"
+                            <td rowspan="2"><input type="number" name="rank" class="input_text" id="rank" value="1" min="1" max="12"
                                     required="" /></td>
-                            <td><input type="number" name="rain" class="input_text" value="5" min="1" max="12"
+                            <td rowspan="2"><input type="number" name="rain" class="input_text" value="5" min="1" max="12"
                                     required="" readonly />
                             </td>
-                            <td><input placeholder="선수 이름" type="text" name="playername" class="input_text" value="김조은"
+                            <td rowspan="2"><input placeholder="선수 이름" type="text" name="playername" class="input_text" value="김조은"
                                     maxlength="30" required="" readonly /></td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult1" class="input_text" value=""
@@ -681,6 +534,43 @@
                             </td>
                             <td><input placeholder="비고" type="text" name="bigo" class="input_text" value=""
                                     maxlength="100" /></td>
+                            
+                        <tr>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
                             <td>
                                 <select>
                                     <option>해당없음</option>
@@ -692,13 +582,14 @@
                                 </select>
                             </td>
                         </tr>
+                        </tr>
                         <tr>
-                            <td><input type="number" name="rank" class="input_text" id="rank" value="8" min="1" max="12"
+                            <td rowspan="2"><input type="number" name="rank" class="input_text" id="rank" value="8" min="1" max="12"
                                     required="" /></td>
-                            <td><input type="number" name="rain" class="input_text" value="6" min="1" max="12"
+                            <td rowspan="2"><input type="number" name="rain" class="input_text" value="6" min="1" max="12"
                                     required="" readonly />
                             </td>
-                            <td><input placeholder="선수 이름" type="text" name="playername" class="input_text" value="최민정"
+                            <td rowspan="2"><input placeholder="선수 이름" type="text" name="playername" class="input_text" value="최민정"
                                     maxlength="30" required="" readonly /></td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult1" class="input_text" value=""
@@ -737,6 +628,43 @@
                             </td>
                             <td><input placeholder="비고" type="text" name="bigo" class="input_text" value=""
                                     maxlength="100" /></td>
+                            
+                        <tr>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
                             <td>
                                 <select>
                                     <option>해당없음</option>
@@ -748,13 +676,14 @@
                                 </select>
                             </td>
                         </tr>
+                        </tr>
                         <tr>
-                            <td><input type="number" name="rank" class="input_text" id="rank" value="3" min="1" max="12"
+                            <td rowspan="2"><input type="number" name="rank" class="input_text" id="rank" value="3" min="1" max="12"
                                     required="" /></td>
-                            <td><input type="number" name="rain" class="input_text" value="7" min="1" max="12"
+                            <td rowspan="2"><input type="number" name="rain" class="input_text" value="7" min="1" max="12"
                                     required="" readonly />
                             </td>
-                            <td><input placeholder="선수 이름" type="text" name="playername" class="input_text" value="김민지"
+                            <td rowspan="2"><input placeholder="선수 이름" type="text" name="playername" class="input_text" value="김민지"
                                     maxlength="30" required="" readonly /></td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult1" class="input_text" value=""
@@ -793,6 +722,43 @@
                             </td>
                             <td><input placeholder="비고" type="text" name="bigo" class="input_text" value=""
                                     maxlength="100" /></td>
+                            
+                        <tr>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
                             <td>
                                 <select>
                                     <option>해당없음</option>
@@ -804,13 +770,14 @@
                                 </select>
                             </td>
                         </tr>
+                        </tr>
                         <tr>
-                            <td><input type="number" name="rank" class="input_text" id="rank" value="6" min="1" max="12"
+                            <td rowspan="2"><input type="number" name="rank" class="input_text" id="rank" value="6" min="1" max="12"
                                     required="" /></td>
-                            <td><input type="number" name="rain" class="input_text" value="8" min="1" max="12"
+                            <td rowspan="2"><input type="number" name="rain" class="input_text" value="8" min="1" max="12"
                                     required="" readonly />
                             </td>
-                            <td><input placeholder="선수 이름" type="text" name="playername" class="input_text" value="황근원"
+                            <td rowspan="2"><input placeholder="선수 이름" type="text" name="playername" class="input_text" value="황근원"
                                     maxlength="30" required="" readonly /></td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult1" class="input_text" value=""
@@ -849,6 +816,43 @@
                             </td>
                             <td><input placeholder="비고" type="text" name="bigo" class="input_text" value=""
                                     maxlength="100" /></td>
+                            
+                        <tr>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
+                            <td>
+                                <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
+                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    style="float: left; width: auto; padding-right: 5px" />
+                            </td>
                             <td>
                                 <select>
                                     <option>해당없음</option>
@@ -859,6 +863,7 @@
                                     <option>세계신기록</option>
                                 </select>
                             </td>
+                        </tr>
                         </tr>
                     </tbody>
                 </table>
