@@ -23,7 +23,7 @@
         function comma(str) {
             str = String(str);
             if (str.length <= 5) {
-                return str.replace(/(\B)(?=(?:\d{2})+(?!\d))/g, "$1.");
+                return str.replace(/(-?\d+)(\d{2})/g, "$1.$2");//음수가능 ㅅㅅ
             }
         }
         function uncomma(str) {
