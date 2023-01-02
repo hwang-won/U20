@@ -12,63 +12,7 @@
     <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css" />
     <script type="text/javascript" src="DataTables/datatables.min.js"></script>
     <script type="text/javascript" src="js/useDataTables.js"></script>
-    <script>
-        // 경기 결과 숫자만 입력 및 자동 양식 스크립트
-        function inputNumberFormat(obj) {
-            obj.value = comma(uncomma(obj.value));
-            finalresult(obj)
-            rankcal()
-        }
-
-        function windFormat(obj){
-             obj.value = comma(uncomma1(obj.value));
-        }
-
-        function comma(str) {
-            str = String(str);
-            if (str.length <= 5) {
-                return str.replace(/(-?\d+)(\d{2})/g, "$1.$2");
-            }
-        }
-
-        function uncomma(str) {
-            str = String(str);
-            return str.replace(/[^\d]+/g, "");
-        }
-
-        function uncomma1(str) {
-                str = String(str);
-                return str.replace(/[^-\d]+/g, "");
-            }
-        // 기록 경기에서 최고 기록 선정
-        function finalresult(obj) {
-            let top = "0"
-            let wind =""
-            let a= obj.parentElement.parentElement
-            for (i = 3; i < 9; i++) {
-                if (parseFloat(top) < parseFloat(a.children[i].firstElementChild.value)) {
-                    top = a.children[i].firstElementChild.value
-                    wind =a.nextElementSibling.children[i-3].firstElementChild.value
-                }
-            }
-            a.children[9].firstElementChild.value = top
-            a.nextElementSibling.children[6].firstElementChild.value = wind
-        }
-        //등수 자동 배정
-        function rankcal() {
-            let re = document.querySelectorAll("#result") //결과 요소 가져옴
-            let ran = document.querySelectorAll("#rank") //둥수 요소가져옴
-            let arr1 = {}
-            for (i = 0; i < re.length; i++) {
-                let k = i
-                arr1[k] = re[i].value //객체에 결과 저장
-            }
-            let keysSorted = Object.keys(arr1).sort(function (a, b) { return arr1[b] - arr1[a] }) //정렬
-            for (i = 0; i < ran.length; i++) {
-                ran[keysSorted[i]].value = i + 1 //등수대로 기입
-            }
-        }
-    </script>
+    <script type="text/javascript" src="js/onlynumber.js"></script>
     <title>U20</title>
 </head>
 
@@ -136,37 +80,37 @@
                                     value="권 산" maxlength="30" required="" readonly /></td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult1" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult2" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult3" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult4" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult5" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult6" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" id="result" type="text" name="gameresult" class="input_text"
-                                    value="" maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    value="" maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td><input placeholder="비고" type="text" name="bigo" class="input_text" value=""
@@ -229,37 +173,37 @@
                                     maxlength="30" required="" readonly /></td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult1" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult2" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult3" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult4" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult5" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult6" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" id="result" type="text" name="gameresult" class="input_text"
-                                    value="" maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    value="" maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td><input placeholder="비고" type="text" name="bigo" class="input_text" value=""
@@ -323,37 +267,37 @@
                                     maxlength="30" required="" readonly /></td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult1" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult2" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult3" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult4" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult5" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult6" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" id="result" type="text" name="gameresult" class="input_text"
-                                    value="" maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    value="" maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td><input placeholder="비고" type="text" name="bigo" class="input_text" value=""
@@ -417,37 +361,37 @@
                                     maxlength="30" required="" readonly /></td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult1" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult2" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult3" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult4" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult5" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult6" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" id="result" type="text" name="gameresult" class="input_text"
-                                    value="" maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    value="" maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td><input placeholder="비고" type="text" name="bigo" class="input_text" value=""
@@ -511,37 +455,37 @@
                                     maxlength="30" required="" readonly /></td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult1" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult2" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult3" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult4" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult5" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult6" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" id="result" type="text" name="gameresult" class="input_text"
-                                    value="" maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    value="" maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td><input placeholder="비고" type="text" name="bigo" class="input_text" value=""
@@ -605,37 +549,37 @@
                                     maxlength="30" required="" readonly /></td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult1" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult2" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult3" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult4" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult5" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult6" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" id="result" type="text" name="gameresult" class="input_text"
-                                    value="" maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    value="" maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td><input placeholder="비고" type="text" name="bigo" class="input_text" value=""
@@ -699,37 +643,37 @@
                                     maxlength="30" required="" readonly /></td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult1" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult2" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult3" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult4" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult5" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult6" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" id="result" type="text" name="gameresult" class="input_text"
-                                    value="" maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    value="" maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td><input placeholder="비고" type="text" name="bigo" class="input_text" value=""
@@ -793,37 +737,37 @@
                                     maxlength="30" required="" readonly /></td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult1" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult2" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult3" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult4" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult5" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" type="text" name="gameresult6" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="경기 결과" id="result" type="text" name="gameresult" class="input_text"
-                                    value="" maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    value="" maxlength="5" required="" onkeyup="field2Format(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td><input placeholder="비고" type="text" name="bigo" class="input_text" value=""
