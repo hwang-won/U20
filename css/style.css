@@ -1070,12 +1070,8 @@ header>div ul.navbar>li {
     margin-bottom: 10px;
 }
 
-.form_check label:nth-child(2) {
-    position: absolute;
-    left: 45%;
-}
-
 .form_check>label {
+    width: 180px;
     color: var(--color-dark-grey);
     font-weight: var(--weight-regular);
 }
