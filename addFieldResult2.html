@@ -20,25 +20,39 @@
             rankcal()
         }
 
+        function windFormat(obj){
+             obj.value = comma(uncomma1(obj.value));
+        }
+
         function comma(str) {
             str = String(str);
             if (str.length <= 5) {
-                return str.replace(/(-?\d+)(\d{2})/g, "$1.$2");//음수가능 ㅅㅅ
+                return str.replace(/(-?\d+)(\d{2})/g, "$1.$2");
             }
         }
+
         function uncomma(str) {
             str = String(str);
-            return str.replace(/[^-\d]+/g, "");
+            return str.replace(/[^\d]+/g, "");
         }
+
+        function uncomma1(str) {
+                str = String(str);
+                return str.replace(/[^-\d]+/g, "");
+            }
         // 기록 경기에서 최고 기록 선정
         function finalresult(obj) {
             let top = "0"
+            let wind =""
+            let a= obj.parentElement.parentElement
             for (i = 3; i < 9; i++) {
-                if (parseFloat(top) < parseFloat(obj.parentElement.parentElement.children[i].firstElementChild.value)) {
-                    top = obj.parentElement.parentElement.children[i].firstElementChild.value
+                if (parseFloat(top) < parseFloat(a.children[i].firstElementChild.value)) {
+                    top = a.children[i].firstElementChild.value
+                    wind =a.nextElementSibling.children[i-3].firstElementChild.value
                 }
             }
-            obj.parentElement.parentElement.children[9].firstElementChild.value = top
+            a.children[9].firstElementChild.value = top
+            a.nextElementSibling.children[6].firstElementChild.value = wind
         }
         //등수 자동 배정
         function rankcal() {
@@ -67,7 +81,7 @@
             <form action="#" method="post" class="form">
                 <h3>경기 이름</h3>
                 <div class="input_row">
-                    <input placeholder="경기 이름" type="text" name="gamename" class="input_text" value="100M 준결승"
+                    <input placeholder="경기 이름" type="text" name="gamename" class="input_text" value="멀리뛰기"
                         maxlength="16" required="" readonly />
                 </div>
                 <h3>심판 이름</h3>
@@ -158,41 +172,40 @@
                             </td>
                             <td><input placeholder="비고" type="text" name="bigo" class="input_text" value=""
                                     maxlength="100" /></td>
-                            
                         <tr>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
@@ -256,37 +269,37 @@
                         <tr>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
@@ -350,37 +363,37 @@
                         <tr>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
@@ -444,37 +457,37 @@
                         <tr>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
@@ -538,37 +551,37 @@
                         <tr>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
@@ -632,37 +645,37 @@
                         <tr>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
@@ -726,37 +739,37 @@
                         <tr>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
@@ -820,37 +833,37 @@
                         <tr>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
                                 <input placeholder="풍속" type="text" name="wind" class="input_text" value=""
-                                    maxlength="5" required="" onkeyup="inputNumberFormat(this)"
+                                    maxlength="5" required="" onkeyup="windFormat(this)"
                                     style="float: left; width: auto; padding-right: 5px" />
                             </td>
                             <td>
