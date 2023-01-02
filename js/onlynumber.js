@@ -23,9 +23,11 @@ function windFormat(obj) {
 
 function comma(str) {
   str = String(str);
-  if (str.length <= 5) {
-    return str.replace(/(-?\d+)(\d{2})/g, "$1.$2");
-  }
+   if (str.length < 5) {
+     return str.replace(/(\B)(?=(?:\d{2})+(?!\d))/g, "$1.");
+   } else {
+     return str.replace(/(\d+)(\d{2})(\d{2})/g, "$1:$2.$3");
+   }
 }
 
 function uncomma(str) {
@@ -93,7 +95,6 @@ function rankcal1() {
   }
   let keysSorted = Object.keys(arr1).sort(function (a, b) {
     if (arr1[a] == "") {
-      console.log(arr1[a]);
       return true;
     }
     if (arr1[b] == "") return false;

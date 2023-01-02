@@ -13,6 +13,30 @@
     <script type="text/javascript" src="DataTables/datatables.min.js"></script>
     <script type="text/javascript" src="js/useDataTables.js"></script>
     <script type="text/javascript" src="js/onlynumber.js"></script>
+    <script>
+        function openTextFile() {
+            var input = document.createElement("input");
+            input.type = "file";
+            input.accept = "text/plain"; // 확장자가 xxx, yyy 일때, ".xxx, .yyy"
+            input.onchange = function (event) {
+                processFile(event.target.files[0]);
+            };
+            input.click();
+        }
+        function processFile(file) {
+            var reader = new FileReader();
+            reader.onload = function () {
+                let ddd = reader.result.split("\r\n");
+                for (i = 0; i < ddd.length; i++) {
+                    let k = ddd[i].split(" ")
+                    let on = document.querySelector("#" + k[1]).children
+                    on[4].firstElementChild.value = k[2]
+                }
+                rankcal1()
+            };
+            reader.readAsText(file, /* optional */ "utf-8");
+        }
+    </script>
     <title>U20</title>
 </head>
 
@@ -37,7 +61,10 @@
                     <input placeholder="풍속" type="text" name="wind" class="input_text" value="" maxlength="16"
                         required="" />
                 </div>
-                <h3 style="margin-bottom: 10px">결과</h3>
+                <div class="btn_base base_mar">
+                    <h2 style="margin-bottom: 10px; float:left; margin-right: 30px;">결과</h2>
+                    <input type="button" onclick="openTextFile()" class="btn_add bold" value="자동 입력">
+                </div>
                 <table cellspacing="0" cellpadding="0" class="team_table" style="border-top: 0px">
                     <thead>
                         <colgroup>
@@ -60,7 +87,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr id="rane1">
                             <td>
                                 <input type="number" name="rank" id="rank" class="input_text" value="" min="1" max="12"
                                     required="" />
@@ -97,7 +124,7 @@
                                 </select>
                             </td>
                         </tr>
-                        <tr>
+                        <tr id="rane2">
                             <td>
                                 <input type="number" name="rank" id="rank" class="input_text" value="" min="1" max="12"
                                     required="" />
@@ -134,7 +161,7 @@
                                 </select>
                             </td>
                         </tr>
-                        <tr>
+                        <tr id="rane3">
                             <td>
                                 <input type="number" name="rank" id="rank" class="input_text" value="" min="1" max="12"
                                     required="" />
@@ -171,7 +198,7 @@
                                 </select>
                             </td>
                         </tr>
-                        <tr>
+                        <tr id="rane4">
                             <td>
                                 <input type="number" name="rank" id="rank" class="input_text" value="" min="1" max="12"
                                     required="" />
@@ -208,7 +235,7 @@
                                 </select>
                             </td>
                         </tr>
-                        <tr>
+                        <tr id="rane5">
                             <td>
                                 <input type="number" name="rank" id="rank" class="input_text" value="" min="1" max="12"
                                     required="" />
@@ -245,7 +272,7 @@
                                 </select>
                             </td>
                         </tr>
-                        <tr>
+                        <tr id="rane6">
                             <td>
                                 <input type="number" name="rank" id="rank" class="input_text" value="" min="1" max="12"
                                     required="" />
@@ -282,7 +309,7 @@
                                 </select>
                             </td>
                         </tr>
-                        <tr>
+                        <tr id="rane7">
                             <td>
                                 <input type="number" name="rank" id="rank" class="input_text" value="" min="1" max="12"
                                     required="" />
@@ -319,7 +346,7 @@
                                 </select>
                             </td>
                         </tr>
-                        <tr>
+                        <tr id="rane8">
                             <td>
                                 <input type="number" name="rank" id="rank" class="input_text" value="" min="1" max="12"
                                     required="" />
