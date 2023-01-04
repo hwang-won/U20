@@ -44,3 +44,21 @@ function sortTable(n) {
     }
   }
 }
+//성별에 따른 종목 리스트 변경
+function changesport(e) {
+  let c = document.querySelector("#sport");
+  let d = c.children;
+  for (i = 0; i < d.length; i++) {
+    if (e.value == 2) {
+      if (d[i].value == 8 || d[i].value == 11 || d[i].value == 22) {
+        d[i].style.display = "none";
+        d[i - 1].style.display = "block";
+      }
+    } else if (e.value == 1) {
+      if (d[i].value == 7 || d[i].value == 10 || d[i].value == 21) {
+        d[i].style.display = "none";
+        d[i + 1].style.display = "block";
+      }
+    }
+  }
+}
