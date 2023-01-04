@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,368 +8,168 @@
     <link rel="stylesheet" href="fontawesome/css/all.min.css" />
     <script src="/fontawesome/js/all.min.js"></script>
     <title>U20</title>
-</head>
+  </head>
 
-<body cz-shortcut-listen="true">
-    <!-- header 
-        <input type="checkbox" id="sidebar_icon" />
-        <header>
-            <div>
-                <ul class="navbar">
-                    <li class="logo">
-                        <a href="index.html"
-                            ><img
-                                src="img/logo.png"
-                                alt="Logo"
-                                class="logo_img"
-                        /></a>
-                    </li>
-                    <li>
-                        <label for="sidebar_icon" class="sidebar_btn">
-                            메뉴
-                            <i class="fas fa-bars"></i
-                        ></label>
-                    </li>
-                </ul>
-                <ul class="navbar right">
-                    <li><a href="mypage.html">마이페이지</a></li>
-                    <li>
-                        <a href="login.html"
-                            ><i class="fas fa-sign-out-alt"></i
-                        ></a>
-                    </li>
-                </ul>
-            </div>
-        </header>
-    -->
-
-    <!-- sidebar 
-        <div class="container">
-            <div class="sidebar">
-                <ul class="accordion">
-                    <span class="target" id="accordion"></span>
-                    <li class="accordion_li">
-                        <span class="target" id="accordion1"></span>
-                        <a
-                            href="#accordion1"
-                            class="open-accordion"
-                            title="open"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    참가자 관리
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="#accordion"
-                            class="close-accordion"
-                            title="close"
-                        >
-                            <div class="ab">
-                                <p>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    참가자 관리
-                                </p>
-                            </div>
-                        </a>
-                        <div class="accordion_content">
-                            <ul>
-                                <li><a href="judge.html">심판 목록</a></li>
-                                <li><a href="director.html">임원 목록</a></li>
-                                <li><a href="coach.html">코치 목록</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="accordion_li">
-                        <span class="target" id="accordion2"></span>
-                        <a
-                            href="#accordion2"
-                            class="open-accordion"
-                            title="open"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    선수 관리
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="#accordion"
-                            class="close-accordion"
-                            title="close"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    선수 관리
-                                </p>
-                            </div>
-                        </a>
-                        <div class="accordion_content">
-                            <ul>
-                                <li>
-                                    <a href="athletemanagement.html"
-                                        >선수 목록</a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="accordion_li">
-                        <span class="target" id="accordion3"></span>
-                        <a
-                            href="#accordion3"
-                            class="open-accordion"
-                            title="open"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    경기 관리
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="#accordion"
-                            class="close-accordion"
-                            title="close"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    경기 관리
-                                </p>
-                            </div>
-                        </a>
-                        <div class="accordion_content">
-                            <ul>
-                                <li>
-                                    <a href="sportmanagement.html">경기 목록</a>
-                                </li>
-                                <li>
-                                    <a href="countrymanagement.html"
-                                        >국가 목록</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="schedulemanagement.html"
-                                        >일정 목록</a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="accordion_li">
-                        <span class="target" id="accordion4"></span>
-                        <a
-                            href="#accordion4"
-                            class="open-accordion"
-                            title="open"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    기록 관리
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="#accordion"
-                            class="close-accordion"
-                            title="close"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    기록 관리
-                                </p>
-                            </div>
-                        </a>
-                        <div class="accordion_content">
-                            <ul>
-                                <li>
-                                    <a href="resultManagement.html"
-                                        >경기결과 목록</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="recordHistory.html"
-                                        >역대기록 목록</a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="accordion_li">
-                        <span class="target" id="accordion5"></span>
-                        <a
-                            href="#accordion5"
-                            class="open-accordion"
-                            title="open"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    통계 관리
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="#accordion"
-                            class="close-accordion"
-                            title="close"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    통계 관리
-                                </p>
-                            </div>
-                        </a>
-                        <div class="accordion_content">
-                            <ul>
-                                <li>
-                                    <a href="playerRankListing.html"
-                                        >선수별 순위보기</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="newRecordListing.html"
-                                        >신기록 경기기록</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="scheduleRankListing.html"
-                                        >경기별 순위보기</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="scheduleListing.html"
-                                        >경기별 메달보기</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="countryListing.html"
-                                        >국가별 순위보기</a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="accordion_li">
-                        <span class="target" id="accordion6"></span>
-                        <a
-                            href="#accordion6"
-                            class="open-accordion"
-                            title="open"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-right"></i>
-                                    계정 관리
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="#accordion"
-                            class="close-accordion"
-                            title="close"
-                        >
-                            <div>
-                                <p>
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    계정 관리
-                                </p>
-                            </div>
-                        </a>
-                        <div class="accordion_content">
-                            <ul>
-                                <li><a href="mypage.html">계정 정보</a></li>
-                                <li>
-                                    <a href="change_pw.html">비밀번호 변경</a>
-                                </li>
-                                <li><a href="signup.html">계정 생성</a></li>
-                                <li>
-                                    <a href="user.html">계정 목록</a>
-                                </li>
-                                <li>
-                                    <a href="log.html">로그 목록</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    -->
-
+  <body cz-shortcut-listen="true">
     <!-- contents 본문 내용 -->
     <div class="container">
-        <!-- <div class="contents something"> -->
-        <div class="something">
-            <div class="judge_info ptop--40">
-                <h3>임원 정보</h3>
-                <hr />
-
-                <div class="row">
-                    <div class="text-center">
-                        <img src="img/judge_image.jpg" class="image_resize" alt="avatar" />
-                    </div>
-                    <div class="judge_info_box">
-                        <span>이름</span>
-                        <span>고길동</span>
-                    </div>
-                    <div class="judge_info_box">
-                        <span>국가</span>
-                        <span>한국</span>
-                    </div>
-                    <div class="judge_info_box">
-                        <span>소속</span>
-                        <span>한국심판협회</span>
-                    </div>
-                    <div class="judge_info_box">
-                        <span>성별</span>
-                        <span>남</span>
-                    </div>
-                    <div class="judge_info_box">
-                        <span>생년월일</span>
-                        <span>1998년 11월 15일</span>
-                    </div>
-                    <div class="judge_info_box">
-                        <span>나이</span>
-                        <span>25</span>
-                    </div>
-                    <div class="judge_info_box">
-                        <span>직무</span>
-                        <span>주 심판</span>
-                    </div>
-                    <div class="judge_info_box">
-                        <span>참가경기</span>
-                        <span>100m, 200m</span>
-                    </div>
+      <!-- <div class="something ptop--40"></div> -->
+      <div class="sub-contents-wrap">
+        <div class="info club record">
+          <div class="f-wrap player" style="margin-top: 2.8571428571rem">
+            <h3 class="tit-box style2">코치 정보</h3>
+            <div class="cont-box f-wrap left player-rank record-player detail">
+              <div class="img-box">
+                <!-- <img
+                  src="https://kleague-admin-test.s3.ap-northeast-2.amazonaws.com/v1/player/player_20220042.png"
+                  alt=""
+                /> -->
+                <img src="./img/judge_image.jpg" alt="" />
+              </div>
+              <div class="txt-box">
+                <div class="txt">
+                  <span class="num campton record-num">No. 11</span>
+                  <span class="name"
+                    >임지훈
+                    <span class="past-small">100m</span>
+                  </span>
                 </div>
-
-                <div class="btn_base base_mar col_right" style="padding-top: 50px">
-                    <a href="director_modify.html" onclick="" class="btn_add">
-                        <span class="btn_txt bold">수정</span>
-                    </a>
-                </div>
-                <div class="btn_base base_mar col_right pbottom--40" style="padding-top: 50px">
-                    <a href="" onclick="" class="btn_add">
-                        <span class="btn_txt bold">카드발급</span>
-                    </a>
-                </div>
+              </div>
             </div>
-        </div>
-    </div>
-</body>
+            <div class="cont-box right player-rank">
+              <table class="style2 center">
+                <tbody>
+                  <tr>
+                    <th>코치고유번호</th>
+                    <td>141</td>
+                    <th>이름</th>
+                    <td>Jihoon LIM</td>
+                  </tr>
+                  <tr>
+                    <th>국적</th>
+                    <td>Korea</td>
+                    <th>소속</th>
+                    <td>대한육상연맹</td>
+                  </tr>
+                  <tr>
+                    <th>성별</th>
+                    <td>남성</td>
+                    <th>생년월일</th>
+                    <td>1998/01/06</td>
+                  </tr>
+                  <tr>
+                    <th>키</th>
+                    <td>171</td>
+                    <th>몸무게</th>
+                    <td>73</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td></td>
+                    <th></th>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
 
+          <div class="f-wrap player-rank">
+            <h3 class="tit-box style2">2022 U20 경기기록</h3>
+            <div class="table-wrap">
+              <table>
+                <colgroup>
+                  <col style="width: auto" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>참가 종목</th>
+                    <th>코칭 선수</th>
+                    <th>경기 이름</th>
+                    <th>경기 라운드 수</th>
+                    <th>경기 결과</th>
+                    <th>경기 통과 여부</th>
+                    <th>신기록 여부</th>
+                    <th>메달</th>
+                    <th>비고</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>육상</td>
+                    <td>조규성</td>
+                    <td>100m</td>
+                    <td>2</td>
+                    <td>9.14s</td>
+                    <td>통과</td>
+                    <td>O</td>
+                    <td>금</td>
+                    <td>비고</td>
+                  </tr>
+                  <tr>
+                    <td>육상</td>
+                    <td>손흥민</td>
+                    <td>200m</td>
+                    <td>2</td>
+                    <td>30.11s</td>
+                    <td>탈락</td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>비고</td>
+                  </tr>
+                  <tr>
+                    <td>육상</td>
+                    <td>이강인</td>
+                    <td>400m</td>
+                    <td>4</td>
+                    <td>X</td>
+                    <td>기권</td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>비고</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="f-wrap player-rank">
+            <h3 class="tit-box style2">2022 U20 메달갯수</h3>
+            <div class="table-wrap">
+              <table>
+                <colgroup>
+                  <col style="width: auto" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>금메달 개수</th>
+                    <th>은메달 개수</th>
+                    <th>동메달 개수</th>
+                    <th>메달 개수</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="btn-wrap center">
+            <button class="btn btn-back float_l" onclick="">ID카드 보기</button>
+          </div>
+          <div class="btn-wrap center">
+            <!-- <button class="btn btn-back" onclick="history.back();"> -->
+            <button class="btn btn-back float_r" onclick="window.close()">
+              닫기
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
