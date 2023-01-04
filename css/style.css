@@ -97,6 +97,12 @@ textarea {
   appearance: none;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -1518,6 +1524,154 @@ table.team_table.center {
   background: #001c48 !important;
   color: #fff;
   border-color: #001c48;
+}
+
+/* 출입권한 ID 카드 양식 */
+/*
+*{
+    margin: 00px;
+    padding: 00px;
+    box-sizing: content-box;
+}
+*/
+.idCard_container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #e6ebe0; */
+  background-color: var(--color-white);
+  flex-direction: row;
+  flex-flow: wrap;
+}
+.front {
+  height: 375px;
+  width: 250px;
+  position: relative;
+  border: 0.5rem solid var(--color-light-grey);
+  border-radius: 10px;
+}
+.top {
+  background-image: url(../img/mark-1.png);
+  background-size: cover;
+  background-position: center;
+  background-color: #e6ebe0;
+  height: 30%;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+  /* border-top-left-radius: 15px;
+  border-top-right-radius: 15px; */
+}
+.bottom {
+  height: 70%;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  color: black;
+  /* border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px; */
+}
+.top img {
+  height: 100px;
+  width: 100px;
+  background-color: #e6ebe0;
+  border-radius: 10px;
+  position: absolute;
+  top: 60px;
+  left: 75px;
+}
+.bottom p {
+  position: relative;
+  top: 60px;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 20px;
+  text-emphasis: spacing;
+  color: black;
+}
+.bottom .desi {
+  font-size: 12px;
+  color: bakcj;
+  font-weight: normal;
+}
+.bottom .no {
+  font-size: 15px;
+  font-weight: bold;
+}
+.top img {
+  width: 5.4rem;
+  height: auto;
+  object-fit: cover;
+}
+.barcode img {
+  height: 65px;
+  width: 65px;
+  text-align: center;
+  margin: 5px;
+}
+.barcode {
+  text-align: center;
+  position: relative;
+  top: 60px;
+}
+.back {
+  /* position: relative;
+  height: 375px;
+  width: 250px;
+  border: 0.5rem solid var(--color-light-grey);
+  border-radius: 10px;
+  background-color: #8338ec;
+  background-image: url(/img/fondoAtleta1.png); */
+  overflow: hidden;
+  position: relative;
+  height: 375px;
+  width: 250px;
+  border: 0.5rem solid var(--color-light-grey);
+  border-radius: 10px;
+}
+.back .back-bg {
+  opacity: 0.6;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+.back .back-main {
+  position: relative;
+  color: var(--color-black);
+}
+.qr img {
+  height: 80px;
+  width: 100%;
+  margin: 20px;
+  background-color: white;
+}
+.Details {
+  color: black;
+  text-align: center;
+  padding: 10px;
+  font-size: 25px;
+}
+.info > p {
+  color: black;
+  padding: 0.3rem;
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+.info-detail > p {
+  color: black;
+  padding: 0.3rem;
+  font-size: 0.6rem;
+  text-align: left;
+  margin-top: 4rem;
+}
+.idCard_container .idCard {
+  padding-right: 20px;
 }
 
 /*이미지 등록 폼*/
