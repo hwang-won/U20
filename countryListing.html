@@ -9,10 +9,25 @@
     <link rel="stylesheet" href="fontawesome/css/all.min.css" />
     <script src="/fontawesome/js/all.min.js"></script>
     <!--Data Tables-->
-    <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css" />
-    <script type="text/javascript" src="DataTables/datatables.min.js"></script>
-    <script type="text/javascript" src="useDataTables.js"></script>
     <script type="text/javascript" src="js/sorting.js"></script>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        $.Lithium = {};
+        $.Lithium.tooltip = function () {
+            $('.tooltip-click').on('click', function () {
+                $(this).toggleClass('on')
+            })
+
+            $(document).on('click', function (event) {
+                if ($(event.target).closest('.tooltip-click').length === 0) {
+                    $('.tooltip-click').removeClass('on')
+                }
+            });
+        };
+        $(document).ready(function () {
+            $.Lithium.tooltip();
+        })
+    </script>
     <title>U20</title>
 </head>
 
@@ -201,73 +216,313 @@
                     <tbody>
                         <tr>
                             <td>대한민국</td>
-                            <td>12</td>
-                            <td>5</td>
-                            <td>7</td>
-                            <td>24</td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">12</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">3</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">8</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">23</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td>이란</td>
-                            <td>12</td>
-                            <td>5</td>
-                            <td>7</td>
-                            <td>24</td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">12</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">2</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">9</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">23</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td>일본</td>
-                            <td>12</td>
-                            <td>5</td>
-                            <td>7</td>
-                            <td>24</td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">10</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">3</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">2</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">15</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td>카자하스탄</td>
-                            <td>12</td>
-                            <td>5</td>
-                            <td>7</td>
-                            <td>24</td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">9</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">4</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">3</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">16</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>>
                         </tr>
                         <tr>
                             <td>몽골</td>
-                            <td>12</td>
-                            <td>5</td>
-                            <td>7</td>
-                            <td>24</td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">9</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">4</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">2</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">15</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td>인도</td>
-                            <td>12</td>
-                            <td>5</td>
-                            <td>7</td>
-                            <td>24</td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">7</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">0</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">4</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">11</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td>대한민국</td>
-                            <td>12</td>
-                            <td>5</td>
-                            <td>7</td>
-                            <td>24</td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">4</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">6</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">5</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">15</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td>대한민국</td>
-                            <td>12</td>
-                            <td>5</td>
-                            <td>7</td>
-                            <td>24</td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">3</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">4</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">4</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">10</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td>대한민국</td>
-                            <td>12</td>
-                            <td>5</td>
-                            <td>7</td>
-                            <td>24</td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">2</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">4</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">4</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">9</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로>
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td>대한민국</td>
-                            <td>12</td>
-                            <td>5</td>
-                            <td>7</td>
-                            <td>24</td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">1</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">4</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">4</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
+                            <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                <i class="tooltip-click-trigger">8</i>
+                                <div class="tooltip">
+                                    <div class="tooltip-description">세아는 정직, 열정, 실력을 핵심 가치로
+                                        삼고 올바른 사람, 올바른 일터, 올바른 제품을 통하여 사람을 소중히 하고 풍요로운 삶에 기여합니다.</div>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
