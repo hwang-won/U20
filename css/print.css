@@ -80,6 +80,11 @@ body {
   width: 100%;
 }
 
+.exp{
+  font-size:12px; width:330px;
+  margin: 4px 0px 4px 0px;
+}
+
 .total{
     position: absolute;
     width:18cm;
@@ -168,6 +173,7 @@ table.team_table.center {
   margin-top: 30px;
   margin-bottom: 30px;
 }
+
 table.tab1 th{
     padding-top: 1px;
     padding-bottom: 1px;
@@ -176,6 +182,16 @@ table.tab1 th{
 table.tab1 td{
     padding-top: 0px;
     padding-bottom: 0px;
+}
+
+table.tab2 th{
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+table.tab2 td{
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 @page {
