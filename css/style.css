@@ -2567,17 +2567,27 @@ footer {
 /* media quarry */
 @media screen and (min-width: 1500px) {
     .contents {
-        /* color: green; */
         left: 100px;
         width: 1280px;
     }
 }
 
 /* media quarry */
-@media screen and (min-width: 1750px) {
+@media screen and (min-width: 1800px) {
+    .container {
+        max-width: 1480px;
+    }
+
     .contents {
-        /* color: blue; */
-        left: 0px;
-        width: 1280px;
+        left: 50px;
+        width: 1480px;
+    }
+
+    .country_table {
+        max-width: 1480px;
+    }
+
+    #sidebar_icon:checked~.container .contents {
+        max-width: 1920px;
     }
 }
