@@ -16,7 +16,25 @@
         <script type="text/javascript" charset="utf8" src="DataTables/datatables.js"></script>
         <script type="text/javascript" src="js/useDataTables.js"></script> -->
     <!-- script -->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+        <script>
+        $.Lithium = {};
+        $.Lithium.tooltip = function () {
+            $('.tooltip-click').on('click', function () {
+                $(this).toggleClass('on')
+            })
+
+            $(document).on('click', function (event) {
+                if ($(event.target).closest('.tooltip-click').length === 0) {
+                    $('.tooltip-click').removeClass('on')
+                }
+            });
+        };
+        $(document).ready(function () {
+            $.Lithium.tooltip();
+        })
+    </script>
     <title>U20</title>
 </head>
 
@@ -322,8 +340,22 @@
                                 <td scope="col">남</td>
                                 <td scope="col">1998년 11월 15일</td>
                                 <td scope="col">25</td>
-                                <td scope="col">헤드 코치</td>
-                                <td scope="col">100m</td>
+                                <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                    <i class="tooltip-click-trigger">100m 외 2개</i>
+                                    <div class="tooltip">
+                                        <div class="tooltip-description">
+                                            200m, 400m
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="tooltip-container tooltip-interactive tooltip-bottom tooltip-click center">
+                                    <i class="tooltip-click-trigger">100m 외 2개</i>
+                                    <div class="tooltip">
+                                        <div class="tooltip-description">
+                                            200m, 400m
+                                        </div>
+                                    </div>
+                                </td>
                                 <td><input type="button"
                                         onclick="window.open('coach_info.html','창 이름','width=900,height=512,location=no,status=no,scrollbars=yes')"
                                         value="보기" class="btn_view"></td>
