@@ -168,7 +168,7 @@
 			</div>
 			<div class="selectArea float_r">
 				<div class="select_box mr10">
-					<select class="d_select" title="날짜" style="width: 140px;">
+					<select class="d_select" id="playdate" title="날짜" style="width: 140px;">
 						<option value="1">날짜</option>
 						<option value="2">2023-06-04</option>
 						<option value="3">2023-06-05</option>
@@ -178,7 +178,7 @@
 				</div>
 
 				<div class="select_box mr10">
-					<select class="d_select" title="성별" style="width: 90px;">
+					<select class="d_select" id="sex" title="성별" style="width: 90px;" onchange="changesport(this)">
 						<option value="" hidden>성별</option>
 						<option value="1">남</option>
 						<option value="2">여</option>
@@ -186,7 +186,7 @@
 				</div>
 
 				<div class="select_box mr10">
-					<select class="d_select" title="기록 방식" style="width: 122px;">
+					<select class="d_select" id="recordtype" title="기록 방식" style="width: 122px;">
 						<option value="" hidden>기록 방식</option>
 						<option value="1">자동</option>
 						<option value="2">수동</option>
@@ -194,8 +194,8 @@
 				</div>
 
 				<div class="select_box mr10">
-					<select class="d_select" title="구분" style="width: 172.667px;">
-						<option value="" hidden>종목</option>
+					<select class="d_select" id="sport"title="구분" style="width: 172.667px;">
+                        <option value="" hidden>종목</option>
 						<option value="" disabled>단거리달리기</option>
 						<option value="1">100M</option>
 						<option value="2">200M</option>
@@ -203,30 +203,33 @@
 						<option value="" disabled>중/장거리</option>
 						<option value="4">800M</option>
 						<option value="5">1500M</option>
-						<option value="6">5000M</option>
-						<option value="7">10000M</option>
-						<option value="8">3000M 장애물</option>
+                        <option value="6">3000M</option>
+						<option value="7">5000M</option>
+						<option value="8">10000M</option>
+						<option value="9">3000M 장애물</option>
 						<option value="" disabled>허들달리기</option>
-						<option value="9">110M 허들</option>
-						<option value="10">400M 허들</option>
+                        <option value="10">100M 허들</option>
+						<option value="11">110M 허들</option>
+						<option value="12">400M 허들</option>
 						<option value="" disabled>점프경기</option>
-						<option value="11">높이뛰기</option>
-						<option value="12">장대높이뛰기</option>
-						<option value="13">멀리뛰기</option>
-						<option value="14">삼단뛰기</option>
+						<option value="13">높이뛰기</option>
+						<option value="14">장대높이뛰기</option>
+						<option value="15">멀리뛰기</option>
+						<option value="16">삼단뛰기</option>
 						<option value="" disabled>던지기</option>
-						<option value="15">투포환</option>
-						<option value="16">원반던지기</option>
-						<option value="17">해머던지기</option>
-						<option value="18">창던지기</option>
+						<option value="17">투포환</option>
+						<option value="18">원반던지기</option>
+						<option value="19">해머던지기</option>
+						<option value="20">창던지기</option>
 						<option value="" disabled>종합</option>
-						<option value="19">10종 경기</option>
+                        <option value="21">7종 경기</option>
+						<option value="22">10종 경기</option>
 						<option value="" disabled>경보</option>
-						<option value="20">10000M 경보</option>
+						<option value="23">10000M 경보</option>
 						<option value="" disabled>릴레이</option>
-						<option value="21">4x100M 릴레이</option>
-						<option value="22">4x400M 릴레이</option>
-						<option value="23">4x400M 혼성</option>
+						<option value="24">4x100M 릴레이</option>
+						<option value="25">4x400M 릴레이</option>
+						<option value="26">4x400M 혼성</option>
 					</select>
 				</div>
 
