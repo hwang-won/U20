@@ -2575,19 +2575,19 @@ footer {
 /* media quarry */
 @media screen and (min-width: 1800px) {
     .container {
-        max-width: 1480px;
+        max-width: 1520px;
     }
 
     .contents {
         left: 50px;
-        width: 1480px;
+        width: 1520px;
     }
 
     .country_table {
-        max-width: 1480px;
+        max-width: 1520px;
     }
 
     #sidebar_icon:checked~.container .contents {
-        max-width: 1920px;
+        max-width: 1520px;
     }
 }
