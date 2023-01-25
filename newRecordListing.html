@@ -18,147 +18,11 @@
 
 <body>
     <!-- header -->
-    <input type="checkbox" id="sidebar_icon" />
-    <header>
-        <div>
-            <ul class="navbar">
-                <li class="logo">
-                    <a href="index.html"><img src="img/logo.png" alt="Logo" class="logo_img" /></a>
-                </li>
-                <li>
-                    <label for="sidebar_icon" class="sidebar_btn">
-                        메뉴
-                        <i class="fas fa-bars"></i></label>
-                </li>
-            </ul>
-            <ul class="navbar right">
-                <li><a href="mypage.html">마이페이지</a></li>
-                <li>
-                    <a href="login.html"><i class="fas fa-sign-out-alt"></i></a>
-                </li>
-            </ul>
-        </div>
-    </header>
+    <?php include 'header.php' ?>
 
     <!-- sidebar -->
-    <div class="container">
-        <div class="sidebar">
-            <ul class="accordion">
-                <li class="accordion_li">
-                    <p class="menu_button">
-                        <i class="fa-solid fa-angle-right"></i>
-                        참가자 관리
-                    </p>
-                    <div class="accordion_content">
-                        <ul>
-                            <li><a href="judge.html">심판 목록</a></li>
-                            <li><a href="director.html">임원 목록</a></li>
-                            <li><a href="coach.html">코치 목록</a></li>
-                        </ul>
-                    </div>
-                </li>
+    <?php include 'sidebar.php' ?>
 
-                <li class="accordion_li">
-                    <p class="menu_button">
-                        <i class="fa-solid fa-angle-right"></i>
-                        선수 관리
-                    </p>
-                    <div class="accordion_content">
-                        <ul>
-                            <li>
-                                <a href="athletemanagement.html">선수 목록</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-
-                <li class="accordion_li">
-                    <p class="menu_button">
-                        <i class="fa-solid fa-angle-right"></i>
-                        경기 관리
-                    </p>
-                    <div class="accordion_content">
-                        <ul>
-                            <li>
-                                <a href="sportmanagement.html">경기 목록</a>
-                            </li>
-                            <li>
-                                <a href="countrymanagement.html">국가 목록</a>
-                            </li>
-                            <li>
-                                <a href="schedulemanagement.html">일정 목록</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-
-                <li class="accordion_li">
-                    <p class="menu_button">
-                        <i class="fa-solid fa-angle-right"></i>
-                        기록 관리
-                    </p>
-                    <div class="accordion_content">
-                        <ul>
-                            <li>
-                                <a href="resultManagement.html">경기결과 목록</a>
-                            </li>
-                            <li>
-                                <a href="recordHistory.html">역대기록 목록</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-
-                <li class="accordion_li active">
-                    <p class="menu_button">
-                        <i class="fa-solid fa-angle-down"></i>
-                        통계 관리
-                    </p>
-                    <div class="accordion_content">
-                        <ul>
-                            <li>
-                                <a href="playerRankListing.html">선수별 순위보기</a>
-                            </li>
-                            <li class="active">
-                                <a href="newRecordListing.html">신기록 경기기록</a>
-                            </li>
-                            <li>
-                                <a href="scheduleRankListing.html">경기별 순위보기</a>
-                            </li>
-                            <li>
-                                <a href="scheduleListing.html">경기별 메달보기</a>
-                            </li>
-                            <li>
-                                <a href="countryListing.html">국가별 순위보기</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-
-                <li class="accordion_li on">
-                    <p class="menu_button">
-                        <i class="fa-solid fa-angle-right"></i>
-                        계정 관리
-                    </p>
-                    <div class="accordion_content">
-                        <ul>
-                            <li><a href="mypage.html">계정 정보</a></li>
-                            <li>
-                                <a href="change_pw.html">비밀번호 변경</a>
-                            </li>
-                            <li><a href="signup.html">계정 생성</a></li>
-                            <li>
-                                <a href="user.html">계정 목록</a>
-                            </li>
-                            <li>
-                                <a href="log.html">로그 목록</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
     <!-- contents 본문 내용 -->
     <div class="container">
         <div class="contents something">
@@ -234,28 +98,31 @@
                 <table width="100%" cellspacing="0" cellpadding="0" class="table table-hover team_table">
                     <colgroup>
                         <col style="width:15%;">
-                        <col style="width:15%;">
-                        <col style="width:20%;">
-                        <col style="width:12%;">
+                        <col style="width:22%;">
+                        <col style="width:6%;">
+                        <col style="width:18%;">
+                        <col style="width:8%;">
                         <col style="width:13%;">
-                        <col style="width:15%;">
                         <col style="width:10%;">
+                        <col style="width:8%;">
                     </colgroup>
                     <thead>
                         <tr>
                             <th onclick="sortTable(0)">기록구분</th>
                             <th onclick="sortTable(1)">이름</th>
-                            <th onclick="sortTable(2)">종목</th>
-                            <th onclick="sortTable(3)">풍속/용기구</th>
-                            <th onclick="sortTable(4)">기록</th>
-                            <th onclick="sortTable(5)">기록일자</th>
-                            <th onclick="sortTable(6)">소속</th>
+                            <th onclick="sortTable(2)">성별</th>
+                            <th onclick="sortTable(3)">종목</th>
+                            <th onclick="sortTable(4)">풍속/용기구</th>
+                            <th onclick="sortTable(5)">기록</th>
+                            <th onclick="sortTable(6)">기록일자</th>
+                            <th onclick="sortTable(7)">소속</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>세계U20신기록</td>
                             <td>MinGee Kim</td>
+                            <td>여</td>
                             <td>100M</td>
                             <td>+1.2m</td>
                             <td>09.89</td>
@@ -265,6 +132,7 @@
                         <tr>
                             <td>세계신기록</td>
                             <td>Bingtian SU</td>
+                            <td>여</td>
                             <td>javelinthrow</td>
                             <td>1kg</td>
                             <td>91m</td>
@@ -274,15 +142,17 @@
                         <tr>
                             <td>아시아U20신기록</td>
                             <td>Republic of Korea</td>
+                            <td></td>
                             <td>4x400m relay(Mixed)</td>
+                            <td>-0.7m</td>
                             <td>03:18.00</td>
-                            <td>09.89</td>
                             <td>2023.06.04</td>
                             <td>KOR</td>
                         </tr>
                         <tr>
                             <td>아시아U20신기록</td>
                             <td>Yuma MARUYAMA</td>
+                            <td>여</td>
                             <td>decathlon</td>
                             <td></td>
                             <td>7790</td>
@@ -292,6 +162,7 @@
                         <tr>
                             <td>아시아신기록</td>
                             <td>Yuhao SHI</td>
+                            <td>여</td>
                             <td>longjump</td>
                             <td>+0.8m</td>
                             <td>08.31m</td>
@@ -301,6 +172,7 @@
                         <tr>
                             <td>대회신기록</td>
                             <td>정재헌</td>
+                            <td>남</td>
                             <td>10km Race Walk</td>
                             <td></td>
                             <td>09.89</td>
@@ -310,6 +182,7 @@
                         <tr>
                             <td>대회신기록</td>
                             <td>정재헌</td>
+                            <td>남</td>
                             <td>100M</td>
                             <td></td>
                             <td>09.89</td>
@@ -319,6 +192,7 @@
                         <tr>
                             <td>대회신기록</td>
                             <td>정재헌</td>
+                            <td>남</td>
                             <td>100M</td>
                             <td></td>
                             <td>09.89</td>
@@ -328,6 +202,7 @@
                         <tr>
                             <td>대회신기록</td>
                             <td>정재헌</td>
+                            <td>남</td>
                             <td>100M</td>
                             <td></td>
                             <td>09.89</td>
@@ -337,6 +212,7 @@
                         <tr>
                             <td>대회신기록</td>
                             <td>정재헌</td>
+                            <td>남</td>
                             <td>100M</td>
                             <td></td>
                             <td>09.89</td>
@@ -368,12 +244,8 @@
     </div>
 
     <!-- footer -->
-    <footer>
-        <p class="footer_text">
-            Copyright © 2022, 20th Asian U20 Athletics Championships
-            Yecheon. All rights reserved.
-        </p>
-    </footer>
+    <?php include 'footer.php'; ?>
+
     <script src="js/main.js"></script>
 </body>
 
