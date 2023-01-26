@@ -2715,19 +2715,19 @@ footer {
 /* media quarry */
 @media screen and (min-width: 1800px) {
     .container {
-        max-width: 1520px;
+        max-width: 1650px;
     }
 
     .contents {
-        left: 50px;
-        width: 1520px;
+        left: 100px;
+        width: 1650px;
     }
 
     .country_table {
-        max-width: 1520px;
+        max-width: 1650px;
     }
 
     #sidebar_icon:checked~.container .contents {
-        max-width: 1520px;
+        max-width: 1650px;
     }
 }
